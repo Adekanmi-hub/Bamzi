@@ -8,6 +8,7 @@ module.exports = {
         darkGray: "rgba(48, 48, 48, 255)",
         lightPurple: "#d772fb",
         lightBrown: "#ff9cb1",
+        skyBlue: "#e9f0ff",
       },
       fontFamily: {
         poppins: "Poppins",
@@ -16,7 +17,8 @@ module.exports = {
         seller: "url(../assets/seller-bg.png)",
         drawer: "url(../assets/bg-drawer-2.png)",
         store: "url(../assets/bg-seller-store.png)",
-        storeHeader: "url(../assets/bg-store-header.png)"
+        storeHeader: "url(../assets/bg-store-header.png)",
+        exclusion: "url(../assets/exclusion.png)",
       }
     },
   },
