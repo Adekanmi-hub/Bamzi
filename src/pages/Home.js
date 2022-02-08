@@ -71,7 +71,7 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <button type="submit" className={styles.btn}>
+                  <button type="submit" className={styles.btn} style={{backgroundColor: "#000033"}}>
                     Book your reservation
                   </button>
                 </div>
