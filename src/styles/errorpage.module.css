@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body {
+  margin: 0px;
+  padding: 0px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+.maincontent {
+  width: 100%;
+  margin: 0px auto;
+  margin-top: 0.05rem;
+  background-color: #e9f0ff;
+  height: 100vh;
+}
+.header {
+  padding: 1.3rem 3rem;
+}
+.page {
+  display: flex;
+  margin: 2.5em auto;
+  padding: 3rem 5rem;
+  align-items: center;
+  margin-top: 0px;
+  justify-content: space-between;
+}
+
+.pagetitle h1 {
+  text-align: right;
+  font-size: 2rem;
+  color: grey;
+  margin: 0px;
+}
+
+.pageimage {
+  display: flex;
+  justify-content: center;
+  color: #f6da8b;
+  align-items: flex-start; 
+}
+
+.pageimage img{
+  width: 400px;
+}
+
+.rightcontent {
+  background-image: url(../assets/Group-11551.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  padding-right: 4rem;
+  width: 50%;
+  align-items: center;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  color: #83868d;
+  padding: 0rem 1.5rem;
+}
+
+.error span{
+  display: inline-block;
+}
+
+.leftcontent {
+  background-image: url(../assets/Group-11551.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+  padding-left: 4rem;
+  width: 50%;
+}
+
+.button {
+  background-color: #000033;
+  color: white;
+  padding: 1rem 0rem;
+  width: 100%;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .page {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .leftcontent,
+  .rightcontent {
+    width: 100%;
+    background: none;
+    padding: 0px;
+  }
+
+  .rightcontent{
+    margin-top: 1rem;
+  }
+
+  .pagetitle h1 {
+    text-align: center;
+  }
+
+  .header {
+    padding: 0rem 1.5rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .page {
+    padding: 0px;
+    margin-top: 4rem;
+  }
+
+  .pageimage img {
+    width: 320px;
+  }
+
+  .error span {
+    font-size: 0.8rem;
+  }
+  .header {
+    padding: 0.5rem;
+  }
+
+  .button {
+    font-size: 0.75rem;
+    font-weight: 400;
+  }
+}
