@@ -48,3 +48,11 @@
   width: auto;
   height: fit-content;
 }
+
+.bg-primary {
+  background-color: #000033;
+}
+
+.bodyGray {
+  background-color: #F9F9F9;
+}

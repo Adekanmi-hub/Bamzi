@@ -45,7 +45,7 @@ const Section2 = () => {
               tasks to stay on schedule
             </div>
           </div>
-          <div className="primaryBtn rounded pt-8 my-14 mx-14">
+          <div className="bg-primary rounded pt-8 my-14 mx-14">
             <img src={image7} alt="" />
             <div className="text-center text-white font-bold text-lg">
               Flexible Digital Store
@@ -55,7 +55,7 @@ const Section2 = () => {
               tasks to stay on schedule
             </div>
           </div>
-          <div className="bgcolors rounded pt-8">
+          <div className="bg-bgcolors rounded pt-8">
             <img src={image8} alt="" />
             <div className="text-center font-bold text-lg">
               Sell products with convenience
@@ -80,7 +80,7 @@ const Section2 = () => {
             </div>
 
             <div className="py-6">
-              <button className="text-white sm:py-2 sm:px-8 lg:py-4 lg:px-14 sm:text-md lg:text-lg font-bold border rounded-xl primaryBtn">
+              <button className="text-white sm:py-2 sm:px-8 lg:py-4 lg:px-14 sm:text-md lg:text-lg font-bold border rounded-xl bg-primary">
                 Learn more
               </button>
             </div>

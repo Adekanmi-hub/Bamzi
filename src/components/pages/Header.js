@@ -42,28 +42,28 @@ export default function Header() {
                     </a>
                   </div>
                   <div className="py-1 text-sm text-gray-700 hover:bg-primary hover:text-white">
-                    <a
-                      href="#!"
+                    <Link
+                      to="/product-details"
                       className="font-bold primaryBtntext items-center px-4 py-2 "
                     >
                       Products
-                    </a>
+                    </Link>
                   </div>
                   <div className="py-1 text-sm text-gray-700 hover:bg-primary hover:text-white">
-                    <a
-                      href="#!"
+                    <Link
+                      to="/sellers-store"
                       className="font-bold text-primary items-center px-4 py-2 "
                     >
                       Stores
-                    </a>
+                    </Link>
                   </div>
                   <div className="py-1 text-sm text-gray-700 hover:bg-primary hover:text-white">
-                    <a
-                      href="#!"
+                    <Link
+                      to="/Wish-List"
                       className="font-bold text-primary items-center px-4 py-2 "
                     >
                       Wishlist
-                    </a>
+                    </Link>
                   </div>
                   <div className="py-1 text-sm text-gray-700 hover:bg-primary hover:text-white">
                     <a
@@ -81,18 +81,18 @@ export default function Header() {
 
             {/**Primary Nav Items */}
             <div className="hidden lg:flex items-center ml-10 space-x-10">
-              <a
-                href="#!"
+              <Link
+                to="/product-details"
                 className=" text-primary hover:text-gray-400 font-semibold"
               >
                 Products
-              </a>
-              <a
-                href="#!"
+              </Link>
+              <Link
+                 to="/sellers-store"
                 className=" text-primary hover:text-gray-400 font-semibold"
               >
                 Stores
-              </a>
+              </Link>
               <form action="">
                 <div className="relative flex items-center text-gray-400 focus-within:text-gray-600">
                   <input
@@ -111,20 +111,20 @@ export default function Header() {
 
           {/**secondary nav items */}
           <div className="hidden lg:flex items-center space-x-3">
-            <a
-              href="#!"
+            <Link
+              to="/Wish-List"
               className="flex text-primary hover:text-gray-400 font-semibold"
             >
               <span className="mr-1">Wishlist</span>
               <IoIosHeartEmpty className="w-5 h-5" />
-            </a>
-            <a
-              href="#!"
+            </Link>
+            <Link
+              to="/Shopping-Cart"
               className="flex text-primary hover:text-gray-400 font-semibold"
             >
               <span className="mr-1">Cart</span>
               <IoIosCart className="w-5 h-5" />
-            </a>
+            </Link>
 
             <a href="#!">
               <img

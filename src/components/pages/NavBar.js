@@ -27,14 +27,14 @@ export default function NavBar() {
               {isOpen && (
                 <div className="origin-top-right absolute top-0 right-0 mt-8 w-32 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none z-50">
                   <div className="font-bold py-1 text-sm text-primary hover:bg-blue-300 hover:text-white">
-                    <a href="#!" className="items-center px-4 py-2 ">
+                    <Link  to="/product-details" className="items-center px-4 py-2 ">
                       Products
-                    </a>
+                    </Link>
                   </div>
                   <div className="font-bold py-1 text-sm text-primary hover:bg-blue-300 hover:text-white">
-                    <a href="#!" className="items-center px-4 py-2 ">
+                    <Link  to="/sellers-store" className="items-center px-4 py-2 ">
                       Stores
-                    </a>
+                    </Link>
                   </div>
                   <div className="font-bold py-1 text-sm text-primary hover:bg-blue-300 hover:text-white">
                     <a href="#!" className="items-center px-4 py-2 ">
@@ -71,18 +71,18 @@ export default function NavBar() {
 
             {/**Primary Nav Items */}
             <div className="hidden lg:flex items-center py-4 ml-10 space-x-10">
-              <a
-                href="#!"
+              <Link
+                to="/product-details"
                 className="text-primary hover:text-gray-400 font-bold"
               >
                 Products
-              </a>
-              <a
-                href="#!"
+              </Link>
+              <Link
+                 to="/sellers-store"
                 className="text-primary hover:text-gray-400 font-bold"
               >
                 Stores
-              </a>
+              </Link>
               <a
                 href="#!"
                 className="text-primary hover:text-gray-400 font-bold"

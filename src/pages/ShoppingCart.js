@@ -5,7 +5,7 @@ const ShoppingCart = () => {
     return ( 
         <div className="font-poppins">
             <Header />
-            <div className="lg:flex">
+            <div className="lg:flex my-16">
             <LeftComponents />
             <RightComponents />
             </div>
