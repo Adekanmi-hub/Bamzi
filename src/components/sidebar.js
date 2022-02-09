@@ -12,7 +12,7 @@ import {
 } from "react-icons/fi"
 import { Link } from "react-router-dom"
 
-const Sidebar = ({ showSidebar, bgLarge }) => {
+const Sidebar = ({ showSidebar, bgLarge, page }) => {
   return (
     <div
       className={`lg:w-auto lg:relative lg:translate-x-0 lg:col-span-1 w-64 absolute inset-y-0 left-0 transform transition duration-200 ease-in-out flex flex-col bg-cover bg-drawer text-primary  text-sm font-light px-4 py-8 space-y-8 z-10 ${
@@ -57,16 +57,23 @@ const Sidebar = ({ showSidebar, bgLarge }) => {
         <span className="cursor-pointer py-0.5 px-2 flex items-center">
           <FiShoppingCart className="mr-2" /> Sales
         </span>
-        <span
-          className={`${
-            bgLarge
-              ? "lg:bg-secondary lg:text-primary"
-              : "lg:bg-primary lg:text-white"
-          } cursor-pointer bg-primary text-white w-full border-none rounded-full py-0.5 px-2 flex items-center`}
-        >
-          <FiBox className="mr-2" />
-          All Products
-        </span>
+        {page === "sellers-board" ? (
+          <span
+            className={`${
+              bgLarge
+                ? "lg:bg-secondary lg:text-primary"
+                : "lg:bg-primary lg:text-white"
+            } cursor-pointer bg-primary text-white w-full border-none rounded-full py-0.5 px-2 flex items-center`}
+          >
+            <FiBox className="mr-2" />
+            All Products
+          </span>
+        ) : (
+          <span className="cursor-pointer py-0.5 px-2 flex items-center">
+            <FiBox className="mr-2" />
+            All Products
+          </span>
+        )}
         <span className="cursor-pointer py-0.5 px-2 flex items-center">
           <FiGrid className="mr-2" />
           Categories
