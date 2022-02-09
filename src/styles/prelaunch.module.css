@@ -6,17 +6,17 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
- .container {
+.container {
   width: 100%;
   margin: 0px auto;
   background-color: #e9f0ff;
   min-height: 100vh;
 }
- .header {
+.header {
   font-size: 3em;
   font-weight: 900;
 }
- .jumbo {
+.jumbo {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 2.5em auto;
@@ -24,20 +24,22 @@ body {
   align-items: center;
 }
 
- .jumbo h1,  .jumbo p{
+.jumbo h1,
+.jumbo p {
   text-align: left;
 }
 
- .navLinks {
+.navLinks {
   margin-left: auto;
 }
 
- .navBar {
+.navBar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 90%;
   margin: 0px auto;
+  padding: 0.75rem 0rem;
 }
 
 p {
@@ -165,7 +167,7 @@ form input {
 @media (max-width: 768px) {
   .jumbo {
     display: flex;
-   flex-direction: column;
+    flex-direction: column;
   }
 
   .jumboImage {
@@ -174,6 +176,10 @@ form input {
 
   .navLinks {
     display: none;
+  }
+
+  .contactForm {
+    width: 100%;
   }
 }
 

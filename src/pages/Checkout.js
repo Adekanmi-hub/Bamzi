@@ -1,6 +1,6 @@
-import React from "react";
-import checkout from "../styles/checkout.module.css";
-import { Link } from "react-router-dom";
+import React from "react"
+import checkout from "../styles/checkout.module.css"
+import { Link } from "react-router-dom"
 
 export default function Checkout() {
   return (
@@ -154,7 +154,11 @@ export default function Checkout() {
                   />
                 </div>
                 <div className={checkout.saveDiv}>
-                  <button type="submit" className={checkout.save} style={{backgroundColor: "#000033"}}>
+                  <button
+                    type="submit"
+                    className={checkout.save}
+                    style={{ backgroundColor: "#000033" }}
+                  >
                     Save and Continue
                   </button>
                   <div className={checkout.checkDiv}>
@@ -211,7 +215,11 @@ export default function Checkout() {
               </div>
 
               <div className={checkout.submitBtn}>
-                <button type="submit" className={checkout.orderButton}>
+                <button
+                  type="submit"
+                  className={checkout.orderButton}
+                  style={{ backgroundColor: "#000033" }}
+                >
                   Proceed
                 </button>
               </div>
@@ -244,5 +252,5 @@ export default function Checkout() {
         </div>
       </div>
     </div>
-  );
+  )
 }

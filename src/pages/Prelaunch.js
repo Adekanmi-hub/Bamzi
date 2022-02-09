@@ -1,8 +1,8 @@
-import React from "react";
-import styles from "../styles/home.module.css";
-import { Link } from "react-router-dom";
+import React from "react"
+import styles from "../styles/prelaunch.module.css"
+import { Link } from "react-router-dom"
 
-export default function Home() {
+export default function Prelaunch() {
   return (
     <div>
       <div className={styles.container}>
@@ -71,7 +71,11 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <button type="submit" className={styles.btn} style={{backgroundColor: "#000033"}}>
+                  <button
+                    type="submit"
+                    className={styles.btn}
+                    style={{ backgroundColor: "#000033" }}
+                  >
                     Book your reservation
                   </button>
                 </div>
@@ -85,5 +89,5 @@ export default function Home() {
         </div>
       </div>
     </div>
-  );
+  )
 }
