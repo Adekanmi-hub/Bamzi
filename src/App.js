@@ -3,6 +3,7 @@ import ProductDetails from "./pages/productDetails"
 import SellersBoard from "./pages/sellersBoard"
 import SellersStore from "./pages/sellersStore"
 import SalesPage from "./pages/SalesPage"
+import CustomiseShop from "./pages/CustomiseShop"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="sellers-board" element={<SellersBoard />} />
         <Route path="sellers-store" element={<SellersStore />} />
         <Route path="sales-page" element={<SalesPage />} />
+        <Route path="customise-shop" element={<CustomiseShop />} />
       </Routes>
     </BrowserRouter>
   )

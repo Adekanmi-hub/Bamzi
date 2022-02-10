@@ -17,6 +17,7 @@ module.exports = {
         drawer: "url(../assets/bg-drawer.png)",
         store: "url(../assets/bg-seller-store.png)",
         storeHeader: "url(../assets/bg-store-header.png)",
+        shop: "url(../assets/bg-shop.jpg)",
       },
     },
   },
