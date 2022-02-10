@@ -54,26 +54,38 @@ const Sidebar = ({ showSidebar, bgLarge, page }) => {
       </div>
       <div className="flex flex-col space-y-2">
         <h3 className="font-semibold">PRODUCTS</h3>
-        <span className="cursor-pointer py-0.5 px-2 flex items-center">
-          <FiShoppingCart className="mr-2" /> Sales
-        </span>
-        {page === "sellers-board" ? (
-          <span
-            className={`${
-              bgLarge
-                ? "lg:bg-secondary lg:text-primary"
-                : "lg:bg-primary lg:text-white"
-            } cursor-pointer bg-primary text-white w-full border-none rounded-full py-0.5 px-2 flex items-center`}
-          >
-            <FiBox className="mr-2" />
-            All Products
-          </span>
-        ) : (
-          <span className="cursor-pointer py-0.5 px-2 flex items-center">
-            <FiBox className="mr-2" />
-            All Products
-          </span>
-        )}
+
+        <Link to="/sales-page">
+          {page === "sales-page" ? (
+            <span className="bg-primary text-white w-full border-none rounded-full cursor-pointer py-0.5 px-2 flex items-center">
+              <FiShoppingCart className="mr-2" /> Sales
+            </span>
+          ) : (
+            <span className="cursor-pointer py-0.5 px-2 flex items-center">
+              <FiShoppingCart className="mr-2" /> Sales
+            </span>
+          )}
+        </Link>
+
+        <Link to="/sellers-board">
+          {page === "sellers-board" ? (
+            <span
+              className={`${
+                bgLarge
+                  ? "lg:bg-secondary lg:text-primary"
+                  : "lg:bg-primary lg:text-white"
+              } cursor-pointer bg-primary text-white w-full border-none rounded-full py-0.5 px-2 flex items-center`}
+            >
+              <FiBox className="mr-2" />
+              All Products
+            </span>
+          ) : (
+            <span className="cursor-pointer py-0.5 px-2 flex items-center">
+              <FiBox className="mr-2" />
+              All Products
+            </span>
+          )}
+        </Link>
         <span className="cursor-pointer py-0.5 px-2 flex items-center">
           <FiGrid className="mr-2" />
           Categories
