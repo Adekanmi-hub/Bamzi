@@ -39,18 +39,18 @@ export default function CustomiseShop() {
             <div className="bg-white p-4 space-y-4 rounded shadow">
               <input
                 type="text"
-                className="px-4 py-2 border border-primary rounded-lg w-8/12 placeholder:text-gray-400 placeholder:text-sm"
+                className="px-4 py-2 border border-primary rounded-lg lg:w-8/12 w-full placeholder:text-gray-400 placeholder:text-sm"
                 placeholder="Store Name"
                 autoComplete=""
               />
 
               <div className="flex space-x-4">
                 <textarea
-                  className="px-4 py-2 border border-primary rounded-lg w-8/12 placeholder:text-gray-400 placeholder:text-sm"
+                  className="px-4 py-2 border border-primary rounded-lg lg:w-8/12 w-full placeholder:text-gray-400 placeholder:text-sm"
                   rows="4"
                   placeholder="Store Description Max (40)"
                 ></textarea>
-                <p className="w-3/12 italic text-sm">
+                <p className="hidden lg:block w-3/12 italic text-sm">
                   This is a short description of what your store offers be
                   short, precise and brief as this is what customers would see
                 </p>
@@ -58,11 +58,11 @@ export default function CustomiseShop() {
 
               <input
                 type="text"
-                className="px-4 py-2 border border-primary rounded-lg w-8/12 placeholder:text-gray-400 placeholder:text-sm"
+                className="px-4 py-2 border border-primary rounded-lg lg:w-8/12 w-full placeholder:text-gray-400 placeholder:text-sm"
                 placeholder="Store full legal address"
               />
 
-              <div className="w-8/12 flex space-x-2">
+              <div className="lg:w-8/12 w-full flex space-x-2">
                 <div className="w-1/2 px-4 py-2 border border-primary rounded-lg">
                   <span className="flex items-center sm:justify-start justify-center space-x-2">
                     <img
@@ -82,14 +82,14 @@ export default function CustomiseShop() {
 
               <input
                 type="text"
-                className="px-4 py-2 border border-primary rounded-lg w-8/12 placeholder:text-gray-400 placeholder:text-sm"
+                className="px-4 py-2 border border-primary rounded-lg lg:w-8/12 w-full placeholder:text-gray-400 placeholder:text-sm"
                 placeholder="Business Contact"
                 autoComplete=""
               />
 
               <input
                 type="text"
-                className="px-4 py-2 border border-primary rounded-lg w-8/12 placeholder:text-gray-400 placeholder:text-sm"
+                className="px-4 py-2 border border-primary rounded-lg lg:w-8/12 w-full placeholder:text-gray-400 placeholder:text-sm"
                 placeholder="Store Name"
                 autoComplete="Additional Info"
               />
