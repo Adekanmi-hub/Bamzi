@@ -203,3 +203,32 @@ export const checkboxCategoryData = [
     value: "Gaming",
   },
 ]
+
+export const orders = [
+  {
+    id: 1,
+    product: {
+      img: require("../assets/apple-watch-img01.png"),
+      title: "Sanda Smart Watch Waterproof IP65 Pedometer",
+      price: 399.99,
+      qty: 1,
+      color: "red",
+      size: "XL",
+    },
+    statusMsg: "Shipping in Progress",
+    date: "3/12/2020",
+  },
+  {
+    id: 2,
+    product: {
+      img: require("../assets/apple-watch-img02.png"),
+      title: "Sanda Smart Watch Waterproof IP65 Pedometer",
+      price: 399.99,
+      qty: 1,
+      color: "blue",
+      size: "XL",
+    },
+    statusMsg: "Shipping in Progress",
+    date: "3/12/2020",
+  },
+]
