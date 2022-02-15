@@ -12,26 +12,6 @@ body {
   background-color: #e9f0ff;
   min-height: 100vh;
 }
-.header {
-  font-size: 3em;
-  font-weight: 900;
-}
-.jumbo {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 2.5em auto;
-  width: 90%;
-  align-items: center;
-}
-
-.jumbo h1,
-.jumbo p {
-  text-align: left;
-}
-
-.navLinks {
-  margin-left: auto;
-}
 
 .navBar {
   display: flex;
@@ -42,8 +22,14 @@ body {
   padding: 0.75rem 0rem;
 }
 
-p {
-  color: grey;
+.navLinks {
+  margin-left: auto;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
 }
 
 a {
@@ -55,14 +41,12 @@ a {
   text-decoration: none;
 }
 
-ul {
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
-}
-
-.contactForm {
+.jumbo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 2.5em auto;
   width: 90%;
+  align-items: center;
 }
 
 .content {
@@ -74,8 +58,17 @@ ul {
   font-weight: 600;
 }
 
-.name {
-  width: 100%;
+.jumbo h1,
+.jumbo p {
+  text-align: left;
+}
+
+p {
+  color: grey;
+}
+
+.contactForm {
+  width: 90%;
 }
 
 form {
@@ -91,6 +84,10 @@ form input {
   border-radius: 16px;
   outline: none;
   border: none;
+}
+
+.name {
+  width: 100%;
 }
 
 .details {
@@ -116,11 +113,6 @@ form input {
   margin: 8px 0px;
 }
 
-.buy p {
-  margin-left: 6px;
-  font-size: 0.75rem;
-}
-
 .buyer {
   display: flex;
   border: 3px solid #fcd25a;
@@ -129,6 +121,11 @@ form input {
   align-items: center;
   justify-content: center;
   padding: 0.5rem 0rem;
+}
+
+.buy p {
+  margin-left: 6px;
+  font-size: 0.75rem;
 }
 
 .buyer p {
@@ -148,12 +145,6 @@ form input {
   color: white;
 }
 
-.jumboImage img {
-  object-fit: cover;
-  max-width: 100%;
-  height: auto;
-}
-
 .btn {
   background-color: #000033;
   color: white;
@@ -162,6 +153,17 @@ form input {
   border-radius: 6px;
   text-align: center;
   font-weight: 700;
+}
+
+.jumboImage img {
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+}
+
+.header {
+  font-size: 3em;
+  font-weight: 900;
 }
 
 @media (max-width: 768px) {

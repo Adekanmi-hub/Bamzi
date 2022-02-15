@@ -20,6 +20,11 @@ body {
   justify-content: space-between;
 }
 
+.menuLists {
+  display: flex;
+  align-items: center;
+}
+
 a {
   color: #141738;
   padding: 0px 10px;
@@ -27,7 +32,6 @@ a {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   text-decoration: none;
-  
 }
 
 .search {
@@ -36,11 +40,12 @@ a {
   display: flex;
   align-items: center;
 }
-.search input{
+
+.search input {
   border: 2px solid #c0c2c5;
   border-radius: 24px;
   padding: 4px 8px;
-  width: 100%
+  width: 100%;
 }
 
 .searchIcon {
@@ -49,11 +54,6 @@ a {
   width: 16px;
   height: 16px;
   color: #c0c2c5;
-}
-
-.menuLists {
-  display: flex;
-  align-items: center;
 }
 
 ul {
@@ -124,8 +124,9 @@ ul {
   font-size: 1rem;
 }
 
-.inputSet1, .inputSet2{
-  display:flex;
+.inputSet1,
+.inputSet2 {
+  display: flex;
   width: 100%;
 }
 
@@ -189,7 +190,7 @@ ul {
   border: 1px grey solid;
 }
 
-.saveDiv{
+.saveDiv {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -202,6 +203,12 @@ ul {
   width: 50%;
   background-color: #000033;
   color: white;
+}
+
+.checkDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .paymentMethod {
@@ -251,20 +258,6 @@ ul {
   border-top-right-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
 }
-.default {
-  display: flex;
-  justify-content: space-between;
-}
-
-.checkDiv {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.checkDiv label {
-  margin-left: 0.5rem;
-}
 
 .orderHeader {
   font-weight: 700;
@@ -274,58 +267,35 @@ ul {
   padding-top: 20px;
   margin-left: 2px;
 }
+
 .shippingDiv {
   display: flex;
   justify-content: space-between;
   color: gray;
 }
+
 .spanShipping {
   padding-left: 20px;
 }
+
 .spanAmt {
   padding: 0px 20px;
 }
+
 .subtotalDiv {
   display: flex;
   justify-content: space-between;
   color: gray;
 }
+
 .spanSubtotal {
   padding-left: 20px;
 }
+
 .spanSubamt {
   padding: 0px 20px;
 }
-.giftImage {
-  color: #fed65f;
-  display: flex;
-  align-items: center;
-  
-}
-.giftLink {
-  color: #fed65f;
-  margin-left: 5px;
-}
-.orderCode {
-  border-radius: 6px;
-  padding: 6px 3px;
-  border: 1px solid #eac2bf;
-  width: 50%;
-  font-size: 0.8rem;
-}
-.submitBtn {
-  padding-top: 0px;
-  width: auto;
-}
-.orderButton {
-  background-color: #141738;
-  color: white;
-  justify-content: center;
-  border: none;
-  width: 100%;
-  padding: 8px 25px;
-  
-}
+
 .coupWrapper {
   display: flex;
   align-items: center;
@@ -333,6 +303,26 @@ ul {
   margin: 10px 0px;
   padding: 0px 20px;
 }
+
+.orderCode {
+  border-radius: 6px;
+  padding: 6px 3px;
+  border: 1px solid #eac2bf;
+  width: 50%;
+  font-size: 0.8rem;
+}
+
+.giftImage {
+  color: #fed65f;
+  display: flex;
+  align-items: center;
+}
+
+.giftLink {
+  color: #fed65f;
+  margin-left: 5px;
+}
+
 .totalDiv {
   display: flex;
   justify-content: space-between;
@@ -340,9 +330,25 @@ ul {
   font-weight: 600;
   border-top: 1px grey solid;
 }
+
 .spanTotal {
   padding: 0px 20px;
 }
+
+.submitBtn {
+  padding-top: 0px;
+  width: auto;
+}
+
+.orderButton {
+  background-color: #141738;
+  color: white;
+  justify-content: center;
+  border: none;
+  width: 100%;
+  padding: 8px 25px;
+}
+
 .pay {
   background-color: #ececec;
   border-radius: 10px;
@@ -351,47 +357,63 @@ ul {
   text-align: center;
   margin-top: 30px;
 }
+
 .secPay {
-  color: #3AA837;
+  color: #3aa837;
   padding-top: 15px;
 }
+
 .secPara {
   color: #989898;
   font-size: 10px;
   padding: 15px 20px;
 }
 
-.pay p {
-  color: grey;
-}
 .paymentDiv {
   display: flex;
   justify-content: center;
   padding: 10px 0px;
 }
-.image1, .image2, .image3 {
+
+.image1,
+.image2,
+.image3 {
   width: 10%;
   height: 20%;
   padding: 5px;
 }
 
+.default {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkDiv label {
+  margin-left: 0.5rem;
+}
+
+.pay p {
+  color: grey;
+}
+
 @media (max-width: 768px) {
   .wholePage {
-  display: flex;
-   flex-direction: column;
-   width: 100%;
-   padding: 0px;
-   justify-content: center;
-   align-items: center;
-   margin-top: 20px;
-  } 
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
 
   .contentLeft {
     width: 90%;
     margin: 0px;
   }
 
-  .menuLists ul, .items {
+  .menuLists ul,
+  .items {
     display: none;
   }
   .contentRight {
@@ -403,7 +425,7 @@ ul {
     width: 80%;
   }
 
-  .menuBar{
+  .menuBar {
     padding: 0.5rem 1rem;
   }
 }
@@ -416,12 +438,20 @@ ul {
     width: 90%;
   }
 
-  .inputSet1, .inputSet2, .inputSet3 {
+  .inputSet1,
+  .inputSet2,
+  .inputSet3 {
     flex-direction: column;
     width: 100%;
   }
 
-  .name, .number, .address, .state, .city, .country, .code {
+  .name,
+  .number,
+  .address,
+  .state,
+  .city,
+  .country,
+  .code {
     width: 100%;
     margin-bottom: 0.5rem;
     padding: 0.5rem 1rem;
@@ -436,13 +466,12 @@ ul {
     margin-bottom: 0.5rem;
   }
 
-  .paymentOptions{
+  .paymentOptions {
     flex-direction: column;
     align-items: center;
   }
 
-  .paymentOptions img{
+  .paymentOptions img {
     margin-bottom: 0.5rem;
-
   }
 }

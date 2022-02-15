@@ -5,25 +5,25 @@ import { Link } from "react-router-dom"
 export default function Checkout() {
   return (
     <div>
-      <div className={checkout.containerBox}>
-        <div className={checkout.menuBar}>
-          <div className={checkout.menuLists}>
+      <div className={"bg-fadewhite w-full my-0 mx-auto"}>
+        <div className={"flex items-center py-2 px-20 bg-white justify-between"}>
+          <div className={"flex items-center"}>
             <Link to="/">
               <img src={require("../assets/BAMZI.png")} width={"60"} />
             </Link>
 
             <ul>
               <li>
-                <a href="#">Products</a>
+                <a className={"text-blueshade py-0 px-2.5 text-base font-poppins font-semibold no-underline"}href="#">Products</a>
               </li>
               <li>
-                <a href="#">Stores</a>
+                <a className={"text-blueshade py-0 px-2.5 text-base font-poppins font-semibold no-underline"}href="#">Stores</a>
               </li>
               <li>
-                <div className={checkout.search}>
-                  <input type="text" placeholder="Search anything" />
+                <div className={"relative w-52 flex items-center"}>
+                  <input className={"border-2 border-solid border-lightgray rounded-full py-1 px-2 w-full"}type="text" placeholder="Search anything" />
                   <svg
-                    className={checkout.searchIcon}
+                    className={"absolute right-2 w-4 h-4 text-lightgray"}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -42,13 +42,13 @@ export default function Checkout() {
           </div>
 
           <div className={checkout.items}>
-            <ul>
+            <ul className={"flex flex-row list-none my-2 mx-4 items-center"}>
               <li>
                 <a href="#">
-                  <span className={checkout.linkItems}>
+                  <span className={"flex items-center ml-2"}>
                     Whishlist{" "}
                     <svg
-                      className={checkout.linkIcons}
+                      className={"ml-1.5 w-6 h-6"}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -66,10 +66,10 @@ export default function Checkout() {
               </li>
               <li>
                 <a href="#">
-                  <span className={checkout.linkItems}>
+                  <span className={"flex items-center ml-2"}>
                     Cart{" "}
                     <svg
-                      className={checkout.linkIcons}
+                      className={"ml-1.5 w-6 h-6"}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -89,79 +89,79 @@ export default function Checkout() {
           </div>
         </div>
 
-        <div className={checkout.wholePage}>
-          <div className={checkout.contentLeft}>
-            <div className={checkout.checkout}>Checkout</div>
+        <div className={"flex py-5 px-20"}>
+          <div className={"w-2/3"}>
+            <div className={"py-4 px-4 border-0 border-solid bg-white rounded-md font-bold"}>Checkout</div>
 
-            <div className={checkout.shippingInfo}>
+            <div className={"flex items-center justify-between py-0.5 px-4 mt-2 border-0 border-solid bg-white rounded-md font-bold"}>
               <h4>Shipping Information</h4>
-              <button className={checkout.shipPlus}>+</button>
+              <button className={"p-4 bg-white border-0 cursor-pointer text-2xl"}>+</button>
             </div>
 
-            <div className={checkout.contactForm}>
+            <div className={"bg-white rounded-md border-0 py-1.5 px-4 mt-2 text-base"}>
               <form method="get" action="login.php">
                 <h6>Basic Info</h6>
 
-                <div className={checkout.inputSet1}>
+                <div className={"flex w-full"}>
                   <input
                     type="text"
                     name="name"
-                    className={checkout.name}
+                    className={"py-3 px-6 rounded-md w-1/2 mr-3 border border-solid border-gray-400"}
                     placeholder="Name"
                   />
                   <input
                     type="number"
                     name="number"
-                    className={checkout.number}
+                    className={"py-3 px-6 rounded-md w-1/2 border border-solid border-gray-400"}
                     placeholder="+234     Phone Number"
                   />
                 </div>
 
                 <h6>Address</h6>
 
-                <div className={checkout.inputSet2}>
+                <div className={"flex w-full"}>
                   <input
                     type="text"
                     name="address"
-                    className={checkout.address}
+                    className={"py-3 px-6 rounded-md w-2/5 mr-2 border border-solid border-gray-400"}
                     placeholder="Street Address/Apartment Unit"
                   />
                   <input
                     type="text"
                     name="state"
-                    className={checkout.state}
+                    className={"py-3 px-6 rounded-md w-1/3 mr-2 border border-solid border-gray-400"}
                     placeholder="State/Region"
                   />
                   <input
                     type="text"
                     name="city"
-                    className={checkout.city}
+                    className={"py-3 px-6 rounded-md w-1/4 border border-solid border-gray-400"}
                     placeholder="City"
                   />
                 </div>
-                <div className={checkout.inputSet3}>
+                <div className={"flex mt-2 w-1/2"}>
                   <input
                     type="text"
                     name="country"
-                    className={checkout.country}
+                    className={"py-3 px-6 rounded-md w-1/2 mr-2 border border-solid border-gray-400"}
                     placeholder="Nigeria"
                   />
                   <input
                     type="number"
                     name="Zip Code"
-                    className={checkout.code}
+                    className={"py-3 px-6 rounded-md w-1/2 border border-solid border-gray-400"}
                     placeholder="Zip Code"
                   />
                 </div>
-                <div className={checkout.saveDiv}>
+                <div className={"flex justify-between items-center mt-6"}>
                   <button
                     type="submit"
-                    className={checkout.save}
+                    className={"py-3 px-6 rounded-md w-1/2 bg-primary text-white"}
                     style={{ backgroundColor: "#000033" }}
                   >
                     Save and Continue
                   </button>
-                  <div className={checkout.checkDiv}>
+                  <div className={"flex items-center justify-between"}>
                     <input type="checkbox" className={checkout.checkbox} />
                     <label>Set as default</label>
                   </div>
@@ -170,54 +170,54 @@ export default function Checkout() {
             </div>
 
             <div className={checkout.payment}>
-              <div className={checkout.paymentMethod}>Payment Method</div>
+              <div className={"py-4 px-4 mt-8 border-0 border-solid bg-white rounded-md font-bold"}>Payment Method</div>
 
-              <div className={checkout.paymentOptions}>
-                <img src={require("../assets/D4a-image9.png")} width={"120"} />
+              <div className={"flex py-7 px-4 mt-1 border-0 border-solid bg-white rounded-md font-bold"}>
+                <img src={require("../assets/D4a-image9.png")} className={"border-2 border-solid border-lightgray rounded-md my-0 mx-1.5"}width={"120"} />
                 <img src={require("../assets/M2-image10.png")} width={"120"} />
                 <img src={require("../assets/GooglePay.png")} width={"120"} />
               </div>
             </div>
 
-            <div className={checkout.shopIn}>Shopping Summary (4)</div>
+            <div className={"py-4 px-4 mt-8 border-0 border-solid bg-white rounded-md font-bold"}>Shopping Summary (4)</div>
           </div>
 
-          <div className={checkout.contentRight}>
-            <div className={checkout.orderContent}>
+          <div className={"w-[35%] py-0 px-6"}>
+            <div className={"bg-white rounded-t-lg shadow-sm"}>
               <div className={checkout.order}>
-                <div className={checkout.orderHeader}>Order Summary</div>
+                <div className={"font-bold font text-lg pb-2.5 pl-5 pt-5 ml-0.5"}>Order Summary</div>
 
-                <div className={checkout.shippingDiv}>
-                  <span className={checkout.spanShipping}>Shipping fee</span>
-                  <span className={checkout.spanAmt}>$10.70</span>
+                <div className={"flex justify-between text-gray-500"}>
+                  <span className={"pl-5"}>Shipping fee</span>
+                  <span className={"py-0 px-5"}>$10.70</span>
                 </div>
               </div>
 
-              <div className={checkout.subtotalDiv}>
-                <span className={checkout.spanSubtotal}>Sub total</span>
-                <span className={checkout.spanSubamt}>$19.00</span>
+              <div className={"flex justify-between text-gray-500"}>
+                <span className={"px-5"}>Sub total</span>
+                <span className={"py-0 px-5"}>$19.00</span>
               </div>
 
-              <div className={checkout.coupWrapper}>
+              <div className={"flex items-center justify-between my-2.5 mx-0 py-0 px-5"}>
                 <input
                   type="text"
-                  className={checkout.orderCode}
+                  className={"rounded-md py-1.5 px-[3px] border border-solid border-lightpink w-1/2 text-sm"}
                   placeholder="Coupon Code"
                 />
-                <div className={checkout.giftImage}>
+                <div className={"text-colorange flex items-center"}>
                   <i className="fas fa-gift"></i>
-                  <span className={checkout.giftLink}>My Gifts</span>
+                  <span className={"text-colorange ml-1.5"}>My Gifts</span>
                 </div>
               </div>
 
-              <div className={checkout.totalDiv}>
-                Total <span className={checkout.spanTotal}>$0.00</span>
+              <div className={"flex justify-between py-2.5 pr-0 pl-5 font-semibold border-t border-gray-500 border-solid"}>
+                Total <span className={"py-0 px-5"}>$0.00</span>
               </div>
 
-              <div className={checkout.submitBtn}>
+              <div className={"pt-0 w-auto"}>
                 <button
                   type="submit"
-                  className={checkout.orderButton}
+                  className={"bg-blueshade text-white justify-center border-0 w-full py-2 px-6"}
                   style={{ backgroundColor: "#000033" }}
                 >
                   Proceed
@@ -225,26 +225,26 @@ export default function Checkout() {
               </div>
             </div>
 
-            <div className={checkout.pay}>
-              <div className={checkout.secPay}>SECURED PAY</div>
+            <div className={"bg-lightgrey rounded-xl w-auto border-2 border-solid border-white text-center mt-[30px]"}>
+              <div className={"text-green pt-[15px]"}>SECURED PAY</div>
 
-              <div className={checkout.secPara}>
+              <div className={"text-gray-400 text-xs py-[15px] px-5"}>
                 Every Payments are secured with Bamzi and additional security is
                 ensured with Money Gauranss.
               </div>
 
-              <div className={checkout.paymentDiv}>
+              <div className={"flex justify-center py-2.5 px-0"}>
                 <img
                   src="https://img.icons8.com/ios-filled/50/000000/shield.png"
-                  className={checkout.image1}
+                  className={"w-[10%] h-1/5 p-1.5"}
                 />
                 <img
                   src="https://img.icons8.com/material-outlined/24/000000/recycle-sign.png"
-                  className={checkout.image2}
+                  className={"w-[10%] h-1/5 p-1.5"}
                 />
                 <img
                   src="https://img.icons8.com/external-photo3ideastudio-flat-photo3ideastudio/64/000000/external-payment-supermarket-photo3ideastudio-flat-photo3ideastudio.png"
-                  className={checkout.image3}
+                  className={"w-[10%] h-1/5 p-1.5"}
                 />
               </div>
             </div>
