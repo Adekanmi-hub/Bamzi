@@ -27,7 +27,7 @@ const Section = () => {
           <img
             src={image3}
             alt="features"
-            class="w-full md:w-3/4 self-center lg:w-full"
+            className="w-full md:w-3/4 self-center lg:w-full"
           />
         </div>
       </div>

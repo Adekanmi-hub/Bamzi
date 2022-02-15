@@ -1,3 +1,5 @@
+import React from "react";
+
 const LeftCompo = () => {
   return (
     <div className="lg:basis-2/3 px-8 py-10">

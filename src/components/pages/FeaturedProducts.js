@@ -13,7 +13,7 @@ const FeaturedProducts = () => {
             </div>
             <div className="flex py-3">
                 <div className="">
-                    <div class="border rounded-lg"><img src={image10} alt=""  className='object-cover object-center h-fit w-full'/></div>
+                    <div className="border rounded-lg"><img src={image10} alt=""  className='object-cover object-center h-fit w-full'/></div>
                    <div className="pt-3 flex">
                         <div className="rounded-lg"><img src={image12} alt="" className='h-full w-full'/></div>
                         <div className="rounded-lg"><img src={image11} alt="" className='h-full w-full'/></div>

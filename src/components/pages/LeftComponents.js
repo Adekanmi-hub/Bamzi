@@ -13,7 +13,7 @@ const LeftComponents = () => {
         <div className="flex justify-between pt-4">
           <div className="">
             <input type="checkbox" id="" name="" value="Select" />
-            <label for="" className="text-sm text-gray-600 px-1">
+            <label htmlFor="" className="text-sm text-gray-600 px-1">
               Select All
             </label>
             <br />

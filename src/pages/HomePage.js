@@ -1,3 +1,4 @@
+import React from 'react'
 import NavBar from "../components/pages/NavBar";
 import Section from "../components/pages/Section";
 import CarouselSlider from "../components/pages/CarouselSlider";

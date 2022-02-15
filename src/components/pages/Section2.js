@@ -37,7 +37,7 @@ const Section2 = () => {
           Why use Bamzi
         </div>
         <div className="lg:flex px-28">
-          <div className="bgcolors rounded lg:pt-8">
+          <div className="bg-bgcolors rounded lg:pt-8">
             <img src={image6} alt="" className=""/>
             <div className="text-center font-bold text-lg">Make More Money</div>
             <div className="text-gray-600 text-center sm:mx-12 lg:mx-3 pt-4 pb-6">
