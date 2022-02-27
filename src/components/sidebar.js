@@ -49,7 +49,7 @@ const Sidebar = ({ showSidebar, bgLarge, page }) => {
           <FiCircle className="mr-4" /> Analytics
         </span>
         <span className="cursor-pointer py-0.5 px-2 flex items-center w-full hover:bg-gray-100 hover:text-black hover:border-none hover:rounded-full">
-          <FiCircle className="mr-4" /> eCommerce
+          <FiCircle className="mr-4" /> Marketing
         </span>
       </div>
       <div className="flex flex-col space-y-2">
