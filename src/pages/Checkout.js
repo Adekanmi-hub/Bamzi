@@ -6,13 +6,13 @@ export default function Checkout() {
   return (
     <div>
       <div className={"bg-fadewhite w-full my-0 mx-auto"}>
-        <div className={"flex items-center py-2 px-20 bg-white justify-between"}>
-          <div className={"flex items-center"}>
+        <div className={"flex items-center py-2 lg:px-20 px-4 bg-white justify-between"}>
+          <div className={"flex items-center space-x-4"}>
             <Link to="/">
               <img src={require("../assets/BAMZI.png")} width={"60"} />
             </Link>
 
-            <ul>
+            <ul className={"lg:flex hidden space-x-4"}>
               <li>
                 <a className={"text-blueshade py-0 px-2.5 text-base font-poppins font-semibold no-underline"}href="#">Products</a>
               </li>
@@ -41,7 +41,7 @@ export default function Checkout() {
             </ul>
           </div>
 
-          <div className={checkout.items}>
+          <div className="lg:flex hidden">
             <ul className={"flex flex-row list-none my-2 mx-4 items-center"}>
               <li>
                 <a href="#">
@@ -89,8 +89,8 @@ export default function Checkout() {
           </div>
         </div>
 
-        <div className={"flex py-5 px-20"}>
-          <div className={"w-2/3"}>
+        <div className={"flex lg:flex-row flex-col md:w-full py-5 lg:px-16 md:px-12 px-0 justify-center items-center lg:justify-between lg:items-start lg:space-x-8 mt-5"}>
+          <div className={"lg:w-2/3 md:3/4 w-full md:m-0"}>
             <div className={"py-4 px-4 border-0 border-solid bg-white rounded-md font-bold"}>Checkout</div>
 
             <div className={"flex items-center justify-between py-0.5 px-4 mt-2 border-0 border-solid bg-white rounded-md font-bold"}>
@@ -102,44 +102,44 @@ export default function Checkout() {
               <form method="get" action="login.php">
                 <h6>Basic Info</h6>
 
-                <div className={"flex w-full"}>
+                <div className={"flex w-full md:flex-row flex-col"}>
                   <input
                     type="text"
                     name="name"
-                    className={"py-3 px-6 rounded-md w-1/2 mr-3 border border-solid border-gray-400"}
+                    className={"py-3 px-6 rounded-md md:w-1/2 w-full mr-3 border border-solid border-gray-400"}
                     placeholder="Name"
                   />
                   <input
                     type="number"
                     name="number"
-                    className={"py-3 px-6 rounded-md w-1/2 border border-solid border-gray-400"}
+                    className={"py-3 px-6 rounded-md md:w-1/2 w-full border border-solid border-gray-400"}
                     placeholder="+234     Phone Number"
                   />
                 </div>
 
                 <h6>Address</h6>
 
-                <div className={"flex w-full"}>
+                <div className={"flex w-full md:flex-row flex-col"}>
                   <input
                     type="text"
                     name="address"
-                    className={"py-3 px-6 rounded-md w-2/5 mr-2 border border-solid border-gray-400"}
+                    className={"py-3 px-6 rounded-md md:w-2/5 w-full mr-2 border border-solid border-gray-400"}
                     placeholder="Street Address/Apartment Unit"
                   />
                   <input
                     type="text"
                     name="state"
-                    className={"py-3 px-6 rounded-md w-1/3 mr-2 border border-solid border-gray-400"}
+                    className={"py-3 px-6 rounded-md md:w-1/3 w-full mr-2 border border-solid border-gray-400"}
                     placeholder="State/Region"
                   />
                   <input
                     type="text"
                     name="city"
-                    className={"py-3 px-6 rounded-md w-1/4 border border-solid border-gray-400"}
+                    className={"py-3 px-6 rounded-md md:w-1/4 w-full border border-solid border-gray-400"}
                     placeholder="City"
                   />
                 </div>
-                <div className={"flex mt-2 w-1/2"}>
+                <div className={"flex mt-2 w-full md:w-4/5"}>
                   <input
                     type="text"
                     name="country"
@@ -149,19 +149,19 @@ export default function Checkout() {
                   <input
                     type="number"
                     name="Zip Code"
-                    className={"py-3 px-6 rounded-md w-1/2 border border-solid border-gray-400"}
+                    className={"py-3 px-6 rounded-md md:w-1/2 w-full border border-solid border-gray-400"}
                     placeholder="Zip Code"
                   />
                 </div>
                 <div className={"flex justify-between items-center mt-6"}>
                   <button
                     type="submit"
-                    className={"py-3 px-6 rounded-md w-1/2 bg-primary text-white"}
+                    className={"py-3 px-6 rounded-md w-1/2 bg-primary text-white md:text-base text-sm"}
                     style={{ backgroundColor: "#000033" }}
                   >
                     Save and Continue
                   </button>
-                  <div className={"flex items-center justify-between"}>
+                  <div className={"flex items-center space-x-2"}>
                     <input type="checkbox" className={checkout.checkbox} />
                     <label>Set as default</label>
                   </div>
@@ -182,7 +182,7 @@ export default function Checkout() {
             <div className={"py-4 px-4 mt-8 border-0 border-solid bg-white rounded-md font-bold"}>Shopping Summary (4)</div>
           </div>
 
-          <div className={"w-[35%] py-0 px-6"}>
+          <div className={"w-full lg:w-1/3 md:w-1/2 lg:mt-0 py-0 lg:px-6 mt-6 px-0"}>
             <div className={"bg-white rounded-t-lg shadow-sm"}>
               <div className={checkout.order}>
                 <div className={"font-bold font text-lg pb-2.5 pl-5 pt-5 ml-0.5"}>Order Summary</div>
