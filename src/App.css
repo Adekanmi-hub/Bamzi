@@ -1,0 +1,58 @@
+.bgcolors {
+  background-color: #e9f0ff;
+}
+.bg-primary {
+  background-color: #000032;
+}
+.primaryBtn {
+  background-color: #000033;
+}
+.primary2Btn {
+  background-color: #fdd25a;
+}
+.primaryBtntext {
+  color: #000033;
+}
+.primary2Btntext {
+  color: #fdd25a;
+}
+.footerbg {
+  background-color: #303030;
+}
+
+.feature-images {
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  border: 6px solid #e7d08c;
+  border-radius: 50%;
+  width: 100%;
+  height: 65%;
+  padding: 10px;
+}
+
+.flex-image {
+  background-image: url("./assets/Shapes.png");
+  background-size: cover; 
+}
+
+.left-image {
+  background-image: url("./assets/style.png");
+  background-repeat: no-repeat;
+  background-attachment: sticky;
+  background-position: left center;
+}
+
+.rounded-div {
+  border: 2px solid yellow;
+  border-radius: 70px;
+  width: auto;
+  height: fit-content;
+}
+
+.bg-primary {
+  background-color: #000033;
+}
+
+.bodyGray {
+  background-color: #F9F9F9;
+}
