@@ -1,8 +1,7 @@
 import React, { useState } from "react"
-import { FiMenu } from "react-icons/fi"
 import styles from "../styles/prelaunch.module.css"
-import { Link } from "react-router-dom"
 import axios from "axios"
+import Header from "../components/header"
 
 export default function Prelaunch() {
   const url = "http://localhost:3030/bamzi/reservation"
@@ -43,30 +42,14 @@ export default function Prelaunch() {
   return (
     <div className="font font-poppins ">
       <div className={"w-full my-0 mx-auto bg-bluelight min-h-screen"}>
-        <div
-          className={
-            "flex justify-between items-center w-full my-0 mx-auto py-3 md:px-16 px-6"
-          }
-        >
-          <Link to="/">
-            <img src={require("../assets/BAMZI.png")} width={"60"} />
-          </Link>
-          <div>
-            <ul className={"lg:flex flex-row hidden list-none"}>
-              <li>
-                <a className={"text-#000033 font-bold no-underline"} href="#">
-                  Contact Us
-                </a>
-              </li>
-              <li>
-                <a className={"text-#000033 font-bold no-underline"} href="#">
-                  Features
-                </a>
-              </li>
-            </ul>
-            <FiMenu size={24} className="lg:hidden block" />
+        <div className={'flex  items-center justify-between  md:pr-6 lg:pr-24 pr-4 lg:py-2 "'}>
+          <Header bg />
+          <div className={'flex font-bold space-x-4 text-lg'}>
+            <div>Contact Us</div>
+            <div>Features</div>
           </div>
         </div>
+        
 
         <div
           className={

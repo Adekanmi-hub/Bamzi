@@ -22,7 +22,7 @@ export default function SellersStore() {
 
   return (
     <div className="font-poppins bg-store bg-repeat">
-      <Header />
+      <Header items />
       <div className="w-full h-80 py-6 bg-storeHeader bg-cover flex items-end relative">
         <div className="flex md:flex-row flex-col md:space-x-4 space-y-4 md:px-24 px-6 md:items-center">
           <div className="md:w-48 md:h-36 w-32 h-24 ">

@@ -1,10 +1,10 @@
-import Header from "../components/pages/Header";
+import Header from "../components/header";
 import RightComponents from "../components/pages/RightComponents";
 import LeftComponents from "../components/pages/LeftComponents";
 const ShoppingCart = () => {
     return ( 
         <div className="font-poppins">
-            <Header />
+            <Header items />
             <div className="lg:flex my-16">
             <LeftComponents />
             <RightComponents />

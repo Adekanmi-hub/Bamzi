@@ -21,7 +21,7 @@ export default function Orders() {
 
   return (
     <div className="font-poppins min-h-screen bg-gray-50">
-      <Header />
+      <Header items />
 
       <div className="flex lg:px-16 lg:py-12 md:px-8 md:py-6">
         <div className="bg-gray-100 lg:w-3/12 py-16 rounded-xl shadow md:flex hidden flex-col">

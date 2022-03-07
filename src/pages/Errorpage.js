@@ -1,17 +1,12 @@
 import React from "react"
-import { Link } from "react-router-dom"
 import { IoIosWarning } from "react-icons/io"
+import Header from "../components/header"
 
 export default function Errorpage() {
   return (
     <div>
       <div className={"w-full my-0 mx-auto h-screen bg-bluelight"}>
-        <div className={"lg:py-5 py-0 lg:px-12 sm:px-6 px-2"}>
-          <Link to="/">
-            <img src={require("../assets/BAMZI.png")} width={"60"} />
-          </Link>
-        </div>
-
+        <Header />
         <div className={"flex lg:flex-row flex-col my-10 mx-auto lg:py-12 lg:px-20 sm:py-2 py-0 sm:px-6 px-0 justify-between items-center sm:mt-0 mt-16"}>
           <div className={"lg:w-1/2 w-full lg:pl-16 pl-0 bg-contain bg-left bg-no-repeat lg:bg-errorbg bg-none"}> 
             <div>

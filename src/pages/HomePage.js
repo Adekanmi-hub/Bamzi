@@ -1,5 +1,5 @@
 import React from 'react'
-import NavBar from "../components/pages/NavBar";
+import Header from "../components/header";
 import Section from "../components/pages/Section";
 import CarouselSlider from "../components/pages/CarouselSlider";
 import Section2 from "../components/pages/Section2";
@@ -11,7 +11,7 @@ const HomePage = () => {
   return (
     <div>
       <div className="bg-bgcolors">
-        <NavBar />
+        <Header items pri sec bg />
         <Section />
         <CarouselSlider />
       </div>

@@ -82,7 +82,7 @@ export default function ProductDetails() {
 
   return (
     <div className="font-poppins">
-      <Header />
+      <Header items />
       <div className="container py-6 px-8 lg:px-16">
         {products.map(product => (
           <div key={product._id}>

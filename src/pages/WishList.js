@@ -1,11 +1,11 @@
-import Header from "../components/pages/Header";
+import Header from "../components/header";
 import LeftCompo from "../components/pages/LeftCompo";
 import RightCompo from "../components/pages/RightCompo";
 
 const WishList = () => {
   return (
     <div>
-      <Header />
+      <Header items />
       <div className="lg:flex bodyGray">
         <LeftCompo />
         <RightCompo />

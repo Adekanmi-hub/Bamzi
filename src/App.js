@@ -24,24 +24,24 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="product-details" element={<ProductDetails />} />
-        <Route path="sellers-board" element={<SellersBoard />} />
-        <Route path="sellers-store" element={<SellersStore />} />
-        <Route path="Home-Page" element={<HomePage />} />
-        <Route path="Shopping-Cart" element={<ShoppingCart />} />
-        <Route path="Wish-List" element={<WishList />} />
-        <Route path="reset-password" element={<ResetPassword />} />
-        <Route path="sales-page" element={<SalesPage />} />
-        <Route path="customise-shop" element={<CustomiseShop />} />
-        <Route path="orders" element={<Orders />} />
-        <Route path="prelaunch" element={<Prelaunch />} />
-        <Route path="checkout" element={<Checkout />} />
-        <Route path="errorpage" element={<Errorpage />} />
-        <Route path="buyeraccount" element={<Buyeraccount />} />   
-        <Route path="sale-History" element={<SaleHistory />} />
-        <Route path="sales-page" element={<SalesPage />} />
-        <Route path="marketing" element={<Marketing />} />
-        <Route path="sellers" element={<Sellers />} />
+        <Route path="/product-details" element={<ProductDetails />} />
+        <Route path="/sellers-board" element={<SellersBoard />} />
+        <Route path="/sellers-store" element={<SellersStore />} />
+        <Route path="/Home-Page" element={<HomePage />} />
+        <Route path="/Shopping-Cart" element={<ShoppingCart />} />
+        <Route path="/wishlist" element={<WishList />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
+        <Route path="/sales-page" element={<SalesPage />} />
+        <Route path="/customise-shop" element={<CustomiseShop />} />
+        <Route path="/orders" element={<Orders />} />
+        <Route path="/prelaunch" element={<Prelaunch />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/buyeraccount" element={<Buyeraccount />} />   
+        <Route path="/sale-History" element={<SaleHistory />} />
+        <Route path="/sales-page" element={<SalesPage />} />
+        <Route path="/marketing" element={<Marketing />} />
+        <Route path="/sellers" element={<Sellers />} />
+        <Route path="/*" element={<Errorpage />} />
       </Routes>
     </BrowserRouter>
   )
