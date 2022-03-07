@@ -8,6 +8,8 @@ module.exports = {
         darkGray: "rgba(48, 48, 48, 255)",
         lightPurple: "#d772fb",
         lightBrown: "#ff9cb1",
+        bgcolors: "#e9f0ff",
+        footerbg: "#303030",
         skyBlue: "#e9f0ff",
       },
       fontFamily: {
