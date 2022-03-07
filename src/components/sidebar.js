@@ -105,10 +105,21 @@ const Sidebar = ({ showSidebar, bgLarge, page }) => {
         <span className="cursor-pointer py-0.5 px-2 flex items-center">
           <FiUser className="mr-2" /> Account
         </span>
-        <span className="cursor-pointer py-0.5 px-2 flex items-center">
-          <FiBox className="mr-2" />
-          Customize Shop
-        </span>
+
+        <Link to="/customise-shop">
+          {page === "customise-shop" ? (
+            <span className="bg-primary text-white w-full border-none rounded-full cursor-pointer py-0.5 px-2 flex items-center">
+              <FiBox className="mr-2" />
+              Customize Shop
+            </span>
+          ) : (
+            <span className="cursor-pointer py-0.5 px-2 flex items-center">
+              <FiBox className="mr-2" />
+              Customize Shop
+            </span>
+          )}
+        </Link>
+
         <span className="cursor-pointer py-0.5 px-2 flex items-center">
           <FiHelpCircle className="mr-2" /> Help
         </span>

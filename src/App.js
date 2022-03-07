@@ -3,6 +3,7 @@ import ProductDetails from "./pages/productDetails"
 import SellersBoard from "./pages/sellersBoard"
 import SellersStore from "./pages/sellersStore"
 import SalesPage from "./pages/SalesPage"
+import CustomiseShop from "./pages/CustomiseShop"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import HomePage from "./pages/HomePage"
 import ShoppingCart from "./pages/ShoppingCart"
@@ -23,6 +24,7 @@ export default function App() {
         <Route path="Wish-List" element={<WishList />} />
         <Route path="reset-password" element={<ResetPassword />} />
         <Route path="sales-page" element={<SalesPage />} />
+        <Route path="customise-shop" element={<CustomiseShop />} />
       </Routes>
     </BrowserRouter>
   )
