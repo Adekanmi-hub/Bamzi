@@ -2,6 +2,7 @@ import React from 'react'
 import ProductDetails from "./pages/productDetails"
 import SellersBoard from "./pages/sellersBoard"
 import SellersStore from "./pages/sellersStore"
+import Orders from "./pages/Orders"
 import SalesPage from "./pages/SalesPage"
 import CustomiseShop from "./pages/CustomiseShop"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
@@ -25,6 +26,7 @@ export default function App() {
         <Route path="reset-password" element={<ResetPassword />} />
         <Route path="sales-page" element={<SalesPage />} />
         <Route path="customise-shop" element={<CustomiseShop />} />
+        <Route path="orders" element={<Orders />} />
       </Routes>
     </BrowserRouter>
   )
