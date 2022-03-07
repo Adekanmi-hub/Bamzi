@@ -10,6 +10,7 @@ module.exports = {
         lightBrown: "#ff9cb1",
         bgcolors: "#e9f0ff",
         footerbg: "#303030",
+        skyBlue: "#e9f0ff",
       },
       fontFamily: {
         poppins: "Poppins",
@@ -18,7 +19,8 @@ module.exports = {
         seller: "url(../assets/seller-bg.png)",
         drawer: "url(../assets/bg-drawer-2.png)",
         store: "url(../assets/bg-seller-store.png)",
-        storeHeader: "url(../assets/bg-store-header.png)"
+        storeHeader: "url(../assets/bg-store-header.png)",
+        exclusion: "url(../assets/exclusion.png)",
       }
     },
   },

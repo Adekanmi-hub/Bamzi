@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import HomePage from "./pages/HomePage"
 import ShoppingCart from "./pages/ShoppingCart"
 import WishList from "./pages/WishList"
+import ResetPassword from "./pages/resetPassword"
 
 
 export default function App() {
@@ -19,7 +20,7 @@ export default function App() {
         <Route path="Home-Page" element={<HomePage />} />
         <Route path="Shopping-Cart" element={<ShoppingCart />} />
         <Route path="Wish-List" element={<WishList />} />
-        
+        <Route path="reset-password" element={<ResetPassword />} />
       </Routes>
     </BrowserRouter>
   )

@@ -41,19 +41,25 @@ export default function ProductDetails() {
       reviews: [
         {
           name: "John Barnes",
+          avatar: require("../assets/avatar-1.jpg"),
           content: "I'm happy with the product.",
+          date: "13/02/2021",
           rating: 4,
         },
         {
           name: "David Stone",
+          avatar: require("../assets/avatar-1.jpg"),
           content:
             "I've been using this product for a while now and it hasn't given me any issues.",
+          date: "13/02/2021",
           rating: 3,
         },
         {
           name: "Mira Long",
+          avatar: require("../assets/avatar-1.jpg"),
           content:
             "Quality product. I recommend this for any lover of this brand.",
+          date: "13/02/2021",
           rating: 5,
         },
       ],
