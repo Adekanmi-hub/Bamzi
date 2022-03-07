@@ -84,7 +84,7 @@ const Sidebar = ({ showSidebar, bgLarge, page }) => {
               className={`${bgLarge
                 ? "lg:bg-secondary lg:text-primary"
                 : "lg:bg-primary lg:text-white"
-                } cursor-pointer bg-primary text-white w-full border-none rounded-full py-0.5 px-2 flex items-center ${extrastyles}`}
+                } cursor-pointer bg-primary text-white w-full border-none rounded-full py-0.5 px-2 flex items-center`}
             >
               <FiBox className="mr-2" />
               All Products

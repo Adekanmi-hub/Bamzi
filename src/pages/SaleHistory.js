@@ -71,7 +71,7 @@ export default function SaleHistory() {
               Price
             </span>
             <span className="text-center">Status</span>
-            <span className="md:w-2/12 w-2/6 pl-6 text-center">Buyer's Info</span>
+            <span className="md:w-2/12 w-2/6 pl-6 text-center">Buyer&apos;s Info</span>
             <span className="md:w-1/12 w-3/12 text-center">QTY</span>
             <span className="w-2/12 text-center hidden xl:block">Date</span>
           </div>

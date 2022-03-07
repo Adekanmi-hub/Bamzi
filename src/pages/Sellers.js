@@ -89,7 +89,7 @@ export default function Sellers() {
           </div>
         </div>
         <div
-          classname={styles.all}
+          className={styles.all}
           style={{
             display: "flex",
             justifyContent: "space-between",
@@ -99,11 +99,11 @@ export default function Sellers() {
           <div className={styles.latest}>
             <h6>Latest Sales(28)</h6>
             <div
-              classname={styles.sound}
+              className={styles.sound}
               style={{ display: "flex", marginTop: "20px" }}
             >
               <div
-                classname={styles.next}
+                className={styles.next}
                 style={{
                   width: "64px",
                   height: "64px",
@@ -116,7 +116,7 @@ export default function Sellers() {
                 <img src={require("../assets/iphone.png")} alt="" />
               </div>
               <div
-                classname={styles.iphones}
+                className={styles.iphones}
                 style={{
                   marginLeft: "20px",
                   whiteSpace: "nowrap",
@@ -125,7 +125,7 @@ export default function Sellers() {
               >
                 <p>iphone X 6 GB Ram</p>
                 <span
-                  classname={styles.newQty}
+                  className={styles.newQty}
                   style={{
                     display: "flex",
                   }}
@@ -145,17 +145,17 @@ export default function Sellers() {
                 </span>
                 <p style={{ color: "yellow", marginTop: "5px" }}>$1500</p>
               </div>
-              <div classname={styles.time} style={{ whiteSpace: "nowrap" }}>
+              <div className={styles.time} style={{ whiteSpace: "nowrap" }}>
                 <p>30min ago</p>
               </div>
             </div>
 
             <div
-              classname={styles.phones}
+              className={styles.phones}
               style={{ display: "flex", marginTop: "20px" }}
             >
               <div
-                classname={styles.phone2}
+                className={styles.phone2}
                 style={{
                   width: "64px",
                   height: "64px",
@@ -167,7 +167,7 @@ export default function Sellers() {
                 <img src={require("../assets/iphone.png")} alt="" />
               </div>
               <div
-                classname={styles.newPhone}
+                className={styles.newPhone}
                 style={{
                   marginLeft: "20px",
                   whiteSpace: "nowrap",
@@ -175,7 +175,7 @@ export default function Sellers() {
               >
                 <p>iwatch X + free pouch and</p>
                 <p>Extra case</p>
-                <span classname={styles.newQtys} style={{ display: "flex" }}>
+                <span className={styles.newQtys} style={{ display: "flex" }}>
                   <p style={{ marginRight: "20px", fontSize: "1.2rem" }}>QTY</p>
                   <p
                     style={{
@@ -192,7 +192,7 @@ export default function Sellers() {
                 <p style={{ color: "yellow" }}>$1500</p>
               </div>
               <div
-                classname={styles.hour}
+                className={styles.hour}
                 style={{ marginLeft: "20px", whiteSpace: "nowrap" }}
               >
                 <p>2 hours</p>
@@ -212,7 +212,7 @@ export default function Sellers() {
             }}
           >
             <div
-              classname={styles.errorOrder}
+              className={styles.errorOrder}
               style={{
                 backgroundColor: "#fdd25a",
                 marginRight: "20px",
@@ -250,7 +250,7 @@ export default function Sellers() {
               </p>
             </div>
             <div
-              classname={styles.Congratulations}
+              className={styles.Congratulations}
               style={{
                 backgroundColor: "grey",
                 borderRadius: "0.5rem",
@@ -261,7 +261,7 @@ export default function Sellers() {
               <p style={{ fontSize: "0.75rem" }}>Congratulations John!</p>
               <p style={{ fontSize: "0.6rem" }}>Best Seller of the month</p>
               <h2 style={{ fontSize: "1.25rem" }}>$89k</h2>
-              <div classname={styles.john} style={{ fontSize: "0.6rem" }}>
+              <div className={styles.john} style={{ fontSize: "0.6rem" }}>
                 <p>You have done 57% more sale today</p>
               </div>
               <button id={styles.btn1}>View Sales</button>
@@ -269,7 +269,7 @@ export default function Sellers() {
           </div>
         </div>
         <div
-          classname={styles.newLatest}
+          className={styles.newLatest}
           style={{
             display: "flex",
             flexDirection: "row",
@@ -277,7 +277,7 @@ export default function Sellers() {
           }}
         >
           <div
-            classname={styles.chart}
+            className={styles.chart}
             style={{
               backgroundColor: "white",
               width: "60%",
@@ -313,7 +313,7 @@ export default function Sellers() {
             />
           </div>
           <div
-            classname={styles.latestTicket}
+            className={styles.latestTicket}
             style={{
               backgroundColor: "white",
               width: "40%",

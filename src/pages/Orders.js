@@ -1,14 +1,11 @@
 import React, { useState } from "react"
 import {
-  FaCalendarAlt,
-  FaChevronDown,
   FaChevronLeft,
   FaCreditCard,
   FaShoppingBag,
   FaTruck,
   FaUser,
 } from "react-icons/fa"
-import { FiGrid } from "react-icons/fi"
 import Header from "../components/header"
 import OrderItem from "../components/OrderItem"
 import { orders } from "../utils/data"

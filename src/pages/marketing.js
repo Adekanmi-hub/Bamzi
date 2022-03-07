@@ -49,9 +49,7 @@ export default function Marketing() {
                 </h1>
 
                 <p className="text-gray-600 text-xs">
-                  Advertise your products to people who have displayed interest
-                  in similar products. Launch an automated ad campaign in 5
-                  minutes right from store's dashboard
+                  Advertise your products to people who have displayed interest in similar products. Launch an automated ad campaign in 5 minutes right from store&apos;s dashboard
                 </p>
               </div>
 
@@ -105,10 +103,7 @@ export default function Marketing() {
                 </h1>
 
                 <p className="text-gray-600 text-xs">
-                  Automated marketing emails remind customers of the products
-                  they liked, offer related goods, personal discounts, and
-                  more.The emails are sent in response to customers' actions and
-                  timely encourage them to come back and buy.
+                  Automated marketing emails remind customers of the products they liked, offer related goods, personal discounts, and more.The emails are sent in response to customers&apos; actions and timely encourage them to come back and buy.
                 </p>
               </div>
 

@@ -1,5 +1,4 @@
 import React from "react"
-import styles from "../styles/errorpage.module.css"
 import { Link } from "react-router-dom"
 import { IoIosWarning } from "react-icons/io"
 
