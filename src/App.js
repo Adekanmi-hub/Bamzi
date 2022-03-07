@@ -5,6 +5,12 @@ import SellersStore from "./pages/sellersStore"
 import Orders from "./pages/Orders"
 import SalesPage from "./pages/SalesPage"
 import CustomiseShop from "./pages/CustomiseShop"
+import Prelaunch from "./pages/Prelaunch"
+import Checkout from "./pages/Checkout"
+import Errorpage from "./pages/Errorpage"
+import Buyeraccount from "./pages/Buyeraccount"
+import SalesPage from "./pages/SalesPage"
+import Marketing from "./pages/marketing"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import HomePage from "./pages/HomePage"
 import ShoppingCart from "./pages/ShoppingCart"
@@ -27,6 +33,12 @@ export default function App() {
         <Route path="sales-page" element={<SalesPage />} />
         <Route path="customise-shop" element={<CustomiseShop />} />
         <Route path="orders" element={<Orders />} />
+        <Route path="prelaunch" element={<Prelaunch />} />
+        <Route path="checkout" element={<Checkout />} />
+        <Route path="errorpage" element={<Errorpage />} />
+        <Route path="buyeraccount" element={<Buyeraccount />} />
+        <Route path="sales-page" element={<SalesPage />} />
+        <Route path="marketing" element={<Marketing />} />
       </Routes>
     </BrowserRouter>
   )

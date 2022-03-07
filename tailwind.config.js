@@ -11,6 +11,16 @@ module.exports = {
         bgcolors: "#e9f0ff",
         footerbg: "#303030",
         skyBlue: "#e9f0ff",
+        bluelight: "#e9f0ff",
+        lightorange: "#fcd25a",
+        fadewhite: "#f9f8f8",
+        blueshade: "#141738",
+        lightgray: "#c0c2c5",
+        lightpink: "#eac2bf",
+        colorange: "#fed65f",
+        lightgrey: "#ececec",
+        green: "#3AA837",
+        
       },
       fontFamily: {
         poppins: "Poppins",
@@ -22,7 +32,8 @@ module.exports = {
         storeHeader: "url(../assets/bg-store-header.png)",
         shop: "url(../assets/bg-shop.jpg)",
         exclusion: "url(../assets/exclusion.png)",
-      }
+        errorbg: "url(../assets/Group-11551.png)",
+      },
     },
   },
 }
