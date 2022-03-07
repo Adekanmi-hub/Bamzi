@@ -11,6 +11,7 @@ import Errorpage from "./pages/Errorpage"
 import Buyeraccount from "./pages/Buyeraccount"
 import SalesPage from "./pages/SalesPage"
 import Marketing from "./pages/marketing"
+import Sellers from "./pages/Sellers"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import HomePage from "./pages/HomePage"
 import ShoppingCart from "./pages/ShoppingCart"
@@ -39,6 +40,7 @@ export default function App() {
         <Route path="buyeraccount" element={<Buyeraccount />} />
         <Route path="sales-page" element={<SalesPage />} />
         <Route path="marketing" element={<Marketing />} />
+        <Route path="sellers" element={<Sellers />} />
       </Routes>
     </BrowserRouter>
   )
