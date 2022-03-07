@@ -1,24 +1,20 @@
 import React, { useState } from "react"
 import {
-  FiEyeOff,
   FiGrid,
-  FiBell,
-  FiMail,
   FiChevronDown,
-  FiMenu,
   FiSearch,
   FiAlertCircle,
   FiEdit3,
   FiTrash2,
   FiFilter,
 } from "react-icons/fi"
-import { AiFillBank } from "react-icons/ai"
-import { FaStoreAlt } from "react-icons/fa"
+
 import { data } from "../utils/data"
 import Card from "../components/card"
 import Pagination from "../components/pagination"
 import Sidebar from "../components/sidebar"
 import Filter from "../components/filter"
+import SellersHeader from "../components/SellersHeader"
 
 export default function SellersBoard() {
   const [products, setProducts] = useState(data)
@@ -62,42 +58,15 @@ export default function SellersBoard() {
     setShowModal(false)
   }
 
-  
   return (
     <div className="font-poppins lg:grid lg:grid-cols-6 bg-cover bg-seller min-h-screen relative">
-      <Sidebar showSidebar={showSidebar} />
+      <Sidebar showSidebar={showSidebar} bgLarge page="sellers-board" />
 
       <div className="col-span-5 bg-gray-100 px-6 py-3 sm:px-16 sm:py-8">
-        {/**header */}
-        <div className="flex items-center justify-between px-2 py-1 bg-white rounded shadow">
-          <div className="flex items-center justify-between w-full lg:w-auto">
-            <span className="text-sm text-white w-40 bg-primary rounded-2xl items-center justify-center flex py-1 mr-3">
-              <AiFillBank className="mr-1" /> Account: $12,990
-            </span>
-            <div className="flex items-center">
-              <FiEyeOff className="mr-3" />
-              <FiBell className="mr-3" />
-              <FiMail className="mr-3" />
-              <div
-                className="lg:hidden cursor-pointer focus:bg-gray-200"
-                onClick={() => setShowSidebar(!showSidebar)}
-              >
-                <FiMenu />
-              </div>
-            </div>
-          </div>
-          <div className="hidden lg:flex items-center space-x-4">
-            <span className="flex items-center">
-              <FaStoreAlt className="mr-2" /> Evans Bex Electronics Store
-            </span>
-            <img
-              src={require("../assets/avatar-1.jpg")}
-              alt="avatar"
-              className="w-8 rounded-full"
-            />
-          </div>
-        </div>
-        {/**header */}
+        <SellersHeader
+          setShowSidebar={setShowSidebar}
+          showSidebar={showSidebar}
+        />
 
         <div className="sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
           <Filter

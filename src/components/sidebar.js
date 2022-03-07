@@ -10,22 +10,27 @@ import {
   FiUser,
   FiHelpCircle,
 } from "react-icons/fi"
+import { Link } from "react-router-dom"
 
-const Sidebar = ({ showSidebar }) => {
+const Sidebar = ({ showSidebar, bgLarge, page }) => {
   return (
     <div
-      className={`lg:w-auto lg:relative lg:translate-x-0 lg:col-span-1 lg:text-white lg:bg-none w-64 absolute inset-y-0 left-0 transform transition duration-200 ease-in-out flex flex-col bg-contain bg-drawer bg-fixed text-black  text-sm font-light px-4 py-8 space-y-8 ${
+      className={`lg:w-auto lg:relative lg:translate-x-0 lg:col-span-1 w-64 absolute inset-y-0 left-0 transform transition duration-200 ease-in-out flex flex-col bg-cover bg-drawer text-primary  text-sm font-light px-4 py-8 space-y-8 z-10 ${
         showSidebar
-          ? "translate-x-0 z-10 shadow-lg"
-          : "-translate-x-full z-0 shadow-none"
+          ? "translate-x-0 shadow-lg"
+          : "-translate-x-full shadow-none"
+      } ${
+        bgLarge ? "lg:bg-none lg:text-white" : "lg:bg-drawer lg:text-primary"
       }`}
     >
       <div className="flex justify-between items-center">
-        <img
-          src={require("../assets/BAMZI.png")}
-          alt="bamzi"
-          className="w-16"
-        />
+        <Link to="/">
+          <img
+            src={require("../assets/BAMZI.png")}
+            alt="bamzi"
+            className="w-16"
+          />
+        </Link>
         <img
           src={require("../assets/avatar-1.jpg")}
           alt="avatar"
@@ -49,13 +54,38 @@ const Sidebar = ({ showSidebar }) => {
       </div>
       <div className="flex flex-col space-y-2">
         <h3 className="font-semibold">PRODUCTS</h3>
-        <span className="cursor-pointer py-0.5 px-2 flex items-center">
-          <FiShoppingCart className="mr-2" /> Sales
-        </span>
-        <span className="cursor-pointer lg:bg-secondary lg:text-black bg-primary text-white w-full border-none rounded-full py-0.5 px-2 flex items-center">
-          <FiBox className="mr-2" />
-          All Products
-        </span>
+
+        <Link to="/sales-page">
+          {page === "sales-page" ? (
+            <span className="bg-primary text-white w-full border-none rounded-full cursor-pointer py-0.5 px-2 flex items-center">
+              <FiShoppingCart className="mr-2" /> Sales
+            </span>
+          ) : (
+            <span className="cursor-pointer py-0.5 px-2 flex items-center">
+              <FiShoppingCart className="mr-2" /> Sales
+            </span>
+          )}
+        </Link>
+
+        <Link to="/sellers-board">
+          {page === "sellers-board" ? (
+            <span
+              className={`${
+                bgLarge
+                  ? "lg:bg-secondary lg:text-primary"
+                  : "lg:bg-primary lg:text-white"
+              } cursor-pointer bg-primary text-white w-full border-none rounded-full py-0.5 px-2 flex items-center`}
+            >
+              <FiBox className="mr-2" />
+              All Products
+            </span>
+          ) : (
+            <span className="cursor-pointer py-0.5 px-2 flex items-center">
+              <FiBox className="mr-2" />
+              All Products
+            </span>
+          )}
+        </Link>
         <span className="cursor-pointer py-0.5 px-2 flex items-center">
           <FiGrid className="mr-2" />
           Categories
@@ -75,10 +105,21 @@ const Sidebar = ({ showSidebar }) => {
         <span className="cursor-pointer py-0.5 px-2 flex items-center">
           <FiUser className="mr-2" /> Account
         </span>
-        <span className="cursor-pointer py-0.5 px-2 flex items-center">
-          <FiBox className="mr-2" />
-          Customize Shop
-        </span>
+
+        <Link to="/customise-shop">
+          {page === "customise-shop" ? (
+            <span className="bg-primary text-white w-full border-none rounded-full cursor-pointer py-0.5 px-2 flex items-center">
+              <FiBox className="mr-2" />
+              Customize Shop
+            </span>
+          ) : (
+            <span className="cursor-pointer py-0.5 px-2 flex items-center">
+              <FiBox className="mr-2" />
+              Customize Shop
+            </span>
+          )}
+        </Link>
+
         <span className="cursor-pointer py-0.5 px-2 flex items-center">
           <FiHelpCircle className="mr-2" /> Help
         </span>

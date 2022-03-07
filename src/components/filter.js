@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState} from "react"
 import { FiStar, FiX } from "react-icons/fi"
 import Radio from "./radio"
 import CheckboxCategory from "./checkboxCategory"
