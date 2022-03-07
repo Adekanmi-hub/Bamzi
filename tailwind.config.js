@@ -17,7 +17,7 @@ module.exports = {
       },
       backgroundImage: {
         seller: "url(../assets/seller-bg.png)",
-        drawer: "url(../assets/bg-drawer-2.png)",
+        drawer: "url(../assets/bg-drawer.png)",
         store: "url(../assets/bg-seller-store.png)",
         storeHeader: "url(../assets/bg-store-header.png)",
         exclusion: "url(../assets/exclusion.png)",
