@@ -6,6 +6,8 @@ import Prelaunch from "./pages/Prelaunch"
 import Checkout from "./pages/Checkout"
 import Errorpage from "./pages/Errorpage"
 import Buyeraccount from "./pages/Buyeraccount"
+import SalesPage from "./pages/SalesPage"
+import Marketing from "./pages/marketing"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 export default function App() {
@@ -19,6 +21,8 @@ export default function App() {
         <Route path="checkout" element={<Checkout />} />
         <Route path="errorpage" element={<Errorpage />} />
         <Route path="buyeraccount" element={<Buyeraccount />} />
+        <Route path="sales-page" element={<SalesPage />} />
+        <Route path="marketing" element={<Marketing />} />
       </Routes>
     </BrowserRouter>
   )
