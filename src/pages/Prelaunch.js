@@ -42,14 +42,7 @@ export default function Prelaunch() {
   return (
     <div className="font font-poppins ">
       <div className={"w-full my-0 mx-auto bg-bluelight min-h-screen"}>
-        <div className={'flex  items-center justify-between  md:pr-6 lg:pr-24 pr-4 lg:py-2 "'}>
-          <Header bg />
-          <div className={'flex font-bold space-x-4 text-lg'}>
-            <div>Contact Us</div>
-            <div>Features</div>
-          </div>
-        </div>
-        
+        <Header secNav="prelaunch" bg />
 
         <div
           className={

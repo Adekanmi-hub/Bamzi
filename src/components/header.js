@@ -6,17 +6,14 @@ import {
   IoIosMenu,
   IoIosSearch,
 } from "react-icons/io"
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom"
 
-const Header = (props) => {
-
+const Header = ({ pryNav, secNav, bg }) => {
   const [isOpen, setIsOpen] = useState(false)
 
-
-
   return (
-    <nav className={`${props.bg ? 'bg-bgcolors' :'bg-white shadow-lg'}`}>
-      <div className="w-full md:px-6 lg:px-24 px-4 lg:py-2 ">
+    <nav className={`${bg ? "bg-bgcolors" : "bg-white shadow-lg"}`}>
+      <div className="w-full md:px-6 lg:px-24 px-4 ">
         <div className="flex w-full lg:justify-between">
           <div className="flex w-full justify-between lg:justify-start items-center">
             {/**Website Brand*/}
@@ -31,47 +28,61 @@ const Header = (props) => {
             </div>
 
             {/**menu */}
-            {!props.items ? '' :  
-            <div className="relative lg:hidden items-center flex justify-end">
-              <button className="w-6 h-6" onClick={() => setIsOpen(!isOpen)}>
-                {isOpen ? <IoIosClose size={24} /> : <IoIosMenu size={24} />}
-              </button>
+            {pryNav || secNav ? (
+              <div className="relative lg:hidden items-center flex justify-end">
+                <button className="w-6 h-6" onClick={() => setIsOpen(!isOpen)}>
+                  {isOpen ? <IoIosClose size={24} /> : <IoIosMenu size={24} />}
+                </button>
 
-              {isOpen   && (
-                <div className="origin-top-right absolute top-0 right-0 mt-8 w-32 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none z-50">
-                  <div className="py-1 text-sm text-gray-700 hover:bg-primary hover:text-white">
-                    <Link to="/buyeraccount" className="items-center px-4 py-2 ">
-                      My Account
-                    </Link>
+                {isOpen && (
+                  <div className="origin-top-right absolute top-0 right-0 mt-8 w-32 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none z-50">
+                    <div className="py-1 text-sm text-gray-700 hover:bg-primary hover:text-white">
+                      <Link
+                        to="/buyeraccount"
+                        className="items-center px-4 py-2 "
+                      >
+                        My Account
+                      </Link>
+                    </div>
+                    <div className="py-1 text-sm text-gray-700 hover:bg-primary hover:text-white">
+                      <Link
+                        to="/sellers-board"
+                        className="items-center px-4 py-2 "
+                      >
+                        Products
+                      </Link>
+                    </div>
+                    <div className="py-1 text-sm text-gray-700 hover:bg-primary hover:text-white">
+                      <Link
+                        to="/sellers-store"
+                        className="items-center px-4 py-2 "
+                      >
+                        Store
+                      </Link>
+                    </div>
+                    <div className="py-1 text-sm text-gray-700 hover:bg-primary hover:text-white">
+                      <Link to="/wishlist" className="items-center px-4 py-2 ">
+                        Wishlist
+                      </Link>
+                    </div>
+                    <div className="py-1 text-sm text-gray-700 hover:bg-primary hover:text-white">
+                      <Link
+                        to="/Shopping-Cart"
+                        className="items-center px-4 py-2 "
+                      >
+                        Cart
+                      </Link>
+                    </div>
                   </div>
-                  <div className="py-1 text-sm text-gray-700 hover:bg-primary hover:text-white">
-                    <Link to="/sellers-board" className="items-center px-4 py-2 ">
-                      Products
-                    </Link>
-                  </div>
-                  <div className="py-1 text-sm text-gray-700 hover:bg-primary hover:text-white">
-                    <Link to="/sellers-store" className="items-center px-4 py-2 ">
-                      Store
-                    </Link>
-                  </div>
-                  <div className="py-1 text-sm text-gray-700 hover:bg-primary hover:text-white">
-                    <Link to="/wishlist" className="items-center px-4 py-2 ">
-                      Wishlist
-                    </Link>
-                  </div>
-                  <div className="py-1 text-sm text-gray-700 hover:bg-primary hover:text-white">
-                    <Link to="/Shopping-Cart" className="items-center px-4 py-2 ">
-                      Cart
-                    </Link>
-                  </div>
-                </div>
-              )}
-            </div>
-            }
+                )}
+              </div>
+            ) : (
+              ""
+            )}
 
             {/**Primary Nav Items */}
 
-            {!props.items ? '' : props.pri ?
+            {pryNav === "auth" && (
               <div className="hidden lg:flex items-center py-4 ml-10 space-x-10">
                 <Link
                   to="/sellers-board"
@@ -98,7 +109,9 @@ const Header = (props) => {
                   Features
                 </a>
               </div>
-              :
+            )}
+
+            {pryNav === "user" && (
               <div className="hidden lg:flex items-center ml-10 space-x-2">
                 <Link
                   to="/sellers-board"
@@ -126,53 +139,74 @@ const Header = (props) => {
                   </div>
                 </form>
               </div>
-            }
-            
+            )}
           </div>
 
           {/**secondary nav items */}
-          {!props.items ? '' : props.sec ?
+          {secNav === "auth" && (
             <div className="hidden lg:flex items-center space-x-3">
-              <Link to="/Shopping-Cart" className="flex text-primary hover:text-gray-400 font-bold">
+              <Link
+                to="/Shopping-Cart"
+                className="flex text-primary hover:text-gray-400 font-bold"
+              >
                 <span className="mr-1">Cart</span>
                 <IoIosCart className="w-5 h-5" />
               </Link>
               <Link to="/login" className="flex hover:text-gray-400 font-bold">
                 <span className="mr-1 border py-1 px-3 rounded-md border-yellow-500">
                   Login
-              </span>
+                </span>
               </Link>
             </div>
-            :
+          )}
+
+          {secNav === "prelaunch" && (
+            <div className="hidden lg:flex items-center space-x-3">
+              <Link
+                to=""
+                className="flex text-primary hover:text-gray-400 font-semibold p-0"
+              >
+                <span className="mr-1">Contact</span>
+                <span className="">Us</span>
+              </Link>
+              <Link to="" className="p-0">
+                <span className="text-primary hover:text-gray-400 font-semibold">
+                  Features
+                </span>
+              </Link>
+            </div>
+          )}
+
+          {secNav === "user" && (
             <div className="hidden lg:flex items-center">
-              <a
-                href="/wishlist"
+              <Link
+                to="/wishlist"
                 className="flex text-primary hover:text-gray-400 font-semibold"
               >
                 <span className="mr-1">Wishlist</span>
                 <IoIosHeartEmpty className="w-5 h-5" />
-              </a>
-              <a
-                href="/Shopping-Cart"
+              </Link>
+              <Link
+                to="/shopping-cart"
                 className="flex text-primary hover:text-gray-400 font-semibold"
               >
                 <span className="mr-1">Cart</span>
                 <IoIosCart className="w-5 h-5" />
-              </a>
+              </Link>
 
-              <Link to="/buyeraccount">
+              <Link to="/my-account">
                 <img
                   src={require("../assets/avatar-0.jpg")}
                   alt=""
-                  className="rounded-full shadow-sm w-40  object-contain aspect-square"
+                  className="rounded-full shadow-sm w-36  object-contain aspect-square"
                 />
               </Link>
             </div>
-          }
+          )}
         </div>
       </div>
     </nav>
   )
 }
 
-export default Header;
+export default Header

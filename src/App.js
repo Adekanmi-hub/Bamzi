@@ -1,4 +1,5 @@
-import React from 'react'
+import React from "react"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import ProductDetails from "./pages/productDetails"
 import SellersBoard from "./pages/sellersBoard"
 import SellersStore from "./pages/sellersStore"
@@ -12,12 +13,10 @@ import Errorpage from "./pages/Errorpage"
 import Buyeraccount from "./pages/Buyeraccount"
 import Marketing from "./pages/marketing"
 import Sellers from "./pages/Sellers"
-import { BrowserRouter, Routes, Route } from "react-router-dom"
 import HomePage from "./pages/HomePage"
 import ShoppingCart from "./pages/ShoppingCart"
 import WishList from "./pages/WishList"
 import ResetPassword from "./pages/resetPassword"
-
 
 export default function App() {
   return (
@@ -27,8 +26,7 @@ export default function App() {
         <Route path="/product-details" element={<ProductDetails />} />
         <Route path="/sellers-board" element={<SellersBoard />} />
         <Route path="/sellers-store" element={<SellersStore />} />
-        <Route path="/Home-Page" element={<HomePage />} />
-        <Route path="/Shopping-Cart" element={<ShoppingCart />} />
+        <Route path="/shopping-cart" element={<ShoppingCart />} />
         <Route path="/wishlist" element={<WishList />} />
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/sales-page" element={<SalesPage />} />
@@ -36,8 +34,8 @@ export default function App() {
         <Route path="/orders" element={<Orders />} />
         <Route path="/prelaunch" element={<Prelaunch />} />
         <Route path="/checkout" element={<Checkout />} />
-        <Route path="/buyeraccount" element={<Buyeraccount />} />   
-        <Route path="/sale-History" element={<SaleHistory />} />
+        <Route path="/my-account" element={<Buyeraccount />} />
+        <Route path="/sales-history" element={<SaleHistory />} />
         <Route path="/sales-page" element={<SalesPage />} />
         <Route path="/marketing" element={<Marketing />} />
         <Route path="/sellers" element={<Sellers />} />

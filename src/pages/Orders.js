@@ -1,13 +1,8 @@
 import React, { useState } from "react"
-import {
-  FaChevronLeft,
-  FaCreditCard,
-  FaShoppingBag,
-  FaTruck,
-  FaUser,
-} from "react-icons/fa"
+import { FaChevronLeft } from "react-icons/fa"
 import Header from "../components/header"
 import OrderItem from "../components/OrderItem"
+import UserSidebar from "../components/userSidebar"
 import { orders } from "../utils/data"
 
 export default function Orders() {
@@ -21,35 +16,10 @@ export default function Orders() {
 
   return (
     <div className="font-poppins min-h-screen bg-gray-50">
-      <Header items />
+      <Header pryNav="user" secNav="user" />
 
       <div className="flex lg:px-16 lg:py-12 md:px-8 md:py-6">
-        <div className="bg-gray-100 lg:w-3/12 py-16 rounded-xl shadow md:flex hidden flex-col">
-          <span className="flex items-center space-x-2 py-2 px-4">
-            <FaUser className="text-gray-700" />
-            <p className="text-primary font-semibold lg:text-lg text-sm lg:block hidden">
-              Bamzi Account
-            </p>
-          </span>
-          <span className="flex items-center space-x-2 py-2 px-4 bg-gray-200 relative before:absolute before:left-0 before:h-6 before:w-1 before:bg-primary">
-            <FaShoppingBag className="text-gray-700" />
-            <p className="text-primary font-semibold lg:text-lg text-sm lg:block hidden">
-              Orders
-            </p>
-          </span>
-          <span className="flex items-center space-x-2 py-2 px-4">
-            <FaCreditCard className="text-gray-700" />
-            <p className="text-primary font-semibold lg:text-lg text-sm lg:block hidden">
-              Billings
-            </p>
-          </span>
-          <span className="flex items-center space-x-2 py-2 px-4">
-            <FaTruck className="text-gray-700" />
-            <p className="text-primary font-semibold lg:text-lg text-sm lg:block hidden">
-              Shipping Address
-            </p>
-          </span>
-        </div>
+        <UserSidebar page="orders" />
 
         <div className="bg-white lg:w-9/12 w-full lg:py-12 lg:px-16 md:py-6 md:px-8 py-3 px-4 space-y-8 md:rounded-r-xl shadow">
           <div className="flex items-center justify-between">

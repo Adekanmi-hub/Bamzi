@@ -14,7 +14,7 @@ export default function Sellers() {
 
   return (
     <div className={styles.mainContainer}>
-      <Sidebar showSidebar={showSidebar} />
+      <Sidebar showSidebar={showSidebar} page="dashboard" />
 
       <div className={styles.mainContent}>
         <SellersHeader

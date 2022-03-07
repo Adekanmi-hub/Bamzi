@@ -1,4 +1,4 @@
-import image3 from "../../assets/Mask.png";
+import image3 from "../assets/Mask.png"
 
 const Section = () => {
   return (
@@ -31,10 +31,8 @@ const Section = () => {
           />
         </div>
       </div>
-
-      
     </div>
-  );
-};
+  )
+}
 
-export default Section;
+export default Section

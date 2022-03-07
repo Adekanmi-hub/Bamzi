@@ -12,7 +12,7 @@ export default function SaleHistory() {
 
   return (
     <div className="font-poppins lg:grid lg:grid-cols-6 bg-cover bg-seller min-h-screen relative">
-      <Sidebar showSidebar={showSidebar} bgLarge page="sellers-board" />
+      <Sidebar showSidebar={showSidebar} page="sales-history" />
 
       <div className="col-span-5 bg-gray-100 px-6 py-3 sm:px-16 sm:py-8">
         <SellersHeader
@@ -46,7 +46,7 @@ export default function SaleHistory() {
 
           <div className="xl:w-1/2 lg:w-3/5 w-full lg:mt-0 pt-16 flex sm:flex-row flex-col sm:space-x-4 sm:space-y-0 space-y-4 sm:items-center items-start lg:justify-end justify-start">
             <div className="flex space-x-2 sm:-mt-8 items-start">
-            <span className="flex items-center space-x-8 p-2 bg-white rounded-md border-none shadow text-sm">
+              <span className="flex items-center space-x-8 p-2 bg-white rounded-md border-none shadow text-sm">
                 <p>Export</p> <FaChevronDown />
               </span>
               <span className="flex items-center space-x-8 p-2 bg-white rounded-md border-none shadow text-sm">
@@ -67,11 +67,11 @@ export default function SaleHistory() {
             <span className="xl:w-2/12 w-2/12 pl-8 ml-8 hidden sm:block">
               Transaction ID
             </span>
-            <span className="w-2/12 text-center hidden sm:block">
-              Price
-            </span>
+            <span className="w-2/12 text-center hidden sm:block">Price</span>
             <span className="text-center">Status</span>
-            <span className="md:w-2/12 w-2/6 pl-6 text-center">Buyer&apos;s Info</span>
+            <span className="md:w-2/12 w-2/6 pl-6 text-center">
+              Buyer&apos;s Info
+            </span>
             <span className="md:w-1/12 w-3/12 text-center">QTY</span>
             <span className="w-2/12 text-center hidden xl:block">Date</span>
           </div>

@@ -59,8 +59,8 @@ export default function SellersBoard() {
   }
 
   return (
-    <div className="font-poppins lg:grid lg:grid-cols-6 bg-cover bg-seller min-h-screen relative">
-      <Sidebar showSidebar={showSidebar} bgLarge page="sellers-board" />
+    <div className="font-poppins lg:grid lg:grid-cols-6 min-h-screen relative">
+      <Sidebar showSidebar={showSidebar} page="sellers-board" />
 
       <div className="col-span-5 bg-gray-100 px-6 py-3 sm:px-16 sm:py-8">
         <SellersHeader

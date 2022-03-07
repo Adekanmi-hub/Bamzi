@@ -1,11 +1,13 @@
-import React from "react";
+import React from "react"
 
 const LeftCompo = () => {
   return (
     <div className="lg:basis-2/3 px-8 py-10">
       <div className="bg-white border px-8 py-4 rounded-md">
         <div className="flex justify-between">
-          <div className="font-extrabold sm:text-md lg:text-xl">Wishlist (3)</div>
+          <div className="font-extrabold sm:text-md lg:text-xl">
+            Wishlist (3)
+          </div>
           <div className="flex item-center">
             <img
               src="https://img.icons8.com/ios/50/000000/delete--v1.png"
@@ -22,12 +24,14 @@ const LeftCompo = () => {
             <div className="flex justify-center items-center border w-32 h-32 ">
               <img
                 className="w-20 h-20"
-                src={require("../../assets/D1-image5.png")}
+                src={require("../assets/D1-image5.png")}
                 alt="deleteimage"
               />
             </div>
             <div className="font-bold px-3">
-              <div className="sm:text-md lg:text-lg text-gray-600">Sandra Smart Watch Waterproof IP65 Pedometer</div>
+              <div className="sm:text-md lg:text-lg text-gray-600">
+                Sandra Smart Watch Waterproof IP65 Pedometer
+              </div>
               <div className="text-yellow-400 pt-10">US $ 399</div>
             </div>
           </div>
@@ -40,7 +44,9 @@ const LeftCompo = () => {
               />
             </div>
             <div className="lg:px-12 lg:py-1 mt-10 bg-primary rounded-md">
-              <span className="text-white sm:text-sm lg:text-md">Add to Cart</span>
+              <span className="text-white sm:text-sm lg:text-md">
+                Add to Cart
+              </span>
             </div>
           </div>
         </div>
@@ -51,12 +57,14 @@ const LeftCompo = () => {
             <div className="flex justify-center items-center border w-32 h-32 ">
               <img
                 className="w-20 h-20"
-                src={require("../../assets/D6c-image4.png")}
+                src={require("../assets/D6c-image4.png")}
                 alt="producticon"
               />
             </div>
             <div className="font-bold px-3">
-              <div className="sm:text-md lg:text-lg text-gray-600">Sandra Smart Watch Waterproof IP65 Pedometer</div>
+              <div className="sm:text-md lg:text-lg text-gray-600">
+                Sandra Smart Watch Waterproof IP65 Pedometer
+              </div>
               <div className="text-yellow-400 pt-10">US $ 399</div>
             </div>
           </div>
@@ -69,7 +77,9 @@ const LeftCompo = () => {
               />
             </div>
             <div className="lg:px-12 lg:py-1 mt-10 bg-primary rounded-md">
-              <span className="text-white sm:text-sm lg:text-md">Add to Cart</span>
+              <span className="text-white sm:text-sm lg:text-md">
+                Add to Cart
+              </span>
             </div>
           </div>
         </div>
@@ -80,12 +90,14 @@ const LeftCompo = () => {
             <div className="flex justify-center items-center border w-32 h-32 ">
               <img
                 className="w-20 h-20"
-                src={require("../../assets/D6-image5.jpg")}
+                src={require("../assets/D6-image5.jpg")}
                 alt="product"
               />
             </div>
             <div className="font-bold px-3">
-              <div className="sm:text-md lg:text-lg text-gray-600">Sandra Smart Watch Waterproof IP65 Pedometer</div>
+              <div className="sm:text-md lg:text-lg text-gray-600">
+                Sandra Smart Watch Waterproof IP65 Pedometer
+              </div>
               <div className="text-yellow-400 pt-10">US $ 399</div>
             </div>
           </div>
@@ -98,13 +110,15 @@ const LeftCompo = () => {
               />
             </div>
             <div className="lg:px-12 lg:py-1 mt-10 bg-primary rounded-md">
-              <span className="text-white sm:text-sm lg:text-md">Add to Cart</span>
+              <span className="text-white sm:text-sm lg:text-md">
+                Add to Cart
+              </span>
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default LeftCompo;
+export default LeftCompo
