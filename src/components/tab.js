@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { FaStar } from "react-icons/fa"
-import { FiAward, FiAlertTriangle } from 'react-icons/fi'
+import { FiAward, FiAlertTriangle } from "react-icons/fi"
 
 const Tab = ({ product }) => {
   const [tab, setTab] = useState(0)
@@ -8,6 +8,28 @@ const Tab = ({ product }) => {
   const toggleTab = index => {
     setTab(index)
   }
+
+  let ratings = []
+  product.reviews.forEach((review) => { ratings.push(review.rating) })
+
+  let total = 0
+  for (let i = 0; i < ratings.length; i++) {
+    total += ratings[i]
+  }
+  const average = Math.floor(total / ratings.length)
+  
+
+  let starRating = []
+  for (var i = 1; i <= 5; i++) {
+    let icon = <FaStar className="text-secondary" />
+
+    if (i > average) {
+      icon = <FaStar className="text-gray-200" />
+    }
+
+    starRating.push(icon)
+  }
+  
 
   return (
     <div className="w-full my-5">
@@ -47,27 +69,22 @@ const Tab = ({ product }) => {
         </div>
 
         <div className={`${tab === 1 ? "block" : "hidden"} bg-gray-50 p-8`}>
-          <div className="flex justify-between">
-            <p className="font-semibold">{`Customer's Reviews (${product.reviews.length})`}</p>
-            <div className="flex space-x-1">
-              <FaStar className="text-secondary" />
-              <FaStar className="text-secondary" />
-              <FaStar className="text-secondary" />
-              <FaStar className="text-secondary" />
-              <FaStar className="text-secondary" />
+          <div className="flex items-center mb-6">
+            <p className="font-semibold lg:w-1/4">{`Customer's Reviews (${product.reviews.length})`}</p>
+            <div className="hidden lg:flex items-center space-x-4 w-1/4">
+              <div className="flex space-x-1">{starRating}</div>
+              <p className="text-lg font-semibold">{average}</p>
             </div>
-            <span className="flex space-x-2 text-green-500 items-center">
+            <span className="hidden lg:flex space-x-2 text-green-500 items-center w-1/4">
               <FiAward />
               <p>Verified Seller</p>
             </span>
-            <span className="flex space-x-2 items-center">
+            <span className="hidden lg:flex space-x-2 items-center w-1/4">
               <FiAlertTriangle />
               <p>Report Item</p>
             </span>
 
-            <div>
-              
-            </div>
+            <div></div>
           </div>
           {product.reviews.map((review, index) => {
             let stars = []
@@ -83,10 +100,25 @@ const Tab = ({ product }) => {
             }
 
             return (
-              <div key={index} className="px-2 py-4 space-y-3">
-                <div className="flex space-x-1">{stars}</div>
-                <p className="text-sm md:text-base ">{review.content}</p>
-                <p className="text-right text-gray-400 border-b border-b-gray-200 text-sm md:text-base">{`by ${review.name}`}</p>
+              <div
+                key={index}
+                className="px-2 py-6 flex flex-col-reverse lg:flex-row"
+              >
+                <div className="flex items-start space-x-2 lg:w-1/4 mt-2 lg:mt-0">
+                  <img
+                    src={review.avatar}
+                    className="w-12 aspect-square rounded-full object-contain"
+                    alt=""
+                  />
+                  <div className="space-y-1">
+                    <p className="text-sm">{review.name}</p>
+                    <p className="text-sm font-semibold">{review.date}</p>
+                  </div>
+                </div>
+                <div className="space-y-2 ">
+                  <div className="flex space-x-1">{stars}</div>
+                  <p className="text-sm md:text-base ">{review.content}</p>
+                </div>
               </div>
             )
           })}
