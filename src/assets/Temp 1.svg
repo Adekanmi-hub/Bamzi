@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1052" viewBox="0 0 1920 1052">
+  <defs>
+    <clipPath id="clip-Temp_1">
+      <rect width="1920" height="1052"/>
+    </clipPath>
+  </defs>
+  <g id="Temp_1" data-name="Temp 1" clip-path="url(#clip-Temp_1)">
+    <rect width="1920" height="1052" fill="#fff"/>
+    <path id="Path_22324" data-name="Path 22324" d="M0,0H1920V1052H0Z" fill="#e9f0ff"/>
+    <g id="Group_154" data-name="Group 154" transform="translate(-222.384 -470)">
+      <g id="button" transform="translate(400.384 628)">
+        <rect id="Rectangle_454" data-name="Rectangle 454" width="229.672" height="316.127" rx="10" fill="#fdd25a"/>
+      </g>
+      <g id="button-2" data-name="button" transform="translate(648.384 628)">
+        <rect id="Rectangle_454-2" data-name="Rectangle 454" width="229.672" height="316.127" rx="10" fill="#003"/>
+      </g>
+    </g>
+    <g id="Group_11587" data-name="Group 11587" transform="translate(-222.384 -470)">
+      <g id="button-3" data-name="button" transform="translate(400.384 628)">
+        <rect id="Rectangle_454-3" data-name="Rectangle 454" width="229.672" height="316.127" rx="10" fill="#fdd25a"/>
+      </g>
+      <g id="button-4" data-name="button" transform="translate(648.384 628)">
+        <rect id="Rectangle_454-4" data-name="Rectangle 454" width="229.672" height="316.127" rx="10" fill="#003"/>
+      </g>
+    </g>
+    <text id="Primary_Colors_" data-name="Primary Colors " transform="translate(178 503)" fill="#003" font-size="40" font-family="Poppins-Medium, Poppins" font-weight="500" letter-spacing="-0.007em"><tspan x="0" y="42">Primary Colors </tspan></text>
+    <text id="Hex_FDD25A" data-name="Hex
+ #FDD25A" transform="translate(178 254)" fill="#003" font-size="30" font-family="Poppins-Medium, Poppins" font-weight="500" letter-spacing="-0.007em"><tspan x="87.395" y="32">Hex</tspan><tspan x="40.565" y="129" xml:space="preserve"> #FDD25A</tspan></text>
+    <g id="button-5" data-name="button" transform="translate(799.361 127.075)">
+      <rect id="Rectangle_454-5" data-name="Rectangle 454" width="964" height="590" rx="10" transform="translate(-0.361 -0.075)" fill="#fff"/>
+    </g>
+    <text id="Poppins_" data-name="Poppins " transform="translate(883 288)" fill="#003" font-size="50" font-family="Poppins-Medium, Poppins" font-weight="500" letter-spacing="-0.007em"><tspan x="0" y="53">Poppins </tspan></text>
+    <text id="Poppins_2" data-name="Poppins " transform="translate(883 359)" fill="#003" font-size="70" font-family="Poppins-ExtraBold, Poppins" font-weight="800" letter-spacing="-0.007em"><tspan x="0" y="74">Poppins </tspan></text>
+    <text id="Poppins_3" data-name="Poppins " transform="translate(883 473)" fill="#003" font-size="40" font-family="Poppins-Light, Poppins" font-weight="300" letter-spacing="-0.007em"><tspan x="0" y="42">Poppins </tspan></text>
+    <g id="Group_11586" data-name="Group 11586" transform="translate(78 6)">
+      <text id="_70px" data-name="70px" transform="translate(1453 272)" fill="#003" font-size="70" font-family="Poppins-Medium, Poppins" font-weight="500" letter-spacing="-0.007em"><tspan x="0" y="74">70px</tspan></text>
+      <text id="_50px" data-name="50px" transform="translate(1450 350)" fill="#003" font-size="50" font-family="Poppins-Medium, Poppins" font-weight="500" letter-spacing="-0.007em"><tspan x="0" y="53">50px</tspan></text>
+      <g id="Group_11585" data-name="Group 11585" transform="translate(2 48)">
+        <text id="_30px" data-name="30px" transform="translate(1453 369)" fill="#003" font-size="30" font-family="Poppins-Medium, Poppins" font-weight="500" letter-spacing="-0.007em"><tspan x="0" y="32">30px</tspan></text>
+        <text id="_20px" data-name="20px" transform="translate(1453 416)" fill="#003" font-size="20" font-family="Poppins-Regular, Poppins" letter-spacing="-0.007em"><tspan x="0" y="21">20px</tspan></text>
+        <g id="Group_11584" data-name="Group 11584" transform="translate(0 -8)">
+          <g id="Group_11583" data-name="Group 11583">
+            <text id="_14px" data-name="14px" transform="translate(1453 458)" fill="#003" font-size="14" font-family="Poppins-Regular, Poppins" letter-spacing="-0.007em"><tspan x="0" y="15">14px</tspan></text>
+          </g>
+          <text id="_12px" data-name="12px" transform="translate(1453 489)" fill="#003" font-size="12" font-family="Poppins-Light, Poppins" font-weight="300" letter-spacing="-0.007em"><tspan x="0" y="13">12px</tspan></text>
+        </g>
+      </g>
+    </g>
+    <text id="Aa_Bb_Cc_Dd_Mm_Qq_" data-name="Aa    Bb    Cc    Dd    Mm     Qq  " transform="translate(883 560)" fill="#003" font-size="40" font-family="Poppins-Light, Poppins" font-weight="300" letter-spacing="-0.007em"><tspan x="0" y="42" xml:space="preserve">Aa    Bb    Cc    Dd    Mm     Qq  </tspan></text>
+    <rect id="Rectangle_598" data-name="Rectangle 598" width="355" height="71" rx="35.5" transform="translate(851 182)" fill="#e9f0ff"/>
+    <text id="Typography_" data-name="Typography " transform="translate(895 195)" fill="#003" font-size="30" font-family="Poppins-Regular, Poppins" letter-spacing="-0.007em"><tspan x="0" y="32">Typography </tspan></text>
+    <rect id="Rectangle_599" data-name="Rectangle 599" width="9" height="508" rx="4.5" transform="translate(1487 159)" fill="#e9f0ff"/>
+    <text id="Hex_000033" data-name="Hex
+ #000033" transform="translate(417 254)" fill="#fff" font-size="30" font-family="Poppins-Medium, Poppins" font-weight="500" letter-spacing="-0.007em"><tspan x="87.395" y="32">Hex</tspan><tspan x="41.975" y="129" xml:space="preserve"> #000033</tspan></text>
+  </g>
+</svg>
