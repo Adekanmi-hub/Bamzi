@@ -5,6 +5,7 @@ import SellersStore from "./pages/sellersStore"
 import Prelaunch from "./pages/Prelaunch"
 import Checkout from "./pages/Checkout"
 import Errorpage from "./pages/Errorpage"
+import Buyeraccount from "./pages/Buyeraccount"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="sellers-store" element={<SellersStore />} />
         <Route path="checkout" element={<Checkout />} />
         <Route path="errorpage" element={<Errorpage />} />
+        <Route path="buyeraccount" element={<Buyeraccount />} />
       </Routes>
     </BrowserRouter>
   )
