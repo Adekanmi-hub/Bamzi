@@ -13,15 +13,14 @@ import {
 import { Link } from "react-router-dom"
 
 const Sidebar = ({ showSidebar, bgLarge, page }) => {
+
   return (
     <div
-      className={`lg:w-auto lg:relative lg:translate-x-0 lg:col-span-1 w-64 absolute inset-y-0 left-0 transform transition duration-200 ease-in-out flex flex-col bg-cover bg-drawer text-primary  text-sm font-light px-4 py-8 space-y-8 z-10 ${
-        showSidebar
-          ? "translate-x-0 shadow-lg"
-          : "-translate-x-full shadow-none"
-      } ${
-        bgLarge ? "lg:bg-none lg:text-white" : "lg:bg-drawer lg:text-primary"
-      }`}
+      className={`lg:w-auto lg:relative lg:translate-x-0 lg:col-span-1 w-64 absolute inset-y-0 left-0 transform transition duration-200 ease-in-out flex flex-col bg-cover bg-drawer text-primary  text-sm font-light px-4 py-8 space-y-8 z-10 ${showSidebar
+        ? "translate-x-0 shadow-lg"
+        : "-translate-x-full shadow-none"
+        } ${bgLarge ? "lg:bg-none lg:text-white" : "lg:bg-drawer lg:text-primary"
+        }`}
     >
       <div className="flex justify-between items-center">
         <Link to="/">
@@ -60,6 +59,9 @@ const Sidebar = ({ showSidebar, bgLarge, page }) => {
             </span>
           )}
         </Link>
+        <span className="cursor-pointer py-0.5 px-2 flex items-center w-full hover:bg-gray-100 hover:text-black hover:border-none hover:rounded-full">
+          <FiCircle className="mr-4" /> Marketing
+        </span>
       </div>
       <div className="flex flex-col space-y-2">
         <h3 className="font-semibold">PRODUCTS</h3>
@@ -79,11 +81,10 @@ const Sidebar = ({ showSidebar, bgLarge, page }) => {
         <Link to="/sellers-board">
           {page === "sellers-board" ? (
             <span
-              className={`${
-                bgLarge
-                  ? "lg:bg-secondary lg:text-primary"
-                  : "lg:bg-primary lg:text-white"
-              } cursor-pointer bg-primary text-white w-full border-none rounded-full py-0.5 px-2 flex items-center`}
+              className={`${bgLarge
+                ? "lg:bg-secondary lg:text-primary"
+                : "lg:bg-primary lg:text-white"
+                } cursor-pointer bg-primary text-white w-full border-none rounded-full py-0.5 px-2 flex items-center ${extrastyles}`}
             >
               <FiBox className="mr-2" />
               All Products

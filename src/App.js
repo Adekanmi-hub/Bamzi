@@ -3,6 +3,8 @@ import ProductDetails from "./pages/productDetails"
 import SellersBoard from "./pages/sellersBoard"
 import SellersStore from "./pages/sellersStore"
 import Orders from "./pages/Orders"
+import React from "react"
+import SaleHistory from "./pages/SaleHistory"
 import SalesPage from "./pages/SalesPage"
 import CustomiseShop from "./pages/CustomiseShop"
 import Prelaunch from "./pages/Prelaunch"
@@ -37,7 +39,8 @@ export default function App() {
         <Route path="prelaunch" element={<Prelaunch />} />
         <Route path="checkout" element={<Checkout />} />
         <Route path="errorpage" element={<Errorpage />} />
-        <Route path="buyeraccount" element={<Buyeraccount />} />
+        <Route path="buyeraccount" element={<Buyeraccount />} />   
+        <Route path="sale-History" element={<SaleHistory />} />
         <Route path="sales-page" element={<SalesPage />} />
         <Route path="marketing" element={<Marketing />} />
         <Route path="sellers" element={<Sellers />} />
