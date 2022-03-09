@@ -1,7 +1,7 @@
-import image10 from '../../assets/D6-image2.jpg';
-import image11 from '../../assets/Card-1 Apple Watch.png';
-import image12 from '../../assets/Group 11523.png';
-import image13 from '../../assets/D1-image3.png';
+import image10 from '../assets/D6-image2.jpg';
+import image11 from '../assets/Card-1 Apple Watch.png';
+import image12 from '../assets/Group 11523.png';
+import image13 from '../assets/D1-image3.png';
 const FeaturedProducts = () => {
     return ( 
         <div className="px-28">

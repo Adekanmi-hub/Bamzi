@@ -230,10 +230,89 @@ export const orders = [
     },
     statusMsg: "Shipping in Progress",
     date: "3/12/2020",
-  }
- ]
+  },
+]
 
 export const salesData = [
+  {
+    _id: 1,
+    product: {
+      img: require("../assets/apple-watch-img01.png"),
+      title: "iPhone wrist band + free Pouch",
+    },
+    options: {
+      color: "red",
+      size: "XL",
+    },
+    shipping: {
+      customer: "Omolola Daniel",
+      address: "",
+    },
+    qty: 4,
+    price: 150,
+    status: "Pending",
+    date: "3/12/2020",
+  },
+  {
+    _id: 2,
+    product: {
+      img: require("../assets/apple-phone-img01.png"),
+      title: "iPhone X 6GB RAM",
+    },
+    options: {
+      ram: 6,
+      size: "XL",
+    },
+    shipping: {
+      customer: "Sarah Adebayo",
+      address: "",
+    },
+    qty: 1,
+    price: 1500,
+    status: "Pending",
+    date: "3/12/2020",
+  },
+  {
+    _id: 3,
+    product: {
+      img: require("../assets/apple-watch-img02.png"),
+      title: "iPhone wrist band + free Pouch",
+    },
+    options: {
+      color: "blue",
+      size: "XL",
+    },
+    shipping: {
+      customer: "Omolola Daniel",
+      address: "",
+    },
+    qty: 4,
+    price: 150,
+    status: "Pending",
+    date: "3/12/2020",
+  },
+  {
+    _id: 4,
+    product: {
+      img: require("../assets/apple-watch-img03.png"),
+      title: "iPhone wrist band + free Pouch",
+    },
+    options: {
+      color: "red",
+      size: "XL",
+    },
+    shipping: {
+      customer: "Omolola Daniel",
+      address: "",
+    },
+    qty: 4,
+    price: 150,
+    status: "Error",
+    date: "3/12/2020",
+  },
+]
+
+export const salesHistoryData = [
   {
     _id: 1,
     product: {
@@ -261,7 +340,6 @@ export const salesData = [
   {
     _id: 3,
     product: {
-      
       title: "Wrist watch and free pouch + warranty",
     },
     transaction_id: "S230Pn00956881",
@@ -274,7 +352,6 @@ export const salesData = [
   {
     _id: 4,
     product: {
-
       title: "Wrist watch and free pouch + warranty",
     },
     transaction_id: "S230Pn00956881",
@@ -283,5 +360,46 @@ export const salesData = [
     buyers_info: "Omolola Daniel",
     qty: 4,
     date: "3/12/2020",
+  },
+]
+
+export const tickets = [
+  {
+    _id: 1,
+    number: 4231852,
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    _id: 2,
+    number: 5641310,
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+  {
+    _id: 3,
+    number: 856086,
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  },
+]
+
+export const latestSales = [
+  {
+    _id: 1,
+    product: {
+      name: "iPhone X 6GB RAM",
+      image: require("../assets/apple-phone-img01.png"),
+      quantity: 6,
+      price: 1500,
+    },
+    timeOfSale: "30mins ago",
+  },
+  {
+    _id: 2,
+    product: {
+      name: "iWatch X + Free Pouch and Extra Case",
+      image: require("../assets/apple-watch-img01.png"),
+      quantity: 1,
+      price: 1500,
+    },
+    timeOfSale: "2hrs ago",
   },
 ]

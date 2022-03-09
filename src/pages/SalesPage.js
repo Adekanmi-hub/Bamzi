@@ -65,16 +65,16 @@ export default function SalesPage() {
                   size={12}
                   className=" absolute top-2 right-2"
                 />
-                <p className="text-xs">Bad goods</p>
-                <p className="text-xl">28 errors</p>
+                <p className="text-xs text-white">Bad goods</p>
+                <p className="text-xl text-white">28 errors</p>
               </div>
               <div className="pt-6 pr-8 pb-4 pl-4 text-white bg-primary rounded-xl relative">
                 <FaQuestionCircle
                   size={12}
                   className="absolute top-2 right-2"
                 />
-                <p className="text-xs">Pending Sales </p>
-                <p className="text-xl">120</p>
+                <p className="text-xs text-white">Pending Sales </p>
+                <p className="text-xl text-white">120</p>
               </div>
             </div>
 

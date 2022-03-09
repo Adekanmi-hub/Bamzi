@@ -3,7 +3,13 @@ import Filter from "../components/filter"
 import Footer from "../components/footer"
 import Header from "../components/header"
 import Card from "../components/card"
-import { FiAlignLeft, FiGrid, FiAlignJustify, FiFilter, FiSearch } from "react-icons/fi"
+import {
+  FiAlignLeft,
+  FiGrid,
+  FiAlignJustify,
+  FiFilter,
+  FiSearch,
+} from "react-icons/fi"
 import { IoIosHeartEmpty, IoIosCart, IoIosHeart } from "react-icons/io"
 import { data } from "../utils/data"
 
@@ -22,7 +28,7 @@ export default function SellersStore() {
 
   return (
     <div className="font-poppins bg-store bg-repeat">
-      <Header items />
+      <Header pryNav="user" secNav="user" />
       <div className="w-full h-80 py-6 bg-storeHeader bg-cover flex items-end relative">
         <div className="flex md:flex-row flex-col md:space-x-4 space-y-4 md:px-24 px-6 md:items-center">
           <div className="md:w-48 md:h-36 w-32 h-24 ">
@@ -49,7 +55,7 @@ export default function SellersStore() {
       <div className="w-full md:px-24 bg-gray-200 shadow-lg flex lg:space-x-16 md:space-x-8">
         <div className="text-white bg-lightPurple md:w-48 w-3/4 py-3 md:px-4 px-6 flex items-center space-x-4">
           <FiAlignLeft />
-          <p className="text-sm">Store Brands</p>
+          <p className="text-sm text-white">Store Brands</p>
         </div>
         <ul className="hidden md:flex lg:space-x-8 md:space-x-4 text-black text-sm py-3">
           <li>Apple</li>

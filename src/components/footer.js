@@ -6,7 +6,7 @@ import {
   FaPinterest,
 } from "react-icons/fa"
 
-export default function Footer({ bgColor,bgC='bg-transparent', btnColor }) {
+export default function Footer({ bgColor, bgC = "bg-transparent", btnColor }) {
   return (
     <footer className={`text-white text-left pt-10 ${bgC}`}>
       {/**contact us */}
@@ -14,8 +14,8 @@ export default function Footer({ bgColor,bgC='bg-transparent', btnColor }) {
         className={`${bgColor} w-full md:w-3/4 lg:w-1/2 grid md:grid-cols-2 items-center md:rounded-xl md:mx-auto py-6 px-8 relative md:-mb-12`}
       >
         <div>
-          <h5 className="text-lg font-semibold">Contact Us!</h5>
-          <p className="text-sm font-light mt-2">
+          <h5 className="text-lg text-white font-semibold">Contact Us!</h5>
+          <p className="text-sm text-white font-light mt-2">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
           </p>
         </div>

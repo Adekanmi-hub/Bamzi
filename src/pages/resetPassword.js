@@ -1,15 +1,15 @@
 import React from "react"
-import AuthHeader from "../components/auth/AuthHeader"
 import AuthStrip from "../components/auth/AuthStrip"
 import AuthCart from "../components/auth/AuthCart"
 import AuthBody from "../components/auth/AuthBody"
 import AuthContent from "../components/auth/AuthContent"
 import AuthContainer from "../components/auth/AuthContainer"
+import Header from "../components/header"
 
 export default function ResetPassword() {
   return (
     <AuthContainer>
-      <AuthHeader />
+      <Header pryNav="auth" bg />
 
       <AuthBody>
         <AuthStrip />

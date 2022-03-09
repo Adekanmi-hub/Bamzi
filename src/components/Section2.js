@@ -1,8 +1,8 @@
-import image5 from "../../assets/Group 11581.png";
-import image6 from "../../assets/day78-wallet.png";
-import image7 from "../../assets/day77-pocket-knief.png";
-import image8 from "../../assets/day80-tea.png";
-import image9 from "../../assets/M2-image2.png";
+import image5 from "../assets/Group 11581.png"
+import image6 from "../assets/day78-wallet.png"
+import image7 from "../assets/day77-pocket-knief.png"
+import image8 from "../assets/day80-tea.png"
+import image9 from "../assets/M2-image2.png"
 
 const Section2 = () => {
   return (
@@ -38,7 +38,7 @@ const Section2 = () => {
         </div>
         <div className="lg:flex px-28">
           <div className="bg-bgcolors rounded lg:pt-8">
-            <img src={image6} alt="" className=""/>
+            <img src={image6} alt="" className="" />
             <div className="text-center font-bold text-lg">Make More Money</div>
             <div className="text-gray-600 text-center sm:mx-12 lg:mx-3 pt-4 pb-6">
               Save time, avoid losing work and information,delegate, and track
@@ -89,7 +89,7 @@ const Section2 = () => {
         <div className="py-4 mx-8 border-b-2"></div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Section2;
+export default Section2

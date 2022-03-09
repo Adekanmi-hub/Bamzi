@@ -14,7 +14,7 @@ export default function Sellers() {
 
   return (
     <div className={styles.mainContainer}>
-      <Sidebar showSidebar={showSidebar} />
+      <Sidebar showSidebar={showSidebar} page="dashboard" />
 
       <div className={styles.mainContent}>
         <SellersHeader
@@ -250,7 +250,7 @@ export default function Sellers() {
               </p>
             </div>
             <div
-              className={styles.Congratulations}
+              className={styles.congratulations}
               style={{
                 backgroundColor: "grey",
                 borderRadius: "0.5rem",

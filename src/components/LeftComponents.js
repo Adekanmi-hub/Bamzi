@@ -1,7 +1,7 @@
-import image from "../../assets/D1-image5.png";
-import image4 from "../../assets/D1-image5.png";
-import image5 from "../../assets/Icon metro-shop.png";
-import image6 from "../../assets/D6-image4.png";
+import image from "../assets/D1-image5.png"
+import image4 from "../assets/D1-image5.png"
+import image5 from "../assets/Icon metro-shop.png"
+import image6 from "../assets/D6-image4.png"
 
 const LeftComponents = () => {
   return (
@@ -239,7 +239,7 @@ const LeftComponents = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default LeftComponents;
+export default LeftComponents

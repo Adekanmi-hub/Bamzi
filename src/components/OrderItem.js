@@ -9,23 +9,25 @@ const OrderItem = ({ order, showDetails, setShowDetails, setShowStatus }) => {
         </div>
 
         <div className="flex flex-col justify-between">
-          <p className="text-sm font-semibold">{order.product.title}</p>
+          <p className="text-sm font-semibold text-black">
+            {order.product.title}
+          </p>
 
           <div className="flex space-x-4">
             {order.product.color === "red" && (
               <div className="flex items-center space-x-2">
-                <p className="text-sm font-semibold">Color</p>
+                <p className="text-sm font-semibold text-black">Color</p>
                 <span className="w-6 h-6 rounded bg-red-500"></span>
               </div>
             )}
             {order.product.color === "blue" && (
               <div className="flex items-center space-x-2">
-                <p className="text-sm font-semibold">Color</p>
+                <p className="text-sm font-semibold text-black">Color</p>
                 <span className="w-6 h-6 rounded bg-blue-500"></span>
               </div>
             )}
             <div className="flex items-center space-x-2">
-              <p className="text-sm font-semibold">Size</p>
+              <p className="text-sm font-semibold text-black">Size</p>
               <span className="text-center text-sm py-1 px-3 rounded-xl font-semibold bg-gray-200 text-gray-500">
                 {order.product.size}
               </span>
@@ -37,8 +39,8 @@ const OrderItem = ({ order, showDetails, setShowDetails, setShowStatus }) => {
       {!showDetails && (
         <div className="flex flex-col md:justify-between md:space-y-0 space-y-3 md:w-4/12 w-full mt-4 md:mt-0">
           <span className="flex items-center justify-between text-sm font-semibold">
-            <p className="text-green-500 underline">Confirm Order</p>
-            <p className="text-primary">{order.date}</p>
+            <p className="text-green underline">Confirm Order</p>
+            <p className="text-black">{order.date}</p>
           </span>
 
           <button
