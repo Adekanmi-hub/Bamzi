@@ -21,7 +21,7 @@ const Header = ({ pryNav, secNav, bg }) => {
               <Link to="/">
                 <img
                   src={require("../assets/BAMZI.png")}
-                  className="w-16"
+                  className="lg:w-16 w-20"
                   alt="bamzi"
                 />
               </Link>
@@ -38,7 +38,7 @@ const Header = ({ pryNav, secNav, bg }) => {
                   <div className="origin-top-right absolute top-0 right-0 mt-8 w-32 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none z-50">
                     <div className="py-1 text-sm text-gray-700 hover:bg-primary hover:text-white">
                       <Link
-                        to="/buyeraccount"
+                        to="/my-account"
                         className="items-center px-4 py-2 "
                       >
                         My Account

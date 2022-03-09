@@ -2,7 +2,8 @@ import React, { useState } from "react"
 import { FaChevronLeft } from "react-icons/fa"
 import Header from "../components/header"
 import OrderItem from "../components/OrderItem"
-import UserSidebar from "../components/userSidebar"
+import UserBody from "../components/user/UserBody"
+import UserSidebar from "../components/user/UserSidebar"
 import { orders } from "../utils/data"
 
 export default function Orders() {
@@ -18,7 +19,7 @@ export default function Orders() {
     <div className="font-poppins min-h-screen bg-gray-50">
       <Header pryNav="user" secNav="user" />
 
-      <div className="flex lg:px-16 lg:py-12 md:px-8 md:py-6">
+      <UserBody>
         <UserSidebar page="orders" />
 
         <div className="bg-white lg:w-9/12 w-full lg:py-12 lg:px-16 md:py-6 md:px-8 py-3 px-4 space-y-8 md:rounded-r-xl shadow">
@@ -66,7 +67,7 @@ export default function Orders() {
                 onClick={() => setShowDetails(false)}
               >
                 <FaChevronLeft size={10} />
-                <p>Back</p>
+                <p className="text-blue-500">Back</p>
               </span>
 
               <span className="flex items-center text-sm md:w-4/12 w-full">
@@ -110,25 +111,27 @@ export default function Orders() {
 
           {!showStatus && showDetails && (
             <div>
-              <div className="flex md:flex-row flex-col-reverse md:justify-between">
+              <div className="flex md:flex-row flex-col-reverse md:justify-between text-black">
                 <div className="md:w-5/12 w-full text-sm space-y-2 mt-6 md:mt-0">
-                  <p>Payment Information</p>
+                  <p className="text-black">Payment Information</p>
                   <span className="flex items-center">
-                    <p className="w-1/2">Sub Total</p>
-                    <p className="w-1/2">$799.98</p>
+                    <p className="w-1/2 text-black">Sub Total</p>
+                    <p className="w-1/2 text-black">$799.98</p>
                   </span>
                   <span className="flex items-center">
-                    <p className="w-1/2">Shipping Fee</p>
-                    <p className="w-1/2">$49.99</p>
+                    <p className="w-1/2 text-black">Shipping Fee</p>
+                    <p className="w-1/2 text-black">$49.99</p>
                   </span>
                   <span className="flex items-center text-base font-semibold">
-                    <p className="w-1/2">Total Payment</p>
+                    <p className="w-1/2 text-black">Total Payment</p>
                     <p className="w-1/2 text-secondary">$849.97</p>
                   </span>
                 </div>
                 <div className="md:w-5/12 w-full text-sm space-y-2">
-                  <p>Shipping Address</p>
-                  <p>Shipping Address by you, Lagos, Nigeria</p>
+                  <p className="text-black">Shipping Address</p>
+                  <p className="text-black">
+                    Shipping Address by you, Lagos, Nigeria
+                  </p>
                 </div>
               </div>
             </div>
@@ -141,7 +144,7 @@ export default function Orders() {
                 onClick={() => setShowStatus(false)}
               >
                 <FaChevronLeft size={10} />
-                <p>Back</p>
+                <p className="text-blue-500">Back</p>
               </span>
 
               <div className="flex flex-col space-y-8">
@@ -181,7 +184,7 @@ export default function Orders() {
             </div>
           )}
         </div>
-      </div>
+      </UserBody>
     </div>
   )
 }

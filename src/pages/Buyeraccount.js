@@ -1,13 +1,14 @@
 import React from "react"
 import Header from "../components/header"
-import UserSidebar from "../components/userSidebar"
+import UserBody from "../components/user/UserBody"
+import UserSidebar from "../components/user/UserSidebar"
 
 export default function Buyeraccount() {
   return (
     <div className="font-poppins min-h-screen bg-gray-50">
       <Header pryNav="user" secNav="user" />
 
-      <div className="flex lg:px-16 lg:py-12 md:px-8 md:py-6">
+      <UserBody>
         <UserSidebar page="my-account" />
 
         <div className="flex justify-between bg-white lg:w-9/12 w-full lg:py-12 lg:px-16 md:py-6 md:px-8 py-3 px-4 md:rounded-r-xl shadow">
@@ -115,7 +116,7 @@ export default function Buyeraccount() {
             </div>
           </div>
         </div>
-      </div>
+      </UserBody>
     </div>
   )
 }
