@@ -22,7 +22,7 @@ export default function CustomiseShop() {
         <div className="flex mt-4 py-4 w-full items-center justify-between">
           <span className="flex space-x-2 text-primary">
             <FiBox size={32} />
-            <p className="text-lg font-semibold">Customise Shop</p>
+            <p className="text-lg font-semibold text-black">Customise Shop</p>
           </span>
           <button className="bg-primary text-white py-2 w-4/12 rounded-lg text-center">
             Save
@@ -98,13 +98,15 @@ export default function CustomiseShop() {
 
           {/** store appearance */}
           <div className="bg-white md:w-4/12 w-full p-4 space-y-5 rounded shadow">
-            <p className="font-semibold text-lg py-2">Store Appearance</p>
+            <p className="font-semibold text-lg text-black py-2">
+              Store Appearance
+            </p>
             <span className="flex items-center space-x-2">
-              <p className="text-sm">Upload Logo</p>
+              <p className="text-sm text-black">Upload Logo</p>
               <BsStack />
             </span>
             <span className="flex items-center space-x-2">
-              <p className="text-sm">Background Image</p>
+              <p className="text-sm text-black">Background Image</p>
               <BsPaletteFill />
             </span>
 

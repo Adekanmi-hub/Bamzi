@@ -17,6 +17,10 @@ import HomePage from "./pages/HomePage"
 import ShoppingCart from "./pages/ShoppingCart"
 import WishList from "./pages/WishList"
 import ResetPassword from "./pages/resetPassword"
+import Signup from "./pages/Signup"
+import Login from "./pages/Login"
+import ForgotPassword from "./pages/ForgotPassword"
+import SellersDashboard from "./pages/SellersDashboard"
 
 export default function App() {
   return (
@@ -39,6 +43,10 @@ export default function App() {
         <Route path="/sales-page" element={<SalesPage />} />
         <Route path="/marketing" element={<Marketing />} />
         <Route path="/sellers" element={<Sellers />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/dashboard" element={<SellersDashboard />} />
         <Route path="/*" element={<Errorpage />} />
       </Routes>
     </BrowserRouter>

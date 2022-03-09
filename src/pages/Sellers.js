@@ -250,7 +250,7 @@ export default function Sellers() {
               </p>
             </div>
             <div
-              className={styles.Congratulations}
+              className={styles.congratulations}
               style={{
                 backgroundColor: "grey",
                 borderRadius: "0.5rem",

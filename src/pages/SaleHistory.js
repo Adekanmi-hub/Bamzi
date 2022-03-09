@@ -4,8 +4,8 @@ import { FiGrid, FiSearch, FiUsers } from "react-icons/fi"
 
 import Sidebar from "../components/sidebar"
 import SellersHeader from "../components/SellersHeader"
-import { salesData } from "../utils/data"
-import SalesItem from "../components/SalesItem"
+import { salesHistoryData } from "../utils/data"
+import SalesHistoryItem from "../components/SalesHistoryItem"
 
 export default function SaleHistory() {
   const [showSidebar, setShowSidebar] = useState(false)
@@ -77,9 +77,9 @@ export default function SaleHistory() {
           </div>
 
           <div className="w-full bg-white">
-            {salesData.map(item => (
+            {salesHistoryData.map(item => (
               <div key={item._id}>
-                <SalesItem item={item} />
+                <SalesHistoryItem item={item} />
               </div>
             ))}
           </div>

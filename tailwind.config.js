@@ -20,7 +20,8 @@ module.exports = {
         colorange: "#fed65f",
         lightgrey: "#ececec",
         green: "#3AA837",
-        
+        gmail: "#c71610",
+        facebook: "#3b5998",
       },
       fontFamily: {
         poppins: "Poppins",
@@ -33,6 +34,7 @@ module.exports = {
         shop: "url(../assets/bg-shop.jpg)",
         exclusion: "url(../assets/exclusion.png)",
         errorbg: "url(../assets/Group-11551.png)",
+        split: "linear-gradient(to right, #e5e7eb 50%, white 50%)",
       },
     },
   },
