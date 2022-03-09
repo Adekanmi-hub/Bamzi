@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
-import { SiGmail } from "react-icons/si"
+import { FcGoogle } from "react-icons/fc"
 import { FaFacebookSquare } from "react-icons/fa"
 import AuthStrip from "../components/auth/AuthStrip"
 import AuthCart from "../components/auth/AuthCart"
@@ -61,11 +61,13 @@ export default function Login() {
             </Link>
           </div>
 
-          <button className="bg-gmail rounded-lg text-white py-2 flex justify-center items-center space-x-3">
-            <SiGmail size={24} />
-            <span className="font-semibold">Sign In with Gmail</span>
+          <button className="bg-white rounded-lg text-white py-2 flex justify-center items-center space-x-3 border border-gray-100 shadow-md">
+            <FcGoogle size={24} />
+            <span className="font-semibold text-black">
+              Sign In with Google
+            </span>
           </button>
-          <button className="bg-facebook rounded-lg text-white py-2 flex justify-center items-center space-x-3">
+          <button className="bg-facebook rounded-lg text-white py-2 flex justify-center items-center space-x-3 shadow-md">
             <FaFacebookSquare size={24} />
             <span className="font-semibold">Sign In with Facebook</span>
           </button>
@@ -92,7 +94,7 @@ export default function Login() {
               onChange={e => onInputChange(e)}
             />
             <button
-              className="bg-primary rounded-lg text-white py-2 font-semibold"
+              className="bg-primary rounded-lg text-white py-2 font-semibold shadow-md"
               onClick={e => handleSubmit(e)}
             >
               Login
