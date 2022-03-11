@@ -100,7 +100,7 @@ export default function Buyeraccount() {
                   placeholder="Confirm Password"
                 />
               </div>
-              <div className={"flex items-center"}>
+              <div className="flex items-center">
                 <button
                   type="submit"
                   className={"py-2 px-6 mt-8  text-white text-sm"}
