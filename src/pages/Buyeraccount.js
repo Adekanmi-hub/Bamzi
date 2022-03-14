@@ -11,7 +11,7 @@ export default function Buyeraccount() {
       <UserBody>
         <UserSidebar page="my-account" />
 
-        <div className="flex justify-between bg-white lg:w-9/12 w-full lg:py-12 lg:px-16 md:py-6 md:px-8 py-3 px-4 md:rounded-r-xl shadow">
+        <div className="flex justify-between bg-white lg:w-9/12 w-full lg:py-12 lg:px-16 md:py-6 md:px-8 py-3 px-4 md:rounded-r-xl shadow md:flex-row flex-col">
           <div className="bg-white py-5 mx-2 text-sm">
             <form method="get" action="login.php">
               <h6>Account Info</h6>
