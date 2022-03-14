@@ -403,3 +403,104 @@ export const latestSales = [
     timeOfSale: "2hrs ago",
   },
 ]
+
+export const colors = [
+  {
+    value: "black",
+    label: "Black",
+  },
+  {
+    value: "blue",
+    label: "Blue",
+  },
+  {
+    value: "brown",
+    label: "Brown",
+  },
+  {
+    value: "green",
+    label: "Green",
+  },
+  {
+    value: "grey",
+    label: "Grey",
+  },
+  {
+    value: "orange",
+    label: "Orange",
+  },
+  {
+    value: "pink",
+    label: "Pink",
+  },
+  {
+    value: "purple",
+    label: "Purple",
+  },
+  {
+    value: "red",
+    label: "Red",
+  },
+  {
+    value: "white",
+    label: "White",
+  },
+  {
+    value: "yellow",
+    label: "Yellow",
+  },
+]
+
+export const ram = [
+  {
+    value: "1",
+    label: "1GB",
+  },
+  {
+    value: "2",
+    label: "2GB",
+  },
+  {
+    value: "4",
+    label: "4GB",
+  },
+  {
+    value: "8",
+    label: "8GB",
+  },
+  {
+    value: "16",
+    label: "16GB",
+  },
+  {
+    value: "32",
+    label: "32GB",
+  },
+  {
+    value: "64",
+    label: "64GB",
+  },
+]
+
+export const sizes = [
+  {
+    value: "small",
+    label: "S",
+  },
+  {
+    value: "medium",
+    label: "M",
+  },
+  {
+    value: "large",
+    label: "L",
+  },
+  {
+    value: "extra large",
+    label: "XL",
+  },
+  {
+    value: "extra extra large",
+    label: "XXL",
+  },
+]
