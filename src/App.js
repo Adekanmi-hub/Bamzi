@@ -21,6 +21,7 @@ import Signup from "./pages/Signup"
 import Login from "./pages/Login"
 import ForgotPassword from "./pages/ForgotPassword"
 import SellersDashboard from "./pages/SellersDashboard"
+import Shippinginfo from "./pages/Shippinginfo"
 
 export default function App() {
   return (
@@ -47,6 +48,7 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/dashboard" element={<SellersDashboard />} />
+        <Route path="/shippinginfo" element={<Shippinginfo />} />
         <Route path="/*" element={<Errorpage />} />
       </Routes>
     </BrowserRouter>
