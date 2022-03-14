@@ -145,7 +145,7 @@ export default function CustomiseShop() {
                     <BsPaletteFill className="text-xl" style={{paddingLeft: '8px'}}/>
                    </div>
                     <input type="file" name="image" onChange={handleFileInputChange} value={fileInputState} className="w-full"/> 
-                    <button className="bg-blue-600 text-white py-2 px-2 rounded-md" type="submit">Submit</button>
+                    <button className="bg-blue-600 text-white py-1 px-2 rounded-md" type="submit">Submit</button>
                 </form>
                 {previewSource && (
                   <img src={previewSource}  className="rounded-full" alt="Selected" style={{height: '120px'}} />
