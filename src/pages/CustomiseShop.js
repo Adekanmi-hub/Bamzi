@@ -8,7 +8,40 @@ import { BsPaletteFill, BsStack } from "react-icons/bs"
 
 export default function CustomiseShop() {
   const [showSidebar, setShowSidebar] = useState(false)
+    const [fileInputState, setFileInputState] = useState('');
+    const [previewSource, setPreviewSource] = useState('')
+    const [selectedFile, setSelectedFile] = useState('');
+    const handleFileInputChange = (e) => {
+        const file = e.target.files[0];
+        previewFile(file);
+    };
 
+    const previewFile = (file) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onloadend = () => {
+        setPreviewSource(reader.result);
+      };
+    };
+    
+    const handleSubmitFile = (e) => {
+      e.preventDefault();
+      if(!previewSource) return;
+      uploadImage(previewSource);
+    };
+
+    const uploadImage = async (base64EncodedImage) => {
+      console.log(base64EncodedImage);
+      try {
+        await fetch('/api/upload', {
+          method: 'POST',
+          body: JSON.stringify({data: base64EncodedImage}),
+          headers: {'Content-type': 'application-json'}
+        })
+      } catch (error) {
+        console.log(error)
+      }
+    }
   return (
     <div className="font-poppins lg:grid lg:grid-cols-6  min-h-screen relative">
       <Sidebar showSidebar={showSidebar} page="customise-shop" />
@@ -101,7 +134,23 @@ export default function CustomiseShop() {
             <p className="font-semibold text-lg text-black py-2">
               Store Appearance
             </p>
-            <span className="flex items-center space-x-2">
+                <form onSubmit={handleSubmitFile} className="w-full">
+                   <div className="flex items-center"> 
+                   <label className="text-md text-gray-700">Upload Logo</label>
+                    <BsStack className="text-xl" style={{paddingLeft: '8px'}}/>
+                   </div>
+                    <input type="file" name="image" onChange={handleFileInputChange} value={fileInputState} className="w-full" /> 
+                   <div className="flex items-center">
+                   <label className="text-md text-gray-700">Background Image</label>
+                    <BsPaletteFill className="text-xl" style={{paddingLeft: '8px'}}/>
+                   </div>
+                    <input type="file" name="image" onChange={handleFileInputChange} value={fileInputState} className="w-full"/> 
+                    <button className="bg-blue-600 text-white py-2 px-2 rounded-md" type="submit">Submit</button>
+                </form>
+                {previewSource && (
+                  <img src={previewSource}  className="rounded-full" alt="Selected" style={{height: '120px'}} />
+                )}
+            {/* <span className="flex items-center space-x-2">
               <p className="text-sm text-black">Upload Logo</p>
               <BsStack />
             </span>
@@ -116,7 +165,7 @@ export default function CustomiseShop() {
                 alt=""
                 className="w-24 h-24 rounded-full mb-12"
               />
-            </div>
+            </div> */}
 
             <span className="text-blue-500 underline text-sm mt-8">
               Preview
