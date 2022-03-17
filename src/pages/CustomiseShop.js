@@ -165,7 +165,7 @@ export default function CustomiseShop() {
                 </h1>
               ) : (
                 <img
-                  className="w-64 h-48 lg:w-full lg:h-fit object-center"
+                  className="w-64 h-48 lg:w-full lg:h-56 object-center rounded-md"
                   src={image}
                 />
               )
