@@ -2,12 +2,13 @@ import React from "react"
 import { FaStar } from "react-icons/fa"
 
 const Card = ({ product, btnColor }) => {
+  console.log(product.images)
   return (
     <div className="flex flex-col bg-white border-none rounded-md shadow py-4">
       <div className="mx-auto">
         <img
           className="h-36 aspect-square object-contain block"
-          src={product.images}
+          src={product.images ? product.images[0] : product.image}
           style={{ objectFit: "contain" }}
           alt="item"
         />
@@ -23,8 +24,10 @@ const Card = ({ product, btnColor }) => {
           </div>
           <div className="text-primary text-lg font-bold">{`$${product.price}`}</div>
         </div>
-        <h6>{product.name}</h6>
-        <p className="text-sm font-light">{product.description}</p>
+        <h6>{product.name ? product.name : product.intro}</h6>
+        <p className="text-sm font-light">
+          {product.description ? product.description : product.intro}
+        </p>
       </div>
     </div>
   )

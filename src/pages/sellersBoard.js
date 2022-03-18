@@ -15,7 +15,6 @@ import {
   checkboxBrandData,
   checkboxCategoryData,
   colors,
-  data,
   ram,
   sizes,
 } from "../utils/data"
@@ -27,7 +26,7 @@ import SellersHeader from "../components/SellersHeader"
 import axios from "axios"
 
 export default function SellersBoard() {
-  const [products, setProducts] = useState(data)
+  const [products, setProducts] = useState([])
   const [showSidebar, setShowSidebar] = useState(false)
   const [showModal, setShowModal] = useState(false)
   const [currentPage, setCurrentPage] = useState(1)
@@ -37,6 +36,7 @@ export default function SellersBoard() {
   const productsPerPage = 6
   const [addProduct, setAddProduct] = useState(false)
   const [editProduct, setEditProduct] = useState(false)
+  const [productID, setProductID] = useState("")
 
   const [selectedCategory, setSelectedCategory] = useState("")
   const [selectedBrand, setSelectedBrand] = useState("")
@@ -51,6 +51,7 @@ export default function SellersBoard() {
   const [texture, setTexture] = useState("")
   const [stock, setStock] = useState("")
   const [image, setImage] = useState("")
+  const [selectedImages, setSelectedImages] = useState([])
 
   const indexOfLastProduct = currentPage * productsPerPage
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage
@@ -106,8 +107,6 @@ export default function SellersBoard() {
     }
   }
 
-  let images = []
-
   const inputStyles =
     "px-2 py-1.5 border border-gray-300 rounded  w-full placeholder:text-gray-400 hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-0"
 
@@ -115,18 +114,17 @@ export default function SellersBoard() {
     setShowModal(false)
   }
 
-  const uploadImage = () => {
+  const uploadImage = async () => {
     const data = new FormData()
     data.append("file", image[0])
     data.append("upload_preset", "bamzi_store")
 
-    axios
-      .post("https://api.cloudinary.com/v1_1/dayropo/image/upload", data)
-      .then(res => {
-        console.log(res)
-        images.splice(images.length, 0, res.data.secure_url)
-        console.log(images)
-      })
+    const res = await axios.post(
+      "https://api.cloudinary.com/v1_1/dayropo/image/upload",
+      data
+    )
+    setSelectedImages(prevState => [...prevState, res.data.secure_url])
+    console.log(selectedImages)
   }
 
   useEffect(() => {
@@ -141,6 +139,10 @@ export default function SellersBoard() {
     fetchData()
   }, [])
 
+  useEffect(() => {
+    console.log(selectedImages)
+  }, [selectedImages])
+
   const handleSubmit = e => {
     e.preventDefault()
     handleColor()
@@ -154,7 +156,7 @@ export default function SellersBoard() {
         subCategory: subCategory,
         brand: selectedBrand.value,
         price: price,
-        images: images,
+        images: selectedImages,
         colors: selectedColors,
         ram: selectedRams,
         sizes: selectedSizes,
@@ -184,7 +186,45 @@ export default function SellersBoard() {
 
   const handleEdit = e => {
     e.preventDefault()
-    setEditProduct(false)
+    handleColor()
+    handleSize()
+    handleRam()
+    axios
+      .put("http://localhost:4000/bamzi/products/update", {
+        productID: productID,
+        name: title,
+        description: description,
+        category: selectedCategory.value,
+        subCategory: subCategory,
+        brand: selectedBrand.value,
+        price: price,
+        images: selectedImages,
+        colors: selectedColors,
+        ram: selectedRams,
+        sizes: selectedSizes,
+        length: length,
+        texture: texture,
+        stock: stock,
+      })
+      .then(res => {
+        console.log(res)
+        setProductID("")
+        setTitle("")
+        setDescription("")
+        setSelectedCategory("")
+        setSubCategory("")
+        setSelectedBrand("")
+        setPrice("")
+        setSelectedColor("")
+        setSelectedRam("")
+        setSelectedSize("")
+        setLength("")
+        setTexture("")
+        setStock("")
+        setImage("")
+        setEditProduct(false)
+        return res
+      })
   }
 
   return (
@@ -203,7 +243,7 @@ export default function SellersBoard() {
             <Filter
               showModal={showModal}
               closeModal={closeModal}
-              products={data}
+              products={products}
               setProducts={setProducts}
               btnColor="bg-primary"
               accentColor="accent-primary"
@@ -256,7 +296,10 @@ export default function SellersBoard() {
                       </span>
                       <span
                         className="flex items-center justify-center bg-gray-200 py-2 w-1/3 cursor-pointer"
-                        onClick={() => setEditProduct(true)}
+                        onClick={() => {
+                          setProductID(product._id)
+                          setEditProduct(true)
+                        }}
                       >
                         <FiEdit3 className="mr-2" /> Edit
                       </span>
@@ -506,17 +549,34 @@ export default function SellersBoard() {
             <div className="flex mt-4 py-4 w-full items-center justify-between">
               <span className="flex space-x-2 text-primary items-center">
                 <MdOutlineAddBusiness size={32} />
-                <p className="text-lg font-semibold text-black">Edit Product</p>
+                <p className="md:text-lg text-base font-semibold text-black">
+                  Edit Product
+                </p>
               </span>
-              <div className="w-4/12 flex justify-end space-x-2">
+              <div className="md:w-4/12 w-1/2 flex justify-end space-x-2">
                 <button
-                  className="bg-red-500 text-white py-2 w-4/12 rounded-lg text-center"
-                  onClick={() => setEditProduct(false)}
+                  className="bg-red-500 text-white py-2 md:w-4/12 w-1/2 rounded-lg text-center"
+                  onClick={() => {
+                    setTitle("")
+                    setDescription("")
+                    setSelectedCategory("")
+                    setSubCategory("")
+                    setSelectedBrand("")
+                    setPrice("")
+                    setSelectedColor("")
+                    setSelectedRam("")
+                    setSelectedSize("")
+                    setLength("")
+                    setTexture("")
+                    setStock("")
+                    setImage("")
+                    setEditProduct(false)
+                  }}
                 >
                   Cancel
                 </button>
                 <button
-                  className="bg-primary text-white py-2 w-4/12 rounded-lg text-center"
+                  className="bg-primary text-white py-2 md:w-4/12 w-1/2 rounded-lg text-center"
                   onClick={e => handleEdit(e)}
                 >
                   Save
@@ -529,16 +589,18 @@ export default function SellersBoard() {
                 Product Info
               </div>
 
-              <div className="flex space-x-4 bg-white p-4 rounded shadow">
-                <div className="space-y-4 w-1/2">
+              <div className="flex md:flex-row flex-col md:space-x-4 space-y-4 md:space-y-0 bg-white p-4 rounded shadow">
+                <div className="space-y-4 md:w-1/2 w-full">
                   <div className="space-y-1">
                     <label htmlFor="title">Title</label>
                     <input
                       type="text"
                       id="title"
+                      value={title}
                       className={inputStyles}
                       placeholder="Product Title"
                       autoComplete=""
+                      onChange={e => setTitle(e.target.value)}
                     />
                   </div>
 
@@ -546,9 +608,11 @@ export default function SellersBoard() {
                     <label htmlFor="description">Description</label>
                     <textarea
                       id="description"
+                      value={description}
                       className={inputStyles}
                       rows="4"
                       placeholder="Product Description Max (40)"
+                      onChange={e => setDescription(e.target.value)}
                     ></textarea>
                   </div>
 
@@ -567,9 +631,11 @@ export default function SellersBoard() {
                     <input
                       type="text"
                       id="subCategory"
+                      value={subCategory}
                       className={inputStyles}
                       placeholder="Sub-Category"
                       autoComplete=""
+                      onChange={e => setSubCategory(e.target.value)}
                     />
                   </div>
 
@@ -588,24 +654,32 @@ export default function SellersBoard() {
                     <input
                       type="number"
                       id="price"
+                      value={price}
                       className={inputStyles}
                       placeholder="Price"
                       autoComplete=""
+                      onChange={e => setPrice(e.target.value)}
                     />
                   </div>
 
-                  <div className="space-y-1">
-                    <span>Images</span>
+                  <div className="space-y-1.5">
+                    <label htmlFor="images">Images</label>
                     <input
-                      type="text"
+                      type="file"
+                      id="images"
                       className={inputStyles}
-                      placeholder="Images"
-                      autoComplete=""
+                      onChange={e => setImage(e.target.files)}
                     />
+                    <button
+                      className="w-1/2 md:4/12 py-1 bg-gray-200 rounded border border-gray-600 text-sm"
+                      onClick={() => uploadImage()}
+                    >
+                      Upload
+                    </button>
                   </div>
                 </div>
 
-                <div className="space-y-4 w-1/2">
+                <div className="space-y-4 md:w-1/2 w-full">
                   <div className="space-y-1">
                     <span>Color</span>
                     <Select
@@ -644,9 +718,11 @@ export default function SellersBoard() {
                     <input
                       type="text"
                       id="length"
+                      value={length}
                       className={inputStyles}
                       placeholder="Length"
                       autoComplete=""
+                      onChange={e => setLength(e.target.value)}
                     />
                   </div>
 
@@ -655,9 +731,11 @@ export default function SellersBoard() {
                     <input
                       type="text"
                       id="texture"
+                      value={texture}
                       className={inputStyles}
                       placeholder="Texture"
                       autoComplete=""
+                      onChange={e => setTexture(e.target.value)}
                     />
                   </div>
 
@@ -666,9 +744,11 @@ export default function SellersBoard() {
                     <input
                       type="number"
                       id="stock"
+                      value={stock}
                       className={inputStyles}
                       placeholder="Stock"
                       autoComplete=""
+                      onChange={e => setStock(e.target.value)}
                     />
                   </div>
                 </div>
