@@ -70,9 +70,9 @@ const UserSidebar = ({ page }) => {
         </span>
       </Link>
 
-      <Link to="" className={LinkReset}>
+      <Link to="/shippinginfo" className={LinkReset}>
         <span
-          className={regularPage}
+     className={page === "shipping" ? currentPage : regularPage}
           onMouseEnter={() => {
             toggleId(3)
             setShowTooltip(true)

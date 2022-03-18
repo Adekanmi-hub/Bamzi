@@ -11,7 +11,7 @@ export default function Buyeraccount() {
       <UserBody>
         <UserSidebar page="my-account" />
 
-        <div className="flex justify-between bg-white lg:w-9/12 w-full lg:py-12 lg:px-16 md:py-6 md:px-8 py-3 px-4 md:rounded-r-xl shadow">
+        <div className="flex justify-between bg-white lg:w-9/12 w-full lg:py-12 lg:px-16 md:py-6 md:px-8 py-3 px-4 md:rounded-r-xl shadow md:flex-row flex-col">
           <div className="bg-white py-5 mx-2 text-sm">
             <form method="get" action="login.php">
               <h6>Account Info</h6>
@@ -21,7 +21,7 @@ export default function Buyeraccount() {
                   type="text"
                   name="name"
                   className={
-                    "py-2 px-6 rounded-md border border-solid border-gray-200"
+                    "rounded-md border border-solid border-gray-200"
                   }
                   placeholder="Full Name"
                 />
@@ -29,7 +29,7 @@ export default function Buyeraccount() {
                   type="text"
                   name="email"
                   className={
-                    "py-2 px-6 rounded-md border border-solid border-gray-200 bg-gray-200 text-black"
+                    "rounded-md border border-solid border-gray-200 bg-gray-200 text-black"
                   }
                   placeholder="omololadaniel@gmail.com"
                 />
@@ -37,7 +37,7 @@ export default function Buyeraccount() {
                   type="number"
                   name="number"
                   className={
-                    " py-2 px-6 rounded-md border border-solid border-gray-200"
+                    "rounded-md border border-solid border-gray-200"
                   }
                   placeholder="Phone Number"
                 />
@@ -45,7 +45,7 @@ export default function Buyeraccount() {
                   type="number"
                   name="number"
                   className={
-                    " py-2 px-6 rounded-md border border-solid border-gray-200"
+                    "rounded-md border border-solid border-gray-200"
                   }
                   placeholder="Date of Birth"
                 />
@@ -53,7 +53,7 @@ export default function Buyeraccount() {
                   type="text"
                   name="text"
                   className={
-                    "w-1/12 py-2 px-6 rounded-md border border-solid border-gray-200"
+                    "rounded-md border border-solid border-gray-200"
                   }
                   placeholder="Gender"
                 />
@@ -61,7 +61,7 @@ export default function Buyeraccount() {
               <div className={"flex items-center"}>
                 <button
                   type="submit"
-                  className={"py-2 px-6 mt-8  text-white text-sm"}
+                  className={"py-2 px-20 mt-8  text-white text-sm"}
                   style={{ backgroundColor: "#000033" }}
                 >
                   Save Info
@@ -79,7 +79,7 @@ export default function Buyeraccount() {
                   type="text"
                   name="name"
                   className={
-                    " py-2 px-6 rounded-md border border-solid border-gray-200"
+                    "rounded-md border border-solid border-gray-200"
                   }
                   placeholder="Old Password"
                 />
@@ -87,7 +87,7 @@ export default function Buyeraccount() {
                   type="text"
                   name="name"
                   className={
-                    " py-2 px-6 rounded-md border border-solid border-gray-200"
+                    "rounded-md border border-solid border-gray-200"
                   }
                   placeholder="New Password"
                 />
@@ -95,15 +95,15 @@ export default function Buyeraccount() {
                   type="text"
                   name="name"
                   className={
-                    " py-2 px-6 rounded-md border border-solid border-gray-200"
+                    "rounded-md border border-solid border-gray-200"
                   }
                   placeholder="Confirm Password"
                 />
               </div>
-              <div className={"flex items-center"}>
+              <div className="flex items-center">
                 <button
                   type="submit"
-                  className={"py-2 px-6 mt-8  text-white text-sm"}
+                  className={"py-2 px-12 mt-8 text-white text-sm"}
                   style={{ backgroundColor: "#000033" }}
                 >
                   Change Password
@@ -111,7 +111,7 @@ export default function Buyeraccount() {
               </div>
             </form>
 
-            <div className="py-5 mx-6 text-sm">
+            <div className="py-5 mx-0 text-sm text-blue-700">
               <h6>Deactivate Account</h6>
             </div>
           </div>
