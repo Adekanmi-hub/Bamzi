@@ -2,7 +2,6 @@ import React from "react"
 import { FaStar } from "react-icons/fa"
 
 const Card = ({ product, btnColor }) => {
-  console.log(product.images)
   return (
     <div className="flex flex-col bg-white border-none rounded-md shadow py-4">
       <div className="mx-auto">

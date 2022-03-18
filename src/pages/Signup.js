@@ -11,36 +11,25 @@ import Header from "../components/header"
 import axios from "axios"
 
 export default function Signup() {
-  const url = "http://localhost:3030/bamzi/signup"
-  const [data, setData] = useState({
-    name: "",
-    email: "",
-    password: "",
-  })
+  const url = "http://localhost:4000/bamzi/signup"
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
 
   const handleSubmit = e => {
     e.preventDefault()
     axios
       .post(url, {
-        name: data.name,
-        email: data.email,
-        password: data.password,
+        name: name,
+        email: email,
+        password: password,
       })
       .then(res => {
         console.log(res)
       })
-    setData({
-      name: "",
-      email: "",
-      password: "",
-    })
-  }
-
-  const onInputChange = e => {
-    const newData = { ...data }
-    newData[e.target.id] = e.target.value
-    setData(newData)
-    console.log(newData)
+    setName("")
+    setEmail("")
+    setPassword("")
   }
 
   return (
@@ -81,29 +70,29 @@ export default function Signup() {
             <input
               type="text"
               id="name"
-              value={data.name}
+              value={name}
               autoComplete="off"
               placeholder="Full Name"
               className="py-2 px-6 shadow-md rounded-full border-gray-100 border"
-              onChange={e => onInputChange(e)}
+              onChange={e => setName(e.target.value)}
             />
             <input
               type="text"
               id="email"
-              value={data.email}
+              value={email}
               autoComplete="off"
               placeholder="Email Address"
               className="py-2 px-6 shadow-md rounded-full border-gray-100 border"
-              onChange={e => onInputChange(e)}
+              onChange={e => setEmail(e.target.value)}
             />
             <input
               type="password"
               id="password"
-              value={data.password}
+              value={password}
               autoComplete="off"
               placeholder="Password"
               className="py-2 px-6 shadow-md rounded-full border-gray-100 border"
-              onChange={e => onInputChange(e)}
+              onChange={e => setPassword(e.target.value)}
             />
             <button
               className="bg-primary rounded-lg text-white py-2 font-semibold shadow-md"

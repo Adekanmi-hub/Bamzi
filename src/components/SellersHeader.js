@@ -2,8 +2,10 @@ import React from "react"
 import { FiEyeOff, FiBell, FiMail, FiMenu } from "react-icons/fi"
 import { AiFillBank } from "react-icons/ai"
 import { FaStoreAlt } from "react-icons/fa"
+import { useNavigate } from "react-router-dom"
 
 const SellersHeader = ({ setShowSidebar, showSidebar }) => {
+  let navigate = useNavigate()
   return (
     <div className="flex items-center justify-between px-2 py-1 bg-white rounded shadow">
       <div className="flex items-center justify-between w-full lg:w-auto">
@@ -22,7 +24,10 @@ const SellersHeader = ({ setShowSidebar, showSidebar }) => {
           </div>
         </div>
       </div>
-      <div className="hidden lg:flex items-center space-x-4">
+      <div
+        className="hidden lg:flex items-center space-x-4 cursor-pointer"
+        onClick={() => navigate("/customise-shop")}
+      >
         <span className="flex items-center">
           <FaStoreAlt className="mr-2" /> Evans Bex Electronics Store
         </span>

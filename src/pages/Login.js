@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { FcGoogle } from "react-icons/fc"
 import { FaFacebookSquare } from "react-icons/fa"
 import AuthStrip from "../components/auth/AuthStrip"
@@ -11,33 +11,28 @@ import Header from "../components/header"
 import axios from "axios"
 
 export default function Login() {
-  const url = "http://localhost:3030/bamzi/signin"
-  const [data, setData] = useState({
-    email: "",
-    password: "",
-  })
+  const url = "http://localhost:4000/bamzi/signin"
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  let navigate = useNavigate()
 
   const handleSubmit = e => {
     e.preventDefault()
     axios
       .post(url, {
-        email: data.email,
-        password: data.password,
+        email: email,
+        password: password,
       })
       .then(res => {
-        console.log(res)
+        console.log(res.data)
+        if (res.data.seller) {
+          navigate("/dashboard")
+        } else {
+          navigate("/sellers-store")
+        }
+        setEmail("")
+        setPassword("")
       })
-    setData({
-      email: "",
-      password: "",
-    })
-  }
-
-  const onInputChange = e => {
-    const newData = { ...data }
-    newData[e.target.id] = e.target.value
-    setData(newData)
-    console.log(newData)
   }
 
   return (
@@ -78,20 +73,20 @@ export default function Login() {
             <input
               type="text"
               id="email"
-              value={data.email}
+              value={email}
               autoComplete="off"
               placeholder="Email Address"
               className="py-2 px-6 shadow-md rounded-full border-gray-100 border"
-              onChange={e => onInputChange(e)}
+              onChange={e => setEmail(e.target.value)}
             />
             <input
               type="password"
               id="password"
-              value={data.password}
+              value={password}
               autoComplete="off"
               placeholder="Password"
               className="py-2 px-6 shadow-md rounded-full border-gray-100 border"
-              onChange={e => onInputChange(e)}
+              onChange={e => setPassword(e.target.value)}
             />
             <button
               className="bg-primary rounded-lg text-white py-2 font-semibold shadow-md"

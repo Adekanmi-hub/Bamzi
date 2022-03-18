@@ -10,9 +10,10 @@ import {
   FiUser,
   FiHelpCircle,
 } from "react-icons/fi"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 const Sidebar = ({ showSidebar, page }) => {
+  let navigate = useNavigate()
   const currentPage =
     "bg-primary text-white cursor-pointer py-0.5 px-2 flex items-center w-full border-none rounded-full"
   const regularPage =
@@ -39,6 +40,7 @@ const Sidebar = ({ showSidebar, page }) => {
           src={require("../assets/avatar-1.jpg")}
           alt="avatar"
           className="w-8 rounded-full lg:hidden"
+          onClick={() => navigate("/customise-shop")}
         />
       </div>
       <span className="lg:hidden text-sm text-primary px-2">
@@ -46,7 +48,7 @@ const Sidebar = ({ showSidebar, page }) => {
       </span>
 
       <div className="flex flex-col space-y-2">
-        <Link to="/sellers" className={LinkReset}>
+        <Link to="/dashboard" className={LinkReset}>
           <span className={page === "dashboard" ? currentPage : regularPage}>
             <FiHome className="mr-4" /> Dashboard
           </span>

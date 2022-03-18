@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import Filter from "../components/filter"
 import Footer from "../components/footer"
 import Header from "../components/header"
@@ -11,12 +11,14 @@ import {
   FiSearch,
 } from "react-icons/fi"
 import { IoIosHeartEmpty, IoIosCart, IoIosHeart } from "react-icons/io"
-import { data } from "../utils/data"
+import axios from "axios"
 
 export default function SellersStore() {
   const [tab, setTab] = useState(0)
-  const [products, setProducts] = useState(data)
+  const [products, setProducts] = useState([])
   const [showModal, setShowModal] = useState(false)
+
+  const userID = "6234d264df9d2322e00785ef"
 
   const toggleTab = index => {
     setTab(index)
@@ -24,6 +26,31 @@ export default function SellersStore() {
 
   const closeModal = () => {
     setShowModal(false)
+  }
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await axios.get("http://localhost:4000/bamzi/products/")
+      setProducts(res.data.response)
+    }
+
+    fetchData()
+  }, [])
+
+  const addToWishlist = async productId => {
+    const res = await axios.post("http://localhost:4000/bamzi/wishlist/add", {
+      user: userID,
+      productId: productId,
+    })
+    console.log(res)
+  }
+
+  const addToCart = async productId => {
+    const res = await axios.post("http://localhost:4000/bamzi/cart/add", {
+      user: userID,
+      productId: productId,
+    })
+    console.log(res)
   }
 
   return (
@@ -109,7 +136,7 @@ export default function SellersStore() {
           <Filter
             showModal={showModal}
             closeModal={closeModal}
-            products={data}
+            products={products}
             setProducts={setProducts}
             btnColor="bg-lightBrown"
             accentColor="accent-lightBrown"
@@ -154,10 +181,20 @@ export default function SellersStore() {
                 <div key={product._id}>
                   <Card product={product} btnColor="bg-lightBrown" />
                   <div className="flex items-center text-sm border-none shadow -mt-1.5">
-                    <span className="flex items-center justify-center border-none rounded-bl-md bg-lightBrown text-white py-2 w-1/2">
+                    <span
+                      className="flex items-center justify-center border-none rounded-bl-md bg-lightBrown text-white py-2 w-1/2"
+                      onClick={() => {
+                        addToWishlist(product._id)
+                      }}
+                    >
                       <IoIosHeartEmpty className="mr-2" /> WISHLIST
                     </span>
-                    <span className="flex items-center justify-center border-none rounded-br-md bg-lightPurple text-white py-2 w-1/2">
+                    <span
+                      className="flex items-center justify-center border-none rounded-br-md bg-lightPurple text-white py-2 w-1/2"
+                      onClick={() => {
+                        addToCart(product._id)
+                      }}
+                    >
                       <IoIosCart className="mr-2" /> ADD TO CART
                     </span>
                   </div>

@@ -124,7 +124,6 @@ export default function SellersBoard() {
       data
     )
     setSelectedImages(prevState => [...prevState, res.data.secure_url])
-    console.log(selectedImages)
   }
 
   useEffect(() => {
@@ -138,10 +137,6 @@ export default function SellersBoard() {
 
     fetchData()
   }, [])
-
-  useEffect(() => {
-    console.log(selectedImages)
-  }, [selectedImages])
 
   const handleSubmit = e => {
     e.preventDefault()
@@ -227,6 +222,14 @@ export default function SellersBoard() {
       })
   }
 
+  const deleteProduct = async productID => {
+    const res = await axios.post(
+      "http://localhost:4000/bamzi/products/delete",
+      { productID: productID }
+    )
+    return res
+  }
+
   return (
     <div className="font-poppins lg:grid lg:grid-cols-6 min-h-screen relative">
       <Sidebar showSidebar={showSidebar} page="sellers-board" />
@@ -303,7 +306,10 @@ export default function SellersBoard() {
                       >
                         <FiEdit3 className="mr-2" /> Edit
                       </span>
-                      <span className="flex items-center justify-center border-none rounded-br-md bg-primary text-white py-2 w-1/3 cursor-pointer">
+                      <span
+                        className="flex items-center justify-center border-none rounded-br-md bg-primary text-white py-2 w-1/3 cursor-pointer"
+                        onClick={() => deleteProduct(product._id)}
+                      >
                         <FiTrash2 className="mr-2" /> Delete
                       </span>
                     </div>
