@@ -9,30 +9,19 @@ import Header from "../components/header"
 import axios from "axios"
 
 export default function ForgotPassword() {
-  const url = "http://localhost:3030/bamzi/forgot-password"
-  const [data, setData] = useState({
-    email: "",
-  })
+  const url = "http://localhost:4000/bamzi/forgot-password"
+  const [email, setEmail] = useState("")
 
   const handleSubmit = e => {
     e.preventDefault()
     axios
       .put(url, {
-        email: data.email,
+        email: email,
       })
       .then(res => {
         console.log(res)
       })
-    setData({
-      email: "",
-    })
-  }
-
-  const onInputChange = e => {
-    const newData = { ...data }
-    newData[e.target.id] = e.target.value
-    setData(newData)
-    console.log(newData)
+    setEmail("")
   }
 
   return (
@@ -59,11 +48,11 @@ export default function ForgotPassword() {
             <input
               type="text"
               id="email"
-              value={data.email}
+              value={email}
               autoComplete="off"
               placeholder="Email Address"
               className="py-2 px-6 shadow rounded border border-gray-100"
-              onChange={e => onInputChange(e)}
+              onChange={e => setEmail(e.target.value)}
             />
             <button
               className="bg-primary rounded text-white py-2 font-semibold"

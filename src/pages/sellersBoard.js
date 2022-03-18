@@ -42,6 +42,13 @@ export default function SellersBoard() {
   const [selectedColor, setSelectedColor] = useState("")
   const [selectedRam, setSelectedRam] = useState("")
   const [selectedSize, setSelectedSize] = useState("")
+  const [title, setTitle] = useState("")
+  const [description, setDescription] = useState("")
+  const [subCategory, setSubCategory] = useState("")
+  const [price, setPrice] = useState("")
+  const [length, setLength] = useState("")
+  const [texture, setTexture] = useState("")
+  const [stock, setStock] = useState("")
 
   const inputStyles =
     "px-2 py-1.5 border border-gray-300 rounded  w-full placeholder:text-gray-400 hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-0"
@@ -218,9 +225,11 @@ export default function SellersBoard() {
                     <input
                       type="text"
                       id="title"
+                      value={title}
                       className={inputStyles}
                       placeholder="Product Title"
                       autoComplete=""
+                      onChange={e => setTitle(e.target.value)}
                     />
                   </div>
 
@@ -228,9 +237,11 @@ export default function SellersBoard() {
                     <label htmlFor="description">Description</label>
                     <textarea
                       id="description"
+                      value={description}
                       className={inputStyles}
                       rows="4"
                       placeholder="Product Description Max (40)"
+                      onChange={e => setDescription(e.target.value)}
                     ></textarea>
                   </div>
 
@@ -249,9 +260,11 @@ export default function SellersBoard() {
                     <input
                       type="text"
                       id="subCategory"
+                      value={subCategory}
                       className={inputStyles}
                       placeholder="Sub-Category"
                       autoComplete=""
+                      onChange={e => setSubCategory(e.target.value)}
                     />
                   </div>
 
@@ -270,9 +283,11 @@ export default function SellersBoard() {
                     <input
                       type="number"
                       id="price"
+                      value={price}
                       className={inputStyles}
                       placeholder="Price"
                       autoComplete=""
+                      onChange={e => setPrice(e.target.value)}
                     />
                   </div>
 
@@ -326,9 +341,11 @@ export default function SellersBoard() {
                     <input
                       type="text"
                       id="length"
+                      value={length}
                       className={inputStyles}
                       placeholder="Length"
                       autoComplete=""
+                      onChange={e => setLength(e.target.value)}
                     />
                   </div>
 
@@ -337,9 +354,11 @@ export default function SellersBoard() {
                     <input
                       type="text"
                       id="texture"
+                      value={texture}
                       className={inputStyles}
                       placeholder="Texture"
                       autoComplete=""
+                      onChange={e => setTexture(e.target.value)}
                     />
                   </div>
 
@@ -348,9 +367,11 @@ export default function SellersBoard() {
                     <input
                       type="number"
                       id="stock"
+                      value={stock}
                       className={inputStyles}
                       placeholder="Stock"
                       autoComplete=""
+                      onChange={e => setStock(e.target.value)}
                     />
                   </div>
                 </div>

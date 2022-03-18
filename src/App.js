@@ -32,7 +32,7 @@ export default function App() {
         <Route path="/sellers-store" element={<SellersStore />} />
         <Route path="/shopping-cart" element={<ShoppingCart />} />
         <Route path="/wishlist" element={<WishList />} />
-        <Route path="/reset-password" element={<ResetPassword />} />
+        <Route path="/reset-password/:token" element={<ResetPassword />} />
         <Route path="/sales-page" element={<SalesPage />} />
         <Route path="/customise-shop" element={<CustomiseShop />} />
         <Route path="/orders" element={<Orders />} />

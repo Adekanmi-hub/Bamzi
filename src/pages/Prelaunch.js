@@ -4,39 +4,28 @@ import axios from "axios"
 import Header from "../components/header"
 
 export default function Prelaunch() {
-  const url = "http://localhost:3030/bamzi/reservation"
-  const [data, setData] = useState({
-    name: "",
-    email: "",
-    industry: "",
-  })
+  const url = "http://localhost:4000/bamzi/reservation"
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [industry, setIndustry] = useState("")
   const [designation, setDesignation] = useState("")
 
   const handleSubmit = e => {
     e.preventDefault()
     axios
       .post(url, {
-        name: data.name,
-        email: data.email,
-        industry: data.industry,
+        name: name,
+        email: email,
+        industry: industry,
         designation: designation,
       })
       .then(res => {
         console.log(res)
       })
-    setData({
-      name: "",
-      email: "",
-      industry: "",
-    })
+    setName("")
+    setEmail("")
+    setIndustry("")
     setDesignation("")
-  }
-
-  const onInputChange = e => {
-    const newData = { ...data }
-    newData[e.target.id] = e.target.value
-    setData(newData)
-    console.log(newData)
   }
 
   return (
@@ -72,27 +61,27 @@ export default function Prelaunch() {
                 }
                 type="text"
                 id="name"
-                value={data.name}
+                value={name}
                 placeholder="Full Name"
-                onChange={e => onInputChange(e)}
+                onChange={e => setName(e.target.value)}
               />
 
               <div className={"flex flex-row justify-between w-full"}>
                 <input
                   type="text"
                   id="email"
-                  value={data.email}
+                  value={email}
                   className={"sm:w-2/3 w-1/2"}
                   placeholder="Email here"
-                  onChange={e => onInputChange(e)}
+                  onChange={e => setEmail(e.target.value)}
                 />
                 <input
                   type="text"
                   id="industry"
-                  value={data.industry}
+                  value={industry}
                   className={"ml-2 sm:w-1/3 w-1/2"}
                   placeholder="Industry"
-                  onChange={e => onInputChange(e)}
+                  onChange={e => setIndustry(e.target.value)}
                 />
               </div>
 
