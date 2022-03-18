@@ -9,14 +9,14 @@ import { BsPaletteFill, BsStack } from "react-icons/bs"
 export default function CustomiseShop() {
   const [showSidebar, setShowSidebar] = useState(false)
   const [image, setImage] = useState("")
-  const [loading, setLoading] = useState(false)
+  const [bgImage, setBgImage] = useState("")
+  const [loading, setLoading] = useState(true)
 
   const uploadImage = e => {
     const files = e.target.files[0]
     const formData = new FormData()
     formData.append("upload_preset", "bamzi_image")
     formData.append("file", files)
-    setLoading(true)
 
     axios
       .post("https://api.cloudinary.com/v1_1/bamzi/image/upload", formData)
@@ -27,19 +27,24 @@ export default function CustomiseShop() {
       })
 
       .catch(err => console.log(err))
+  }
 
-    // const uploadImage = async (base64EncodedImage) => {
-    //   console.log(base64EncodedImage);
-    //   try {
-    //     await fetch('/api/upload', {
-    //       method: 'POST',
-    //       body: JSON.stringify({data: base64EncodedImage}),
-    //       headers: {'Content-type': 'application-json'}
-    //     })
-    //   } catch (error) {
-    //     console.log(error)
-    //   }
-    // }
+  const uploadBgImage = e => {
+    const files = e.target.files[0]
+    const formData = new FormData()
+    formData.append("upload_preset", "bamzi_image")
+    formData.append("file", files)
+    setLoading(true)
+
+    axios
+      .post("https://api.cloudinary.com/v1_1/bamzi/image/upload", formData)
+      .then(res => {
+        console.log(res)
+        setBgImage(res.data.secure_url)
+        setLoading(false)
+      })
+
+      .catch(err => console.log(err))
   }
   return (
     <div className="font-poppins lg:grid lg:grid-cols-6  min-h-screen relative">
@@ -154,20 +159,28 @@ export default function CustomiseShop() {
             <input
               type="file"
               name="file"
-              onChange={e => uploadImage(e)}
+              onChange={e => uploadBgImage(e)}
               className="w-full"
             />
 
             {
               loading ? (
-                <h1 className="text-md text-blue-400 ease-in-out duration-200 ...">
-                  Loading...
-                </h1>
+                <div className="h-[300px] w-full bg-shop bg-cover bg-center flex justify-center items-end rounded-lg">
+                  <img
+                    src={require("../assets/avatar-0.jpg")}
+                    alt=""
+                    className="w-24 h-24 rounded-full mb-12"
+                  />
+                </div>
               ) : (
-                <img
-                  className="w-64 h-48 lg:w-full lg:h-56 object-center rounded-md"
-                  src={image}
-                />
+                <div className="h-[240px] w-full relative rounded-lg">
+                  <img src={bgImage} className="h-full w-full object-contain" />
+
+                  <img
+                    className="w-24 h-24 rounded-full absolute left-24 bottom-20"
+                    src={image}
+                  />
+                </div>
               )
 
               /* {previewSource && (
