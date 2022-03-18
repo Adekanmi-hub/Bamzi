@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import {
   FiGrid,
   FiPlus,
@@ -24,6 +24,7 @@ import Pagination from "../components/pagination"
 import Sidebar from "../components/sidebar"
 import Filter from "../components/filter"
 import SellersHeader from "../components/SellersHeader"
+import axios from "axios"
 
 export default function SellersBoard() {
   const [products, setProducts] = useState(data)
@@ -49,9 +50,7 @@ export default function SellersBoard() {
   const [length, setLength] = useState("")
   const [texture, setTexture] = useState("")
   const [stock, setStock] = useState("")
-
-  const inputStyles =
-    "px-2 py-1.5 border border-gray-300 rounded  w-full placeholder:text-gray-400 hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-0"
+  const [image, setImage] = useState("")
 
   const indexOfLastProduct = currentPage * productsPerPage
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage
@@ -59,7 +58,6 @@ export default function SellersBoard() {
     indexOfFirstProduct,
     indexOfLastProduct
   )
-  console.log(currentProducts)
 
   const paginate = pageNumber => setCurrentPage(pageNumber)
 
@@ -81,13 +79,107 @@ export default function SellersBoard() {
     }
   }
 
+  let selectedColors = []
+  const handleColor = () => {
+    if (selectedColor) {
+      selectedColor.map(item => {
+        selectedColors.push(item.value)
+      })
+    }
+  }
+
+  let selectedRams = []
+  const handleRam = () => {
+    if (selectedRam) {
+      selectedRam.map(item => {
+        selectedRams.push(item.value)
+      })
+    }
+  }
+
+  let selectedSizes = []
+  const handleSize = () => {
+    if (selectedSize) {
+      selectedSize.map(item => {
+        selectedSizes.push(item.value)
+      })
+    }
+  }
+
+  let images = []
+
+  const inputStyles =
+    "px-2 py-1.5 border border-gray-300 rounded  w-full placeholder:text-gray-400 hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-0"
+
   const closeModal = () => {
     setShowModal(false)
   }
 
+  const uploadImage = () => {
+    const data = new FormData()
+    data.append("file", image[0])
+    data.append("upload_preset", "bamzi_store")
+
+    axios
+      .post("https://api.cloudinary.com/v1_1/dayropo/image/upload", data)
+      .then(res => {
+        console.log(res)
+        images.splice(images.length, 0, res.data.secure_url)
+        console.log(images)
+      })
+  }
+
+  useEffect(() => {
+    const fetchData = () => {
+      axios.get("http://localhost:4000/bamzi/products/").then(response => {
+        console.log(response.data.response)
+        const fetchedData = response.data.response
+        setProducts(fetchedData)
+      })
+    }
+
+    fetchData()
+  }, [])
+
   const handleSubmit = e => {
     e.preventDefault()
-    setAddProduct(false)
+    handleColor()
+    handleSize()
+    handleRam()
+    axios
+      .post("http://localhost:4000/bamzi/products/add", {
+        name: title,
+        description: description,
+        category: selectedCategory.value,
+        subCategory: subCategory,
+        brand: selectedBrand.value,
+        price: price,
+        images: images,
+        colors: selectedColors,
+        ram: selectedRams,
+        sizes: selectedSizes,
+        length: length,
+        texture: texture,
+        stock: stock,
+      })
+      .then(res => {
+        console.log(res)
+        setTitle("")
+        setDescription("")
+        setSelectedCategory("")
+        setSubCategory("")
+        setSelectedBrand("")
+        setPrice("")
+        setSelectedColor("")
+        setSelectedRam("")
+        setSelectedSize("")
+        setLength("")
+        setTexture("")
+        setStock("")
+        setImage("")
+        setAddProduct(false)
+        return res
+      })
   }
 
   const handleEdit = e => {
@@ -105,6 +197,7 @@ export default function SellersBoard() {
           showSidebar={showSidebar}
         />
 
+        {/**show products */}
         {!addProduct && !editProduct && (
           <div className="sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
             <Filter
@@ -142,7 +235,8 @@ export default function SellersBoard() {
                     className="flex items-center p-2 bg-white rounded-md border-none shadow text-sm cursor-pointer"
                     onClick={() => setAddProduct(true)}
                   >
-                    Add Product <FiPlus className="ml-4" />
+                    <p className="lg:block hidden">Add Product</p>
+                    <FiPlus className="lg:ml-4 ml-0" />
                   </span>
                   <span className="p-2 bg-white rounded-md border-none shadow">
                     <FiGrid />
@@ -189,23 +283,42 @@ export default function SellersBoard() {
             </div>
           </div>
         )}
+        {/**show products */}
 
+        {/**add product */}
         {addProduct && !editProduct && (
           <div>
             <div className="flex mt-4 py-4 w-full items-center justify-between">
               <span className="flex space-x-2 text-primary items-center">
                 <MdOutlineAddBusiness size={32} />
-                <p className="text-lg font-semibold text-black">Add Product</p>
+                <p className="md:text-lg text-base font-semibold text-black">
+                  Add Product
+                </p>
               </span>
-              <div className="w-4/12 flex justify-end space-x-2">
+              <div className="md:w-4/12 w-1/2 flex justify-end space-x-2">
                 <button
-                  className="bg-red-500 text-white py-2 w-4/12 rounded-lg text-center"
-                  onClick={() => setAddProduct(false)}
+                  className="bg-red-500 text-white py-2 md:w-4/12 w-1/2 rounded-lg text-center md:text-base text-sm"
+                  onClick={() => {
+                    setTitle("")
+                    setDescription("")
+                    setSelectedCategory("")
+                    setSubCategory("")
+                    setSelectedBrand("")
+                    setPrice("")
+                    setSelectedColor("")
+                    setSelectedRam("")
+                    setSelectedSize("")
+                    setLength("")
+                    setTexture("")
+                    setStock("")
+                    setImage("")
+                    setAddProduct(false)
+                  }}
                 >
                   Cancel
                 </button>
                 <button
-                  className="bg-primary text-white py-2 w-4/12 rounded-lg text-center"
+                  className="bg-primary text-white py-2 md:w-4/12 w-1/2 rounded-lg text-center md:text-base text-sm"
                   onClick={e => handleSubmit(e)}
                 >
                   Save
@@ -218,8 +331,8 @@ export default function SellersBoard() {
                 Product Info
               </div>
 
-              <div className="flex space-x-4 bg-white p-4 rounded shadow">
-                <div className="space-y-4 w-1/2">
+              <div className="flex md:flex-row flex-col md:space-x-4 space-y-4 md:space-y-0 bg-white p-4 rounded shadow">
+                <div className="space-y-4 md:w-1/2 w-full">
                   <div className="space-y-1">
                     <label htmlFor="title">Title</label>
                     <input
@@ -291,18 +404,24 @@ export default function SellersBoard() {
                     />
                   </div>
 
-                  <div className="space-y-1">
-                    <span>Images</span>
+                  <div className="space-y-1.5">
+                    <label htmlFor="images">Images</label>
                     <input
-                      type="text"
+                      type="file"
+                      id="images"
                       className={inputStyles}
-                      placeholder="Images"
-                      autoComplete=""
+                      onChange={e => setImage(e.target.files)}
                     />
+                    <button
+                      className="w-1/2 md:4/12 py-1 bg-gray-200 rounded border border-gray-600 text-sm"
+                      onClick={() => uploadImage()}
+                    >
+                      Upload
+                    </button>
                   </div>
                 </div>
 
-                <div className="space-y-4 w-1/2">
+                <div className="space-y-4 md:w-1/2 w-full">
                   <div className="space-y-1">
                     <span>Color</span>
                     <Select
@@ -379,7 +498,9 @@ export default function SellersBoard() {
             </div>
           </div>
         )}
+        {/**add product */}
 
+        {/**edit product */}
         {!addProduct && editProduct && (
           <div>
             <div className="flex mt-4 py-4 w-full items-center justify-between">
@@ -555,6 +676,7 @@ export default function SellersBoard() {
             </div>
           </div>
         )}
+        {/**edit product */}
       </div>
     </div>
   )

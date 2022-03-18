@@ -453,27 +453,27 @@ export const colors = [
 
 export const ram = [
   {
-    value: "1",
+    value: "1GB",
     label: "1GB",
   },
   {
-    value: "2",
+    value: "2GB",
     label: "2GB",
   },
   {
-    value: "4",
+    value: "4GB",
     label: "4GB",
   },
   {
-    value: "8",
+    value: "8GB",
     label: "8GB",
   },
   {
-    value: "16",
+    value: "16GB",
     label: "16GB",
   },
   {
-    value: "32",
+    value: "32GB",
     label: "32GB",
   },
   {
@@ -484,23 +484,23 @@ export const ram = [
 
 export const sizes = [
   {
-    value: "small",
+    value: "S",
     label: "S",
   },
   {
-    value: "medium",
+    value: "M",
     label: "M",
   },
   {
-    value: "large",
+    value: "L",
     label: "L",
   },
   {
-    value: "extra large",
+    value: "XL",
     label: "XL",
   },
   {
-    value: "extra extra large",
+    value: "XXL",
     label: "XXL",
   },
 ]

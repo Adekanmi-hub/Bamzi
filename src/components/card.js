@@ -7,7 +7,7 @@ const Card = ({ product, btnColor }) => {
       <div className="mx-auto">
         <img
           className="h-36 aspect-square object-contain block"
-          src={product.image}
+          src={product.images}
           style={{ objectFit: "contain" }}
           alt="item"
         />
@@ -15,14 +15,16 @@ const Card = ({ product, btnColor }) => {
 
       <div className="mt-4 h-32 px-4">
         <div className="flex justify-between mb-4">
-          <div className={`${btnColor} flex items-center space-x-1 rounded px-3`}>
+          <div
+            className={`${btnColor} flex items-center space-x-1 rounded px-3`}
+          >
             <span className="text-white mt-1">{product.rating}</span>
             <FaStar className="text-secondary" />
           </div>
           <div className="text-primary text-lg font-bold">{`$${product.price}`}</div>
         </div>
-        <h6>{product.title}</h6>
-        <p className="text-sm font-light">{product.intro}</p>
+        <h6>{product.name}</h6>
+        <p className="text-sm font-light">{product.description}</p>
       </div>
     </div>
   )
