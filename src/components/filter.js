@@ -1,5 +1,5 @@
-import React, { useState} from "react"
-import { FiStar, FiX } from "react-icons/fi"
+import React, { useState } from "react"
+import { FiX } from "react-icons/fi"
 import Radio from "./radio"
 import CheckboxCategory from "./checkboxCategory"
 import CheckboxBrand from "./checkboxBrand"
@@ -12,7 +12,7 @@ const Filter = ({
   btnColor,
   products,
 }) => {
-  const [selectedRating, setSelectedRating] = useState(0)
+  // const [selectedRating, setSelectedRating] = useState(0)
   const [selectedRadio, setSelectedRadio] = useState("All")
   const [selectedCategory, setSelectedCategory] = useState([])
   const [selectedBrand, setSelectedBrand] = useState([])
@@ -53,25 +53,25 @@ const Filter = ({
     }
   }
 
-  const filterByRating = data => {
-    console.log("filteredRating")
-    switch (selectedRating) {
-      case 5:
-        return data.filter(prod => Math.floor(prod.rating) === 5)
-      case 4:
-        return data.filter(prod => Math.floor(prod.rating) === 4)
-      case 3:
-        return data.filter(prod => Math.floor(prod.rating) === 3)
-      case 2:
-        return data.filter(prod => Math.floor(prod.rating) === 2)
-      case 1:
-        return data.filter(prod => Math.floor(prod.rating) === 1)
-      case 0:
-        return data
-      default:
-        return data
-    }
-  }
+  // const filterByRating = data => {
+  //   console.log("filteredRating")
+  //   switch (selectedRating) {
+  //     case 5:
+  //       return data.filter(prod => Math.floor(prod.rating) === 5)
+  //     case 4:
+  //       return data.filter(prod => Math.floor(prod.rating) === 4)
+  //     case 3:
+  //       return data.filter(prod => Math.floor(prod.rating) === 3)
+  //     case 2:
+  //       return data.filter(prod => Math.floor(prod.rating) === 2)
+  //     case 1:
+  //       return data.filter(prod => Math.floor(prod.rating) === 1)
+  //     case 0:
+  //       return data
+  //     default:
+  //       return data
+  //   }
+  // }
 
   const filterData = product => {
     const filteredPrices = filterByPrice(product)
@@ -80,10 +80,10 @@ const Filter = ({
     console.log("filteredBrands :", filteredBrands)
     const filteredCategories = filterByCategory(filteredBrands)
     console.log("filteredCategories :", filteredCategories)
-    const filteredRatings = filterByRating(filteredCategories)
-    console.log("filteredRatings :", filteredRatings)
+    // const filteredRatings = filterByRating(filteredCategories)
+    // console.log("filteredRatings :", filteredRatings)
 
-    return filteredRatings
+    return filteredCategories
   }
 
   const onChangeHandler = () => {
@@ -168,7 +168,7 @@ const Filter = ({
           accentColor={accentColor}
         />
 
-        <div className="py-4 space-y-2">
+        {/* <div className="py-4 space-y-2">
           <h3>Rating</h3>
           <div className="flex flex-col mt-2">
             <div className="text-sm flex space-x-2 items-center">
@@ -257,7 +257,7 @@ const Filter = ({
               </label>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <button
           className={`${btnColor} text-white text-sm py-2 px-6 rounded border-none mb-3`}
