@@ -46,7 +46,7 @@ const Header = ({ pryNav, secNav, bg }) => {
                     </div>
                     <div className="py-1 text-sm text-gray-700 hover:bg-primary hover:text-white">
                       <Link
-                        to="/sellers-board"
+                        to="/dashboard"
                         className="items-center px-4 py-2 "
                       >
                         Products
