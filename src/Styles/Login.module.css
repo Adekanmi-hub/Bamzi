@@ -1,0 +1,833 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+
+body {
+    width: 100%;
+    text-decoration: none;
+    min-height: 100vh;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/*These are the styles for the webpage header*/
+header {
+    background-color: #E9F0FF;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 850px;
+}
+
+.headercont {
+    margin-right: 8%;
+    margin-left: 8%;
+}
+
+.headcont {
+    display: flex;
+    justify-content: baseline;
+}
+
+.logo {
+    width: 150px;
+    height: 55px;
+    margin-top: 2%;
+}
+
+.headnav1 {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: left;
+    margin-top: 3%;
+    width: 30%;
+    margin-left: 7%;
+}
+
+.headlink1 {
+    margin-right: 12%;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.headnav2 {
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    margin-top: 3%;
+    justify-content: right;
+    width: 10%;
+    margin-right: 2%;
+    margin-left: 40%;
+}
+
+.headlink2 {
+    font-weight: 700;
+    font-size: 18px;
+    width: 40%;
+    text-align: center;
+}
+
+.headcart {
+    width: 25px;
+    height: 25px;
+}
+
+.headbtn {
+    background-color: #E9F0FF;
+    padding: 5px 30px;
+    font-size: 18px;
+    font-weight: 800;
+    border-radius: 10px;
+    border-color: #FDD25A;
+    border-style: solid;
+    margin-top: 2.5%;
+    height: 50px;
+    width: 10%;
+}
+
+.headcnt {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.headercnt {
+    margin-top: 15%;
+    width: 48%;
+}
+
+.headertxt {
+    font-size: 60px;
+}
+
+.headertxt1 {
+    margin-top: 3%;
+    font-size: 18px;
+    opacity: 0.4;
+    font-weight: 500;
+    width: 100%;
+}
+
+.headerbtn {
+    margin-top: 5%;
+}
+
+.headerbtn1 {
+    background-color: #000033;
+    color: white;
+    padding: 15px 35px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.headerbtn2 {
+    background-color: #FDD25A;
+    color: white;
+    border-color: #FDD25A;
+    border-style: solid;
+    padding: 15px 35px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 8%;
+}
+
+.headerimg {
+    margin-top: 3%;
+    margin-left: 10%;
+    width: 52%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.headerimg1 {
+    height: 650px;
+    width: 780px;
+    margin-right: 0%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.headerimg2 {
+    height: 600px;
+    width: 600px;
+    position: absolute;
+    bottom: 80px;
+    right: 70px;
+}
+
+/*This is the subheader displayed inbetween the header and section 1 on the webpage*/
+.subhead {
+    display: flex;
+    flex-direction: row;
+    margin-top: -5%;
+    margin-left: 8%;
+}
+
+.subsec1 {
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px #e0e0e08c;
+    border: 10px solid #FDD25A;
+}
+
+.subsec2 {
+    margin-left: 12%;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px #e0e0e08c;
+    border: 10px solid #FDD25A;
+}
+
+.subsec3 {
+    margin-left: 13%;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px #e0e0e08c;
+    border: 10px solid #FDD25A;
+}
+
+.subsec4 {
+    margin-left: 13%;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px #e0e0e08c;
+    border: 10px solid #FDD25A;
+}
+
+.orders {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.order1 {
+    margin-left: 11%;
+    font-size: 18px;
+}
+
+.order2 {
+    margin-right: 2%;
+    font-size: 18px;
+}
+
+.order3 {
+    margin-right: 2%;
+    font-size: 18px;
+}
+
+.order4 {
+    margin-right: 11%;
+    font-size: 18px;
+}
+
+
+/*This is the first section of the webpage*/
+.sec1 {
+    position: relative;
+    margin-top: 8%;
+    display: flex;
+    flex-direction: row;
+}
+
+.sec1img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 48%;
+}
+
+.sec1img1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 600px;
+    height: 630px;
+}
+
+.sec1img2 {
+    position: absolute;
+    top: -90px;
+    left: 250px;
+    width: 500px;
+    height: 830px;
+}
+
+.sec1txt {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: right;
+    margin-left: 0%;
+    margin-top: 7%;
+}
+
+.sec1head {
+    font-size: 46px;
+    font-weight: 600;
+}
+
+.sec1txt1 {
+    margin-top: 3%;
+    width: 75%;
+    font-size: 18px;
+    opacity: 0.3;
+    font-weight: 500;
+}
+
+.sec1btn {
+    position: relative;
+    font-size: 20px;
+    color: #707070;
+    font-weight: 600;
+    width: 26%;
+    margin-top: 6%;
+    border: 1px solid #0808ff;
+    background-color: white;
+    padding: 15px 50px 15px 0px;
+    border-radius: 15px;
+}
+
+.arrow {
+    position: absolute;
+    color: #707070;
+    bottom: 140px;
+    left: 865px;
+}
+
+/*This is the second section of the webpage*/
+.sec2 {
+    margin-top: 5%;
+}
+
+.sec2head {
+    font-size: 44px;
+    text-align: center;
+}
+
+.sec2main {
+    display: flex;
+    margin-left: 17%;
+    margin-top: 5%;
+}
+
+.sec2flex1 {
+    background-color: #E9F0FF;
+    padding: 30px 30px 0px 30px;
+    width: 23%;
+    border-radius: 10px;
+    height: 400px;
+}
+
+.sec2img1 {
+    margin-left: 8%;
+    width: 230px;
+    height: 180px;
+}
+
+.sec2hd {
+    text-align: center;
+    font-size: 24px;
+    width: 80%;
+    margin-left: 8%;
+    
+}
+
+.sec2txt {
+    margin-top: 5%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+}
+
+.sec2flex2 {
+    background-color: #000033;
+    color: white;
+    padding: 30px;
+    width: 23%;
+    margin-left: 5%;
+    margin-top: 4%;
+    border-radius: 10px;
+    height: 420px;
+}
+
+.sec2img2 {
+    width: 260px;
+    height: 210px;
+}
+
+.sec2hd1 {
+    text-align: center;
+    font-size: 24px;
+    margin-top: -8%;
+}
+
+.sec2flex3 {
+    background-color: #E9F0FF;
+    padding: 30px;
+    width: 23%;
+    margin-left: 5%;
+    border-radius: 10px;
+    height: 400px;
+}
+
+.sec2img3 {
+    width: 250px;
+    height: 200px;
+}
+
+
+/*This is the third section of the webpage*/
+.sec3 {
+    margin-top: 9%;
+    margin-left: 13%;
+    display: flex;
+}
+
+.sec3img {
+    width: 650px;
+    height: 400px;
+}
+
+.sec3cont {
+    margin-left: 5%;
+}
+
+.sec3head {
+    width: 80%;
+    font-size: 46px;
+}
+
+.sec3txt {
+    margin-top: 6%;
+    font-size: 18px;
+    font-weight: 600;
+    opacity: 0.3;
+}
+
+.sec3txt1 {
+    font-size: 18px;
+    font-weight: 600;
+    opacity: 0.3;
+}
+
+.sec3btn {
+    width: 40%;
+    margin-top: 10%;
+    background-color: #000033;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.hor {
+    margin-top: 8%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+/*This is the fourth section of the webpage*/
+.sec4 {
+    margin-left: 12%;
+    margin-bottom: 12%;
+}
+
+.sec4head {
+    margin-top: 3%;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.sec4cont1 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3%;
+}
+
+.cont1 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 1%;
+}
+
+.sec4btn {
+    font-size: 16px;
+    background-color: #000033;
+    width: 10%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 1%;
+    color: white;
+}
+
+.cont2 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 1%;
+    margin-top: 1%;
+}
+
+.sec4cont2 {
+    display: flex;
+    margin-top: 3%;
+}
+
+.sec4subcont1 {
+    width: 48%;
+}
+
+.cont3 {
+    width: 93%;
+    padding: 70px 40px 70px 40px;
+    border-radius: 10px;
+    background-color: #000033;
+    color: white;
+    text-align: center;
+}
+
+.sec4img1 {
+    margin-top: 3%;
+    width: 305px;
+    height: 425px;
+}
+
+.sec4img2 {
+    border-radius: 10px;
+    width: 600px;
+    height: 600px;
+}
+
+
+/*This is the fifth section of the webpage*/
+.sec5 {
+    background-color: #E9F0FF;
+    height: 500px;
+}
+
+.sec5cont {
+    display: flex;
+    margin-left: 12%;
+}
+
+.sec5header {
+    margin-top: 4%;
+    width: 58%;
+}
+
+.sec5head {
+    width: 100%;
+    font-size: 44px;
+}
+
+.sec5span {
+    color: #FDD25A;
+}
+
+.sec5btn {
+    margin-top: 4%;
+    background-color: #000033;
+    width: 35%;
+    padding: 15px;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.sec5img {
+    margin-left: 3%;
+    margin-top: -7%;
+    width: 500px;
+    height: 630px;
+    opacity: 1;
+}
+
+
+/*This is the subheader displayed inbetween the fifth section and the footer on the webpage*/
+.sec6 {
+    width: 58%;
+    margin-left: 21%;
+    margin-right: 20%;
+    position: relative;
+    bottom: 80px;
+    left: 0;
+}
+
+.sec6cont {
+    padding: 40px 35px 40px 35px;
+    background-color: #000033;
+    border-radius: 10px;
+}
+
+.sec6sub {
+    display: flex;
+}
+
+.sec6hd1 {
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.sec6hd2 {
+    color: white;
+    font-size: 16px;
+    margin-top: 3%;
+    height: 30%;
+}
+
+.sec6head2 {
+    margin-left: 8%;
+    padding: 15px;
+    display: flex;
+    background-color: white;
+    width: 45%;
+    margin-top: 1%;
+    height: 70px;
+    border: solid;
+    position: relative;
+    border-radius: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+}
+
+input {
+    border: none;
+}
+
+input::placeholder {
+    padding-left: 15px;
+    font-weight: 600;
+    opacity: 0.7;
+    font-size: 18px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.sec6btn {
+    background-color: #FDD25A;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 20px;
+    border-color: #FDD25A;
+    position: absolute;
+    bottom: 10px;
+    left: 230px;
+    width: 30%;
+}
+
+
+footer {
+    width: 100%;
+    background-color: #303030;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 460px;
+    width: 100%;
+    position: relative;
+    bottom: 5px;
+}
+
+.footerbody {
+    margin-left: 8%;
+    color: white;
+}
+
+.footcont {
+    display: flex;
+    flex-direction: row;
+}
+
+.footimg {
+    width: 130px;
+}
+
+.footlogo {
+    width: 100px;
+    height: 40px;
+    opacity: 1;
+}
+
+.footlogo1 {
+    margin-top: 70%;
+    width: 130px;
+    height: 50px;
+}
+
+.flex {
+    font-family: work sans;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-left: 15%;
+}
+
+.flexlist1 {
+    margin-left: 23%;
+}
+
+.flexlist2 {
+    margin-left: 26%;
+}
+
+.flextxt {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.flextxt1 {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.flextxt2 {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.ol {
+    margin-top: 25%;
+    line-height: 150%;
+}
+
+.ol1 {
+    margin-top: 25%;
+    line-height: 160%;
+}
+
+.ol2 {
+    margin-top: 13%;
+    line-height: 150%;
+}
+
+li {
+    list-style: none;
+    font-size: 16px;
+    line-height: 200%;
+    opacity: 0.5;
+}
+
+.lastline {
+    display: flex;
+    margin-right: 10%;
+    font-size: 10px;
+    width: 100%;
+    margin-top: 2%;
+}
+
+.lastline1 {
+    width: 50%;
+}
+
+.lastline2 {
+    width: 50%;
+    margin-left: 50%;
+}
+
+.lastlink {
+    margin-right: 4%;
+}
+
+.lastlink1 {
+    margin-right: 4%;
+}
+
+/*@media screen and (max-width: 480px) {
+  
+}
+@media screen and (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+  header {
+    width: 100%;
+  }
+  .headercont {
+    margin-right: 8%;
+  }
+  .headcont {
+    width: 95%;
+  }
+  .logo {
+    width: 80px;
+    height: 40px;
+  }
+  .headnav2 {
+    margin-left: 0%;
+    margin-right: 0%;
+    width: 40%;
+  }
+  .headnav1{
+    width: 40%;
+    margin-left: 5%;
+  }
+  .headlink1 {
+    margin-right: 8%;
+    font-size: 12px;
+  }
+  .headlink2 {
+    font-size: 12px;
+    width: 13%;
+  }
+  .headcart {
+    width: 15px;
+    height: 15px;
+    margin-right: 8%;
+  }
+  .headbtn {
+    width: 15%;
+    height: 30px;
+    font-size: 12px;
+    padding: 0px 8px;
+  }
+  .headerimg1 {
+    width:300px;
+  }
+  .headerimg2 {
+    width: 300px;
+  }
+  .subhead {
+    margin-left: 0%;
+    width: 40%;
+  }
+  .sec2main {
+    margin-left: 0%;
+    width: 100%;
+  }
+  .sec4img1 {
+    width: 200px;
+  }
+  .sec4img2 {
+    width: 200px;
+  }
+  .sec5img {
+    width: 200px;
+  }
+  .flex {
+    margin-left: 0%;
+    width: 60%;
+  }
+}*/
