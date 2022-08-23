@@ -1,0 +1,1136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: poppins;
+}
+
+body {
+    width: 100%;
+    text-decoration: none;
+    min-height: 100vh;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.dashboard {
+    display: flex;
+    position: relative;
+}
+
+.sidebar {
+    background-color: #000033;
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+    width: 20%;
+    top: 0px;
+    bottom: 0px;
+    position: relative;
+}
+
+.sidebarcont {
+    padding: 0px 0px 0px 23px;
+    width: 100%;
+}
+
+.sidebarbg {
+    /* background-color: #000033; */
+    background-color: #000033;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.dashboard2 {
+    background-color: #f9f9f9;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+}
+
+
+/*This is the styling for Bamzi logo on Dashboard1*/
+.img1 {
+    box-shadow: 0px 0px 10px white;
+    background-color: white;
+    padding: 0px 7px;
+    border-radius: 7px;
+    
+    width: 150px;
+    height: 60px;
+}
+
+.bamzi {
+    margin-top: 20%;
+    font-size: 36px;
+}
+.bam {
+    color: white;
+}
+
+.zi {
+    color: #FDD25A;
+}
+
+.section1 {
+    margin-top: 20%;
+    padding: 5px 20px 5px 0px;
+    background-color: #f9f9f9;
+    border-radius: 3px;
+    width: 95%;
+}
+
+.home {
+    color: black;
+    margin-left: 5%;
+}
+
+.dash {
+    color: black;
+    margin-left: 12%;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+.section2 {
+    width: 100%;
+    margin-top: 10%;
+    color: white;
+}
+
+.circle {
+    margin-left: 5%;
+}
+
+.analytics {
+    margin-left: 12%;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+.section3 {
+    margin-top: 10%;
+    width: 100%;
+    color: white;
+}
+
+.marketing {
+    margin-left: 12%;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+.product {
+    color: white;
+    margin-top: 10%;
+    width: 97%;
+    margin-left: 3%;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.section4 {
+    margin-top: 5%;
+    width: 100%;
+    color: white;
+}
+
+.cart {
+    margin-left: 5%;
+}
+
+.sales {
+    margin-left: 6%;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.arrow1 {
+    margin-left: 40%;
+}
+
+.section5 {
+    margin-top: 5%;
+    width: 100%;
+    padding: 5px 20px 5px 0px;
+    background-color: #FDD25A;
+    border-radius: 3px;
+    width: 95%;
+    color: white;
+}
+
+.cube {
+    margin-left: 5%;
+    color: white;
+}
+
+.products {
+    margin-left: 6%;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+}
+
+.section6 {
+    margin-top: 5%;
+    width: 100%;
+    color: white;
+}
+
+.icategory {
+    margin-left: 5%;
+}
+
+.arrow2 {
+    margin-left: 18%;
+}
+
+.category {
+    margin-left: 6%;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+.transaction {
+    color: white;
+    margin-left: 3%;
+    width: 97%;
+    margin-top: 15%;
+    font-size: 18px;
+}
+
+.section7 {
+    margin-top: 5%;
+    width: 100%;
+    color: white;
+}
+
+.calendar {
+    margin-left: 5%;
+}
+
+.history {
+    margin-left: 6%;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.section8 {
+    color: white;
+    margin-top: 5%;
+    width: 100%;
+}
+
+.card {
+    margin-left: 5%;
+}
+
+.billing {
+    margin-left: 6%;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+.setting {
+    color: white;
+    margin-top: 15%;
+    width: 97%;
+    margin-left: 3%;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.section9 {
+    color: white;
+    margin-top: 5%;
+    width: 100%;
+}
+
+.person {
+    margin-left: 5%;
+}
+
+.arrow3 {
+    margin-left: 30%;
+}
+
+.account {
+    margin-left: 6%;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.section10 {
+    color: white;
+    margin-top: 5%;
+    width: 100%;
+}
+
+.arrow {
+    margin-left: 5%;
+}
+
+.shop {
+    margin-left: 6%;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.section11 {
+    color: white;
+    margin-top: 5%;
+    width: 100%;
+}
+
+.question {
+    margin-left: 5%;
+}
+
+.help {
+    margin-left: 6%;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.sect {
+    margin-top: 3%;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+/*This is section 1 of the Dashboard2*/
+.sect1 {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 10px 7px 0px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #d0d0d0;
+    width: 100%;
+    position: relative;
+}
+
+.sect1cont1 {
+    display: flex;
+    padding: 7px 15px 0px 24px;
+    background-color: #000033;
+    border-radius: 20px;
+    box-shadow: 0px 0px 2px black;
+    height: 9%;
+    margin-left: 2%;
+    width: 22%;
+}
+
+.sect1bal {
+    color: white;
+}
+
+.sect1amount {
+    margin-left: 3%;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: start;
+}
+
+.sect1hide {
+    margin-left: 7%;
+    color: black;
+    opacity: 0.5;
+}
+
+.sect1cont2 {
+    margin-left: 2%;
+}
+
+.sect1notify {
+    position: relative;
+    color: black;
+    opacity: 0.7;
+}
+
+.sect1not {
+    color: #FDD25A;
+    position: absolute;
+    left: 391px;
+    top: 6px;
+}
+
+.sect1cont3 {
+    margin-left: 2%;
+}
+
+.sect1mail {
+    position: relative;
+    color: black;
+    opacity: 0.7;
+}
+
+.sect1not1 {
+    color: #FDD25A;
+    position: absolute;
+    left: 444px;
+    top: 6px;
+}
+
+.sect1shop {
+    margin-left: 19%;
+    color: black;
+    opacity: 0.5;
+}
+
+.sect1evans {
+    margin-left: 5%;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.sect1img {
+    margin-left: 3%;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    box-shadow: 0px 0px 0px 2px #e0e0e0;
+}
+
+
+/* THIS IS THE MAIN CONTENT STYLING ON THE WEBPAGE */
+.main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main2 {
+    width: 33%;
+}
+
+.filtercont {
+    display: flex;
+    padding: 70px 0px 10px 0px;
+}
+
+.filter {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+.result {
+    margin-left: 360px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.maincontainer {
+    background-color: white;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #d0d0d0;
+}
+
+.subcontainer {
+    padding: 20px;
+}
+
+.multirange {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.pricerangecont {
+    padding: 10px 0px 15px 0px;
+    border-bottom: 1px solid grey;
+}
+
+.pricerange {
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.slidercont {
+    padding: 10px 0px 10px 0px;
+    border-bottom: 1px solid grey;
+}
+
+.sliderrange {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 0px 10px 0px;
+}
+
+.slider {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.slidertxt {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.range {
+    width: 100%;
+}
+
+/* THIS IS THE STYLING FOR CATEGORY SEGMENT*/
+.categorycont {
+    padding: 10px 0px 10px 0px;
+    border-bottom: 1px solid grey;
+}
+
+.categorytxt {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 0px 10px 0px;
+}
+
+/* THIS IS THE STYLING FOR CELL PHONE CATEGORY */
+.cellphonescont {
+    display: flex;
+    width: 100%;
+}
+
+.cellphonesmain {
+    padding: 0px 0px 0px 10px;
+}
+
+.cellphones {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.cellphonesamount {
+    padding-left: 183px;
+    color: grey;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* THIS IS THE STYLING FOR COMPUTERS AND TABLETS CATEGORY */
+.computerscont {
+    display: flex;
+    width: 100%;
+}
+
+.computersmain {
+    padding: 0px 0px 0px 10px;
+}
+
+.computers {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.computersamount {
+    padding-left: 120px;
+    color: grey;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+/* THIS IS THE STYLING FOR CELL PHONE ACCESSORIES CATEGORY */
+.accessoriescont {
+    display: flex;
+    width: 100%;
+}
+
+.accessoriesmain {
+    padding: 0px 0px 0px 10px;
+}
+
+.accessories {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.accessoriesamount {
+    padding-left: 111px;
+    color: grey;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* THIS IS THE STYLING FOR APPLIANCES CATEGORY */
+.appliancescont {
+    display: flex;
+    width: 100%;
+}
+
+.appliancesmain {
+    padding: 0px 0px 0px 10px;
+}
+
+.appliances {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.appliancesamount {
+    padding-left: 181px;
+    color: grey;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* THIS IS THE STYLING FOR AUDIO CATEGORY */
+.audiocont {
+    display: flex;
+    width: 100%;
+}
+
+.audiomain {
+    padding: 0px 0px 0px 10px;
+}
+
+.audio {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.audioamount {
+    padding-left: 229px;
+    color: grey;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* THIS IS THE STYLING FOR IPHONE ACCESSORIES CATEGORY */
+.iphonecont {
+    display: flex;
+    width: 100%;
+}
+
+.iphonemain {
+    padding: 0px 0px 0px 10px;
+}
+
+.iphone {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.iphoneamount {
+    padding-left: 136px;
+    color: grey;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* THIS IS THE STYLING FOR CAMERAS AND CAMCORDERS CATEGORY */
+.camerascont {
+    display: flex;
+    width: 100%;
+}
+
+.camerasmain {
+    padding: 0px 0px 0px 10px;
+}
+
+.cameras {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.camerasamount {
+    padding-left: 110px;
+    color: grey;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* THIS IS THE STYLING FOR CASES AND CLIPS CATEGORY */
+.casescont {
+    display: flex;
+    width: 100%;
+}
+
+.casesmain {
+    padding: 0px 0px 0px 10px;
+}
+
+.cases {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.casesamount {
+    padding-left: 124px;
+    color: grey;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* THIS IS THE STYLING FOR TV AND HOME THEATER CATEGORY */
+.tvcont {
+    display: flex;
+    width: 100%;
+}
+
+.tvmain {
+    padding: 0px 0px 0px 10px;
+}
+
+.tv {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.tvamount {
+    padding-left: 144px;
+    color: grey;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* THIS IS THE STYLING FOR KITCHEN APPLIANCES CATEGORY */
+.kitchencont {
+    display: flex;
+    width: 100%;
+}
+
+.kitchenmain {
+    padding: 0px 0px 0px 10px;
+}
+
+.kitchen {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.kitchenamount {
+    padding-left: 105px;
+    color: grey;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* THIS IS THE STYLING FOR BRAND SEGMENT*/
+.brandcont {
+    padding: 10px 0px 10px 0px;
+    border-bottom: 1px solid grey;
+}
+
+.brandtxt {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 0px 10px 0px;
+}
+
+/* THIS IS THE STYLING FOR INSIGNI BRAND*/
+.insignicont {
+    display: flex;
+    width: 100%;
+}
+
+.insignimain {
+    padding: 0px 0px 0px 10px;
+}
+
+.insigni {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.insigniamount {
+    padding-left: 220px;
+    color: grey;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* THIS IS THE STYLING FOR SAMSUNG BRAND*/
+.samsungcont {
+    display: flex;
+    width: 100%;
+}
+
+.samsungmain {
+    padding: 0px 0px 0px 10px;
+}
+
+.samsung {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.samsungamount {
+    padding-left: 204px;
+    color: grey;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+/* THIS IS THE STYLING FOR HP*/
+.hpcont {
+    display: flex;
+    width: 100%;
+}
+
+.hpmain {
+    padding: 0px 0px 0px 10px;
+}
+
+.hp {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.hpamount {
+    padding-left: 255px;
+    color: grey;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* THIS IS THE STYLING FOR APPLE*/
+.applecont {
+    display: flex;
+    width: 100%;
+}
+
+.applemain {
+    padding: 0px 0px 0px 10px;
+}
+
+.apple {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.appleamount {
+    padding-left: 226px;
+    color: grey;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* THIS IS THE STYLING FOR SONY BRAND*/
+.sonycont {
+    display: flex;
+    width: 100%;
+}
+
+.sonymain {
+    padding: 0px 0px 0px 10px;
+}
+
+.sony {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.sonyamount {
+    padding-left: 231px;
+    color: grey;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* THIS IS THE STYLING FOR METRA*/
+.metracont {
+    display: flex;
+    width: 100%;
+}
+
+.metramain {
+    padding: 0px 0px 0px 10px;
+}
+
+.metra {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.metraamount {
+    padding-left: 231px;
+    color: grey;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* THIS IS THE STYLING FOR DYNE*/
+.dynecont {
+    display: flex;
+    width: 100%;
+}
+
+.dynemain {
+    padding: 0px 0px 0px 10px;
+}
+
+.dyne {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.dyneamount {
+    padding-left: 234px;
+    color: grey;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* THIS IS THE STYLING FOR LG*/
+.lgcont {
+    display: flex;
+    width: 100%;
+}
+
+.lgmain {
+    padding: 0px 0px 0px 10px;
+}
+
+.lg {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.lgamount {
+    padding-left: 255px;
+    color: grey;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* THIS IS THE STYLING FOR CANON*/
+.canoncont {
+    display: flex;
+    width: 100%;
+}
+
+.canonmain {
+    padding: 0px 0px 0px 10px;
+}
+
+.canon {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.canonamount {
+    padding-left: 227px;
+    color: grey;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* THIS IS THE STYLING FOR LENOVO*/
+.lenovocont {
+    display: flex;
+    width: 100%;
+}
+
+.lenovomain {
+    padding: 0px 0px 0px 10px;
+}
+
+.lenovo {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.lenovoamount {
+    padding-left: 217px;
+    color: grey;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.ratingcont {
+    padding: 10px 0px 10px 0px;
+}
+
+.rating {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 0px 10px 0px;
+}
+
+.starmain1 {
+    display: flex;
+}
+
+.starcont1 {
+    display: flex;
+}
+
+.star1 {
+    color: orange;
+}
+
+.star2 {
+    color: grey;
+}
+
+.startxt1 {
+    padding-left: 180px;
+    font-size: 12px;
+    color: grey;
+}
+
+.startxt2 {
+    padding-left: 180px;
+    font-size: 12px;
+    color: grey;
+}
+
+.startxt3 {
+    padding-left: 187px;
+    font-size: 12px;
+    color: grey;
+}
+
+.startxt4 {
+    padding-left: 180px;
+    font-size: 12px;
+    color: grey;
+}
+
+.startxt5 {
+    padding-left: 180px;
+    font-size: 12px;
+    color: grey;
+}
+
+.categorybtn {
+    margin-top: 25px;
+    background-color: #000033;
+    color: white;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 10px 20px 10px 20px;
+}
+
+.itemsmain {
+    width: 63%;
+}
+
+.searchmain {
+    display: flex;
+    margin-left: 2%;
+    width: 88%;
+    justify-content: space-between;
+}
+
+.searchcont {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 0px 0px 10px #d0d0d0;
+    width: 55%;
+    height: 10%;
+    margin-top: 0.5%;
+    border: 1px solid white;
+    border-radius: 33px;
+    padding: 5px 15px 3px 3px;
+}
+
+input::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.5;
+}
+
+.searchlogo {
+    opacity: 0.5;
+}
+
+.action {
+    display: flex;
+    width: 35%;
+}
+
+.actioncont {
+    margin-top: 2%;
+    border-radius: 7px;
+    box-shadow: 0px 0px 10px #d0d0d0;
+    width: 58%;
+    height: 80%;
+    padding: 0px 3px 0px 3px;
+    border: none;
+}
+
+.grid {
+    padding: 10px;
+    box-shadow: 0px 0px 10px #d0d0d0;
+    margin-left: 4%;
+    height: 80%;
+    margin-top: 2%;
+    border-radius: 7px;
+}
+
+.burger {
+    padding: 10px;
+    box-shadow: 0px 0px 10px #d0d0d0;
+    margin-left: 4%;
+    height: 80%;
+    margin-top: 2%;
+    border-radius: 7px;
+}
+
+.imgx {
+    width: 310px;
+    height: 380px;
+}
+
+.bottomcont {
+    padding: 30px 0px 30px 380px;
+    display: flex;
+}
+
+.arrowback {
+    padding: 7px 7px 5px 9px;
+    border-radius: 50px;
+    height: 35px;
+    width: 5%;
+    background-color: #e6e6e6;
+
+}
+
+.numbercont {
+    display: flex;
+    padding: 0px 10px 0px 10px;
+    width: 40%;
+    height: 35px;
+    justify-content: space-between;
+    background-color: #e6e6e6;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 2%;
+}
+
+.no1 {
+    padding-top: 7px;
+}
+
+.arrowforward {
+    padding: 7px 7px 5px 9px;
+    border-radius: 50px;
+    height: 35px;
+    width: 5%;
+    background-color: #e6e6e6;
+    margin-left: 2%;
+}
+
+.no6 {
+    background-color: #000033;
+    color: white;
+    border-radius: 35px;
+    padding: 7px 7px 7px 15px;
+    width: 15%;
+    height: 100%;
+}

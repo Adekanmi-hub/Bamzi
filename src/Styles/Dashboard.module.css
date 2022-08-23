@@ -19,12 +19,15 @@ body {
 
 .dashboard {
     display: flex;
+    position: relative;
 }
 
 .sidebar {
-    box-shadow: 10px 0 -5px 0 #555;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
     width: 20%;
-    height: 100%;
+    top: 0px;
+    bottom: 0px;
+    position: relative;
 }
 
 .sidebarcont {
@@ -360,7 +363,7 @@ body {
     height: 35px;
     box-shadow: 0px 0px 0px 2px #e0e0e0;
 }
-
+ /*This is section 2 of Dashboard 2*/
 .sect2 {
     margin-top: 4%;
 }

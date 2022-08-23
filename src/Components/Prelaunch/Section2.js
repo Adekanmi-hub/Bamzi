@@ -5,7 +5,7 @@ export const Section2 = () => {
     return (
         <div>
             <div>
-                <form action="" className={classes.form}>
+                <form action="" className={classes.form1}>
                     <input type="text" className={classes.formname} name="fname" placeholder="Full Name" /><br />
                     <div>
                         <input type="email" className={classes.formemail} name="email" placeholder="Email here" />

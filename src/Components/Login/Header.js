@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from '../../Styles/Login.module.css'
+import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
@@ -12,7 +13,10 @@ const Header = () => {
                             <a className={classes.headlink1} href="/" style={{ color: "#000033" }}>Products</a>
                             <a className={classes.headlink1} href="/" style={{ color: "#000033" }}>Stores</a>
                             <a className={classes.headlink1} href="/" style={{ color: "#000033" }}>Pricing</a>
-                            <a className={classes.headlink1} href="/" style={{ color: "#000033" }}>Features</a>
+                            <Link to='/dashboard'>
+                                <p className={classes.headlink1} style={{ color: "#000033" }}>Features</p>
+                            </Link>
+
                         </span>
                         <span className={classes.headnav2}>
                             <a className={classes.headlink2} href="/" alt="" style={{ color: "#000033" }}>cart</a>

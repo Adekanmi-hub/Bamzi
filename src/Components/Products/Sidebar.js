@@ -1,6 +1,5 @@
 import React from 'react'
-import classes from '../../Styles/Dashboard.module.css'
-import { Link } from "react-router-dom"
+import classes from '../../Styles/Products.module.css'
 
 import { FiHome } from 'react-icons/fi'
 import { BiRadioCircle } from 'react-icons/bi'
@@ -18,7 +17,8 @@ const Sidebar = () => {
         <div className={classes.sidebar}>
             <div className={classes.sidebarbg}>
                 <div className={classes.sidebarcont}>
-                    <img className={classes.img1} src={require('../../Asset/BAMZI.png')} alt="" />
+                    {/* <img className={classes.img1} src={require('../../Asset/BAMZI.png')} alt="" /> */}
+                    <h1 className={classes.bamzi}><span className={classes.bam}>BAM</span><span className={classes.zi}>ZI</span></h1>
 
 
                     <div className={classes.section1}>
@@ -43,10 +43,7 @@ const Sidebar = () => {
                     </div>
                     <div className={classes.section5}>
                         <span className={classes.cube}><IoCubeOutline /></span>
-
-                        <Link to='/products'>
                         <span className={classes.products}>All Products</span>
-                        </Link>
                     </div>
                     <div className={classes.section6}>
                         <span className={classes.icategory}><BiCategory /></span>

@@ -641,14 +641,13 @@ input:focus {
 
 
 footer {
-    width: 100%;
     background-color: #303030;
     background-repeat: no-repeat;
     background-size: contain;
     height: 460px;
     width: 100%;
     position: relative;
-    bottom: 5px;
+    bottom: 0px;
 }
 
 .footerbody {
