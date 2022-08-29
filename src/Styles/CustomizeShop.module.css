@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: poppins;
+}
+
+body {
+    width: 100%;
+    text-decoration: none;
+    min-height: 100vh;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.dashboard {
+    display: flex;
+    position: relative;
+}
+
+.sidebar {
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+    width: 20%;
+    top: 0px;
+    bottom: 0px;
+    position: relative;
+}
+
+.sidebarcont {
+    margin-left: 7%;
+    width: 93%;
+}
+
+.sidebarbg {
+    background-image: url(../Asset/bg-drawer.png);
+    background-repeat: no-repeat;
+    background-size: 450px;
+}
+
+.dashboard2 {
+    background-color: #f9f9f9;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+}
+
+
+/*This is the styling for Bamzi logo on Dashboard1*/
+.img1 {
+    margin-top: 20%;
+    width: 130px;
+    height: 60px;
+}
+
+
+.section1 {
+    margin-top: 25%;
+    padding: 5px 20px 5px 0px;
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    width: 97%;
+}
+
+.home {
+    color: black;
+    margin-left: 5%;
+}
+
+.dash {
+    color: black;
+    margin-left: 12%;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+.section2 {
+    width: 100%;
+    margin-top: 10%;
+}
+
+.circle {
+    margin-left: 5%;
+}
+
+.analytics {
+    margin-left: 12%;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+.section3 {
+    margin-top: 10%;
+    width: 100%;
+}
+
+.marketing {
+    margin-left: 12%;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+.product {
+    margin-top: 10%;
+    width: 97%;
+    margin-left: 3%;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.section4 {
+    margin-top: 5%;
+    width: 100%;
+}
+
+.cart {
+    margin-left: 5%;
+}
+
+.sales {
+    margin-left: 6%;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.arrow1 {
+    margin-left: 45%;
+}
+
+.section5 {
+    margin-top: 5%;
+    width: 100%;
+}
+
+.cube {
+    margin-left: 5%;
+}
+
+.products {
+    margin-left: 6%;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.section6 {
+    margin-top: 5%;
+    width: 100%;
+}
+
+.icategory {
+    margin-left: 5%;
+}
+
+.arrow2 {
+    margin-left: 25%;
+}
+
+.category {
+    margin-left: 6%;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+.transaction {
+    margin-left: 3%;
+    width: 97%;
+    margin-top: 15%;
+    font-size: 18px;
+}
+
+.section7 {
+    margin-top: 5%;
+    width: 100%;
+}
+
+.calendar {
+    margin-left: 5%;
+}
+
+.history {
+    margin-left: 6%;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.section8 {
+    margin-top: 5%;
+    width: 100%;
+}
+
+.card {
+    margin-left: 5%;
+}
+
+.billing {
+    margin-left: 6%;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+.setting {
+    margin-top: 15%;
+    width: 97%;
+    margin-left: 3%;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.section9 {
+    margin-top: 5%;
+    width: 100%;
+}
+
+.person {
+    margin-left: 5%;
+}
+
+.arrow3 {
+    margin-left: 35%;
+}
+
+.account {
+    margin-left: 6%;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.section10 {
+    margin-top: 5%;
+    padding: 5px 20px 5px 0px;
+    background-color: #000033;
+    border-radius: 3px;
+    width: 97%;
+    
+}
+
+.cube1 {
+    margin-left: 5%;
+    color: #e0dcdc;
+}
+
+
+.shop {
+    margin-left: 6%;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+}
+
+.section11 {
+    margin-top: 5%;
+    width: 100%;
+}
+
+.question {
+    margin-left: 5%;
+}
+
+.help {
+    margin-left: 6%;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.sect {
+    margin-top: 3%;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+/*This is section 1 of the Dashboard2*/
+.sect1 {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 10px 7px 0px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #e0dcdc;
+    width: 100%;
+    position: relative;
+}
+
+.sect1cont1 {
+    display: flex;
+    padding: 7px 15px 0px 24px;
+    background-color: #000033;
+    border-radius: 20px;
+    box-shadow: 0px 0px 2px black;
+    height: 9%;
+    margin-left: 2%;
+    width: 20%;
+}
+
+.sect1bal {
+    color: white;
+}
+
+.sect1amount {
+    margin-left: 3%;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: start;
+}
+
+.sect1hide {
+    margin-left: 7%;
+    color: black;
+    opacity: 0.5;
+}
+
+.sect1cont2 {
+    margin-left: 2%;
+}
+
+.sect1notify {
+    position: relative;
+    color: black;
+    opacity: 0.7;
+}
+
+.sect1not {
+    color: #FDD25A;
+    position: absolute;
+    left: 402px;
+    top: 6px;
+}
+
+.sect1cont3 {
+    margin-left: 2%;
+}
+
+.sect1mail {
+    position: relative;
+    color: black;
+    opacity: 0.7;
+}
+
+.sect1not1 {
+    color: #FDD25A;
+    position: absolute;
+    left: 456px;
+    top: 6px;
+}
+
+.sect1shop {
+    margin-left: 25%;
+    color: black;
+    opacity: 0.5;
+}
+
+.sect1evans {
+    margin-left: 5%;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.sect1img {
+    margin-left: 3%;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    box-shadow: 0px 0px 0px 2px #e0e0e0;
+}
+
+/*This is section 1 of the Dashboard2*/
